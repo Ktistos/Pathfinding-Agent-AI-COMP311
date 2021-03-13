@@ -100,13 +100,7 @@ public class Project {
 
                 fileLine=in.readLine().replaceAll(" ", "");
             }
-            for(String s : vertexMap.keySet()){
-                out.print(s + " " );
-                for(int i=0; i<vertexMap.get(s).edges.size();i++){
-                    out.print(vertexMap.get(s).edges.get(i).name + " ");
-                }
-                out.println("");
-            }
+
         }
 
         void addToGraph(String[] graphInfo,HashMap<String,Vertex> vertexMap){
@@ -125,7 +119,7 @@ public class Project {
                 }
                 Vertex endVertex;
                 if(vertexMap.containsKey(endVertexName))
-                    endVertex=destination;
+                    endVertex=vertexMap.get(endVertexName);
                 else{
                     endVertex = new Vertex(endVertexName);
                     vertexMap.put(endVertexName, endVertex);
