@@ -6,10 +6,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.PriorityQueue;
+
+import javax.swing.text.DocumentFilter.FilterBypass;
 
 
 public class Project {
@@ -131,6 +133,35 @@ public class Project {
                 startingVertex.addEdge(road);
                 endVertex.addEdge(road);
         }
+
+        SearchNode UCS(Vertex source , String destination){
+            PriorityQueue<SearchNode> fringe =  new PriorityQueue<>();
+            fringe.add(source.createSearchNode());
+            HashMap<String,SearchNode> visitedNodes = new HashMap<>();
+            
+            while(!fringe.isEmpty()){
+                SearchNode node = fringe.poll();
+
+                if(node.getName().equals(destination))
+                    return node;
+
+                if(!visitedNodes.containsKey(node.getName())){
+
+                    visitedNodes.put(node.getName(), node);
+
+
+                }
+
+            }
+            
+        
+            
+            return null;
+        }
+
+
+
+
     }
     
     static class Vertex{
@@ -145,6 +176,45 @@ public class Project {
         void addEdge(Edge edge){
             edges.add(edge);
         }
+
+         SearchNode createSearchNode(){
+            return new SearchNode(name,this);
+        }
+
+    }
+
+
+    static class SearchNode implements Comparable<SearchNode>{
+
+        SearchNode parentNode;
+        int cost ;
+        Vertex originVertex;
+
+
+        SearchNode(String name,Vertex originVertex) {
+            cost=0;
+            parentNode=null;
+            this.originVertex=originVertex;
+        }
+
+        @Override
+        public int compareTo(Project.SearchNode arg0) {
+            if(this.cost< arg0.cost)
+                return -1;
+            else if(this.cost>arg0.cost)
+                return 1;
+            return 0;
+            
+        }
+
+        String getName(){
+            return originVertex.name;
+        }
+
+        void expand(PriorityQueue<SearchNode> fringe){
+            
+        }
+
 
     }
     
@@ -170,7 +240,6 @@ public class Project {
             fileOut= fileArg;
     
         }
-
 
         void println(Object argument){
             fileOut.println(argument);
