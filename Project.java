@@ -67,11 +67,16 @@ public class Project {
         
         public void experiment() throws IOException{
             constructGraph();
+
+            SearchNode node = IDA(source, destination.name);
+
+            while(node.parentNode!=null){
+                out.println(node.getName() + " " + node.cost);
+                node=node.parentNode;
+            }
+            out.println(node.getName() + " " + node.cost);
         
         }
-
-
-
 
         void constructGraph() throws IOException{
             
@@ -145,21 +150,52 @@ public class Project {
 
                 if(!visitedNodes.containsKey(node.getName())){
 
-                    visitedNodes.put(node.getName(), node);
-
-
+                    visitedNodes.put(node.getName(), node);  
+                    node.expand(fringe);
                 }
 
             }
-            
             return null;
         }
 
 
+        SearchNode IDA(Vertex source , String destination){
+            
+            float costLimit=0;
 
+            while(true){
 
+                PriorityQueue<SearchNode> fringe =  new PriorityQueue<>();
+                fringe.add(source.createSearchNode());
+                HashMap<String,SearchNode> visitedNodes = new HashMap<>();
+
+                while(!fringe.isEmpty()){
+                    SearchNode node = fringe.poll();
+    
+                    if(node.getName().equals(destination))
+                        return node;
+    
+                    if(!visitedNodes.containsKey(node.getName())){
+    
+                        visitedNodes.put(node.getName(), node);  
+                        if(node.cost<=costLimit)
+                            node.expand(fringe);
+                        else{ 
+                            costLimit=node.cost;
+                            break;
+                        }
+    
+                    }
+    
+                }
+            }
+            
+            
+            //return null;
+        }
     }
     
+
     static class Vertex{
         String name;
         List<Edge> edges;
@@ -212,22 +248,14 @@ public class Project {
             for(Edge edge : originVertex.edges){
 
                 SearchNode node = edge.getNeighbourVertex(this.originVertex).createSearchNode();
-                node.cost = this.cost + edge.normalWeight;
-                node.parentNode=this;
-
-                if(this.parentNode!=null && this.parentNode.getName().equals(node.getName()))
-                    return;
-
-                fringe.add(node);
-
-               /* if(this.parentNode==null){ fringe.add(node)
-                }else if(!this.parentNode.getName().equals(node.getName())){
+                if(!(this.parentNode!=null && this.parentNode.getName().equals(node.getName()))){
+                    node.cost = this.cost + edge.normalWeight;
+                    node.parentNode=this;
                     fringe.add(node);
-                }*/
-
+                }
+            
             }
         }
-
 
     }
     
