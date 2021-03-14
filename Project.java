@@ -11,8 +11,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.PriorityQueue;
 
-import javax.swing.text.DocumentFilter.FilterBypass;
-
 
 public class Project {
 
@@ -202,20 +200,31 @@ public class Project {
             else if(this.cost>arg0.cost)
                 return 1;
             return 0;
-            
         }
+
+
 
         String getName(){
             return originVertex.name;
         }
 
-        void expand(PriorityQueue<SearchNode> fringe, SearchNode parentNode){
+        void expand(PriorityQueue<SearchNode> fringe){
             for(Edge edge : originVertex.edges){
-            
-                SearchNode node = edge.end.createSearchNode();
-                if(node)
+
+                SearchNode node = edge.getNeighbourVertex(this.originVertex).createSearchNode();
                 node.cost = this.cost + edge.normalWeight;
+                node.parentNode=this;
+
+                if(this.parentNode!=null && this.parentNode.getName().equals(node.getName()))
+                    return;
+
                 fringe.add(node);
+
+               /* if(this.parentNode==null){ fringe.add(node)
+                }else if(!this.parentNode.getName().equals(node.getName())){
+                    fringe.add(node);
+                }*/
+
             }
         }
 
@@ -234,8 +243,9 @@ public class Project {
             this.normalWeight= normalWeight;
         }
 
-        Vertex getNeighboorVertex(Vertex vertex){
-            if
+        Vertex getNeighbourVertex(Vertex vertex){
+            if(start.name.equals(vertex.name)) return end;
+            else return start;
         }
     }
 
