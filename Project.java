@@ -154,8 +154,6 @@ public class Project {
 
             }
             
-        
-            
             return null;
         }
 
@@ -211,9 +209,11 @@ public class Project {
             return originVertex.name;
         }
 
-        void expand(PriorityQueue<SearchNode> fringe){
+        void expand(PriorityQueue<SearchNode> fringe, SearchNode parentNode){
             for(Edge edge : originVertex.edges){
+            
                 SearchNode node = edge.end.createSearchNode();
+                if(node)
                 node.cost = this.cost + edge.normalWeight;
                 fringe.add(node);
             }
@@ -232,6 +232,10 @@ public class Project {
             this.start=start;
             this.end=end;
             this.normalWeight= normalWeight;
+        }
+
+        Vertex getNeighboorVertex(Vertex vertex){
+            if
         }
     }
 
