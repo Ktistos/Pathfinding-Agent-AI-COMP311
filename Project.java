@@ -187,7 +187,7 @@ public class Project {
     static class SearchNode implements Comparable<SearchNode>{
 
         SearchNode parentNode;
-        int cost ;
+        float cost ;
         Vertex originVertex;
 
 
@@ -212,7 +212,11 @@ public class Project {
         }
 
         void expand(PriorityQueue<SearchNode> fringe){
-            
+            for(Edge edge : originVertex.edges){
+                SearchNode node = edge.end.createSearchNode();
+                node.cost = this.cost + edge.normalWeight;
+                fringe.add(node);
+            }
         }
 
 
