@@ -337,6 +337,46 @@ public class Project {
             numOfActualStatus=0;
         }
 
+        float MAP(int prediction){
+
+            float ret = 0;
+            float p0 = ((float) numOfActualLow)/((float)numOfActualStatus);
+            float p1 = ((float) numOfActualNormal)/((float)numOfActualStatus);
+            float p2 = ((float) numOfActualHeavy)/((float)numOfActualStatus);
+
+            Map<Float,Float> probabilityHashmap = new HashMap<>();
+
+            float enumerator0 = 0;
+            float enumerator1 = 0;
+            float enumerator2 = 0;
+
+            switch (prediction){
+                case 0:
+                    enumerator0 = lowGivenLow;
+                    enumerator1 = lowGivenNormal;
+                    enumerator2 = lowGivenHeavy;
+                    break;
+                case 1:
+                    enumerator0 = normalGivenLow;
+                    enumerator1 = normalGivenNormal;
+                    enumerator2 = normalGivenHeavy;
+                    break;
+                case 2:
+                    enumerator0 = heavyGivenLow;
+                    enumerator1 = heavyGivenNormal;
+                    enumerator2 = heavyGivenHeavy;
+                    break;
+            }
+            float prod0 = p0 *(((float)enumerator0)/((float) numOfActualLow));
+            float prod1 = p1 *(((float)enumerator1)/((float) numOfActualNormal));
+            float prod2 = p2 *(((float)enumerator2)/((float) numOfActualHeavy));
+            probabilityHashmap.put(prod0,(float)0.9);
+            probabilityHashmap.put(prod1,(float)1);
+            probabilityHashmap.put(prod2,(float)1.25);
+            float maxProd = Math.max(Math.max(prod0,prod1),prod2);
+            return probabilityHashmap.get(maxProd);
+        }
+
         void computeDailyProbabilities(int day){
             numOfActualStatus+=Experiment.roads.size();
             for(Edge edge : Experiment.roads.values()){
