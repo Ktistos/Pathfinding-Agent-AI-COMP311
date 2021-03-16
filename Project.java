@@ -48,32 +48,33 @@ public class Project {
     static class Experiment{
         BufferedReader in ;
         Output out;
-        int numOfRoads;
         Vertex source;
         Vertex destination;
-        HashMap<String,Edge> roads = new HashMap<>();
+        static HashMap<String,Edge> roads = new HashMap<>();
 
         Experiment(BufferedReader in , Output out){
             this.in=in;
             this.out=out;
-            numOfRoads=0;
             source=null;
             destination= null ;
+
 
         }
         
         public void experiment() throws IOException{
-            constructGraph();
 
+            constructGraph();
+            //int
             initializeTraffic(false);
             initializeTraffic(true);
 
-            for(Edge edge : roads.values()){
-                if(edge.historyOfActualOutcomes.size()!=edge.historyOfpredictions.size() || edge.historyOfpredictions.size()!=80 )
-                    out.println("poutsa");
-            }
+
 
         }
+
+
+
+
 
 
         void initializeTraffic(boolean actualTraffic) throws IOException {
@@ -91,23 +92,21 @@ public class Project {
 
             String prediction = in.readLine();
             while(!prediction.equals(fileBound)){
-
                 while(!prediction.equals("</Day>")){
                     //splitting string based on ';' character
-                    String[] lineTokens =  prediction.split(";");
-
-                    String roadName= lineTokens[0];
-                    String trafficState= lineTokens[1];
-                    //adding predictions to the history of each road
-                    roads.get(roadName).addToTrafficHistory(trafficState,actualTraffic);
+                    String[] lineTokens =  prediction.replaceAll(" ", "").split(";");
+                    if(lineTokens.length>1) {
+                        String roadName = lineTokens[0];
+                        String trafficState = lineTokens[1];
+                        //adding predictions to the history of each road
+                        roads.get(roadName).addToTrafficHistory(trafficState, actualTraffic);
+                    }
                     //read next line
                     prediction=in.readLine();
                 }
                 //skip <Day>
-                in.readLine();
+                prediction=in.readLine();
             }
-
-
         }
 
 
@@ -292,7 +291,109 @@ public class Project {
         }
 
     }
-    
+
+    static class Probabilities{
+
+            //a-priori statistics
+            int numOfActualHeavy;
+            int numOfActualNormal;
+            int numOfActualLow;
+
+            //a-posteriori statistics
+            //Given Low
+            int lowGivenLow;
+            int normalGivenLow;
+            int heavyGivenLow;
+            //Given Normal
+            int lowGivenNormal;
+            int normalGivenNormal;
+            int heavyGivenNormal;
+            //Given Heavy
+            int lowGivenHeavy;
+            int normalGivenHeavy;
+            int heavyGivenHeavy;
+
+            int numOfActualStatus;
+
+
+        public Probabilities() {
+
+            numOfActualHeavy=0;
+            numOfActualNormal=0;
+            numOfActualLow=0;
+
+            lowGivenLow=0;
+            normalGivenLow=0;
+            heavyGivenLow=0;
+
+            lowGivenNormal=0;
+            normalGivenNormal=0;
+            heavyGivenNormal=0;
+
+            lowGivenHeavy=0;
+            normalGivenHeavy=0;
+            heavyGivenHeavy=0;
+
+            numOfActualStatus=0;
+        }
+
+        void computeDailyProbabilities(int day){
+            numOfActualStatus+=Experiment.roads.size();
+            for(Edge edge : Experiment.roads.values()){
+                switch (edge.historyOfActualOutcomes.get(day)){
+                    case 0:
+                        switch (edge.historyOfpredictions.get(day)){
+                            case 0:
+                                lowGivenLow++;
+                                break;
+                            case 1:
+                                normalGivenLow++;
+                                break;
+                            case 2:
+                                heavyGivenLow++;
+                                break;
+                        }
+                        numOfActualLow++;
+                        break;
+                    case 1:
+                        switch (edge.historyOfpredictions.get(day)){
+                            case 0:
+                                lowGivenNormal++;
+                                break;
+                            case 1:
+                                normalGivenNormal++;
+                                break;
+                            case 2:
+                                heavyGivenNormal++;
+                                break;
+                        }
+                        numOfActualNormal++;
+                        break;
+                    case 2:
+                        switch (edge.historyOfpredictions.get(day)){
+                            case 0:
+                                lowGivenHeavy++;
+                                break;
+                            case 1:
+                                normalGivenHeavy++;
+                                break;
+                            case 2:
+                                heavyGivenHeavy++;
+                                break;
+                        }
+                        numOfActualHeavy++;
+                        break;
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
     static class Edge{
         String name;
         float normalWeight;
@@ -328,8 +429,10 @@ public class Project {
                 case "normal":
                     history.add(1);
                     break;
+                case "heavy":
+                        history.add(2);
                 default:
-                    history.add(2);
+
             }
         }
     }
