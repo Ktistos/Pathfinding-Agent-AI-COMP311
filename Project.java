@@ -6,10 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.PriorityQueue;
+import java.util.*;
 
 
 public class Project {
@@ -68,15 +65,52 @@ public class Project {
         public void experiment() throws IOException{
             constructGraph();
 
-            SearchNode node = IDA(source, destination.name);
+            initializeTraffic(false);
+            initializeTraffic(true);
 
-            while(node.parentNode!=null){
-                out.println(node.getName() + " " + node.cost);
-                node=node.parentNode;
+            for(Edge edge : roads.values()){
+                if(edge.historyOfActualOutcomes.size()!=edge.historyOfpredictions.size() || edge.historyOfpredictions.size()!=80 )
+                    out.println("poutsa");
             }
-            out.println(node.getName() + " " + node.cost);
-        
+
         }
+
+
+        void initializeTraffic(boolean actualTraffic) throws IOException {
+
+            //choosing whether to initialize predictions or actualTrafficPerDay
+            String fileBound;
+            if(actualTraffic)
+                fileBound="</ActualTrafficPerDay>";
+            else
+                fileBound= "</Predictions>";
+
+            //skip lines <Predictions> and <Day>
+            in.readLine();
+            in.readLine();
+
+            String prediction = in.readLine();
+            while(!prediction.equals(fileBound)){
+
+                while(!prediction.equals("</Day>")){
+                    //splitting string based on ';' character
+                    String[] lineTokens =  prediction.split(";");
+
+                    String roadName= lineTokens[0];
+                    String trafficState= lineTokens[1];
+                    //adding predictions to the history of each road
+                    roads.get(roadName).addToTrafficHistory(trafficState,actualTraffic);
+                    //read next line
+                    prediction=in.readLine();
+                }
+                //skip <Day>
+                in.readLine();
+            }
+
+
+        }
+
+
 
         void constructGraph() throws IOException{
             
@@ -263,17 +297,40 @@ public class Project {
         String name;
         float normalWeight;
         Vertex start,end;
+        ArrayList<Integer> historyOfpredictions ;
+        ArrayList<Integer> historyOfActualOutcomes ;
 
         Edge(String name,Vertex start,Vertex end,float normalWeight){
             this.name= name;
             this.start=start;
             this.end=end;
             this.normalWeight= normalWeight;
+            this.historyOfpredictions = new ArrayList<>(80);
+            this.historyOfActualOutcomes = new ArrayList<>(80);
         }
 
         Vertex getNeighbourVertex(Vertex vertex){
             if(start.name.equals(vertex.name)) return end;
             else return start;
+        }
+
+        void addToTrafficHistory(String trafficState,boolean actualTraffic){
+            List<Integer> history;
+            if(actualTraffic)
+                history= this.historyOfActualOutcomes;
+            else
+                history=this.historyOfpredictions;
+
+            switch (trafficState){
+                case "low":
+                    history.add(0);
+                    break;
+                case "normal":
+                    history.add(1);
+                    break;
+                default:
+                    history.add(2);
+            }
         }
     }
 
