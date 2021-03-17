@@ -9,6 +9,7 @@ import java.io.PrintWriter;
 import java.util.*;
 
 
+
 public class Project {
 
 
@@ -51,30 +52,73 @@ public class Project {
         Vertex source;
         Vertex destination;
         static HashMap<String,Edge> roads = new HashMap<>();
+        static Probabilities probs=new Probabilities();
+        static int day=0;
 
         Experiment(BufferedReader in , Output out){
             this.in=in;
             this.out=out;
             source=null;
             destination= null ;
-
-
         }
         
         public void experiment() throws IOException{
 
             constructGraph();
-            //int
+            //initialization of predictions and actual outcomes of road traffic status
             initializeTraffic(false);
             initializeTraffic(true);
+
+            int numOfCorrectPredictions=0;
+            for (int i = 0; i < 80; i++) {
+                out.println("Day "+(i+1));
+                printPathInfo(UCS(source,destination.name));
+                int pred= findNumOfCorrectPredictionsPerDay();
+                numOfCorrectPredictions+=pred;
+                out.println(pred);
+                if(i<79){
+                    day++;
+                    probs.computeDailyProbabilities();
+                }
+
+                out.println("");
+            }
+            out.println(numOfCorrectPredictions);
+            out.println(((float)numOfCorrectPredictions/(float) 80*roads.size()) + " /" + 80*roads.size() );
+
+
 
 
 
         }
 
 
+        int findNumOfCorrectPredictionsPerDay(){
+            int numOfCorrectPredictions=0;
+            for(Edge edge : roads.values()){
+                if(edge.decision==edge.historyOfActualOutcomes.get(day))
+                    numOfCorrectPredictions++;
+            }
+            return numOfCorrectPredictions;
+        }
 
 
+        void printPathInfo(SearchNode goal){
+            LinkedList<SearchNode> nodeList = new LinkedList<>();
+            SearchNode node =  goal;
+            while(node.parentNode!=null){
+                nodeList.addFirst(node);
+                node=node.parentNode;
+            }
+
+
+
+            out.print("Predicted Cost:" + nodeList.getLast().predictedCost+" ");
+            out.println("Actual Cost:"+ nodeList.getLast().realCost);
+
+
+
+        }
 
 
         void initializeTraffic(boolean actualTraffic) throws IOException {
@@ -211,10 +255,10 @@ public class Project {
                     if(!visitedNodes.containsKey(node.getName())){
     
                         visitedNodes.put(node.getName(), node);  
-                        if(node.cost<=costLimit)
+                        if(node.predictedCost <=costLimit)
                             node.expand(fringe);
                         else{ 
-                            costLimit=node.cost;
+                            costLimit=node.predictedCost;
                             break;
                         }
     
@@ -252,21 +296,23 @@ public class Project {
     static class SearchNode implements Comparable<SearchNode>{
 
         SearchNode parentNode;
-        float cost ;
+        float predictedCost;
+        float realCost;
         Vertex originVertex;
 
 
         SearchNode(String name,Vertex originVertex) {
-            cost=0;
+            predictedCost =0;
+            realCost=0;
             parentNode=null;
             this.originVertex=originVertex;
         }
 
         @Override
         public int compareTo(Project.SearchNode arg0) {
-            if(this.cost< arg0.cost)
+            if(this.predictedCost < arg0.predictedCost)
                 return -1;
-            else if(this.cost>arg0.cost)
+            else if(this.predictedCost >arg0.predictedCost)
                 return 1;
             return 0;
         }
@@ -282,7 +328,8 @@ public class Project {
 
                 SearchNode node = edge.getNeighbourVertex(this.originVertex).createSearchNode();
                 if(!(this.parentNode!=null && this.parentNode.getName().equals(node.getName()))){
-                    node.cost = this.cost + edge.normalWeight;
+                    node.predictedCost = this.predictedCost + edge.getPredictedCost();
+                    node.realCost= this.realCost +  edge.getRealCost();
                     node.parentNode=this;
                     fringe.add(node);
                 }
@@ -337,14 +384,20 @@ public class Project {
             numOfActualStatus=0;
         }
 
-        float MAP(int prediction){
+        int MAP(int prediction){
 
-            float ret = 0;
+            Map<Float,Integer> probabilityHashmap = new HashMap<>();
+            float prod0=0;
+            float prod1=0;
+            float prod2=0;
+            float maxProd;
+
+
             float p0 = ((float) numOfActualLow)/((float)numOfActualStatus);
             float p1 = ((float) numOfActualNormal)/((float)numOfActualStatus);
             float p2 = ((float) numOfActualHeavy)/((float)numOfActualStatus);
 
-            Map<Float,Float> probabilityHashmap = new HashMap<>();
+
 
             float enumerator0 = 0;
             float enumerator1 = 0;
@@ -367,22 +420,27 @@ public class Project {
                     enumerator2 = heavyGivenHeavy;
                     break;
             }
-            float prod0 = p0 *(((float)enumerator0)/((float) numOfActualLow));
-            float prod1 = p1 *(((float)enumerator1)/((float) numOfActualNormal));
-            float prod2 = p2 *(((float)enumerator2)/((float) numOfActualHeavy));
-            probabilityHashmap.put(prod0,(float)0.9);
-            probabilityHashmap.put(prod1,(float)1);
-            probabilityHashmap.put(prod2,(float)1.25);
-            float maxProd = Math.max(Math.max(prod0,prod1),prod2);
+
+
+            prod0 = p0 *(((float)enumerator0)/((float) numOfActualLow));
+            prod1 = p1 *(((float)enumerator1)/((float) numOfActualNormal));
+            prod2 = p2 *(((float)enumerator2)/((float) numOfActualHeavy));
+
+
+            probabilityHashmap.put(prod0,0);
+            probabilityHashmap.put(prod1,1);
+            probabilityHashmap.put(prod2,2);
+
+            maxProd = Math.max(Math.max(prod0,prod1),prod2);
             return probabilityHashmap.get(maxProd);
         }
 
-        void computeDailyProbabilities(int day){
+        void computeDailyProbabilities(){
             numOfActualStatus+=Experiment.roads.size();
             for(Edge edge : Experiment.roads.values()){
-                switch (edge.historyOfActualOutcomes.get(day)){
+                switch (edge.historyOfActualOutcomes.get(Experiment.day)){
                     case 0:
-                        switch (edge.historyOfpredictions.get(day)){
+                        switch (edge.historyOfPredictions.get(Experiment.day)){
                             case 0:
                                 lowGivenLow++;
                                 break;
@@ -396,7 +454,7 @@ public class Project {
                         numOfActualLow++;
                         break;
                     case 1:
-                        switch (edge.historyOfpredictions.get(day)){
+                        switch (edge.historyOfPredictions.get(Experiment.day)){
                             case 0:
                                 lowGivenNormal++;
                                 break;
@@ -410,7 +468,7 @@ public class Project {
                         numOfActualNormal++;
                         break;
                     case 2:
-                        switch (edge.historyOfpredictions.get(day)){
+                        switch (edge.historyOfPredictions.get(Experiment.day)){
                             case 0:
                                 lowGivenHeavy++;
                                 break;
@@ -438,16 +496,23 @@ public class Project {
         String name;
         float normalWeight;
         Vertex start,end;
-        ArrayList<Integer> historyOfpredictions ;
+        ArrayList<Integer> historyOfPredictions;
         ArrayList<Integer> historyOfActualOutcomes ;
+        HashMap<Integer,Float> weightMap ;
+        int decision;
 
         Edge(String name,Vertex start,Vertex end,float normalWeight){
             this.name= name;
             this.start=start;
             this.end=end;
             this.normalWeight= normalWeight;
-            this.historyOfpredictions = new ArrayList<>(80);
+            this.historyOfPredictions = new ArrayList<>(80);
             this.historyOfActualOutcomes = new ArrayList<>(80);
+            weightMap = new HashMap<>();
+            weightMap.put(0,(float)0.9);
+            weightMap.put(1,(float)1.0);
+            weightMap.put(2,(float)1.25);
+            decision=0;
         }
 
         Vertex getNeighbourVertex(Vertex vertex){
@@ -460,7 +525,7 @@ public class Project {
             if(actualTraffic)
                 history= this.historyOfActualOutcomes;
             else
-                history=this.historyOfpredictions;
+                history=this.historyOfPredictions;
 
             switch (trafficState){
                 case "low":
@@ -474,6 +539,23 @@ public class Project {
                 default:
 
             }
+        }
+
+        float getPredictedCost(){
+
+            if(Experiment.day>0)
+                decision=Experiment.probs.MAP(historyOfPredictions.get(Experiment.day));
+            else {
+                Random rand = new Random();
+                decision= rand.nextInt(3);
+            }
+            return normalWeight*weightMap.get(decision);
+        }
+
+
+
+        float getRealCost(){
+            return normalWeight*weightMap.get(historyOfActualOutcomes.get(Experiment.day));
         }
     }
 
