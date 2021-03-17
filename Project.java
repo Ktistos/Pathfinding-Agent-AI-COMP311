@@ -114,6 +114,7 @@ public class Project {
                 nodeList.addFirst(node);
                 node=node.parentNode;
             }
+            nodeList.addFirst(node);
 
             for(int i=0;i<nodeList.size()-1;i++){
                 float roadCost=nodeList.get(i).originVertex.findEdgeOfNeighbour(nodeList.get(i+1).originVertex).getPredictedCost();
@@ -240,7 +241,7 @@ public class Project {
                 if(!visitedNodes.containsKey(node.getName())){
 
                     visitedNodes.put(node.getName(), node);  
-                    node.expand(fringe,true);
+                    node.expand(fringe,false);
                 }
 
             }
@@ -269,7 +270,7 @@ public class Project {
     
                     if(!visitedNodes.containsKey(node.getName())){
     
-                        visitedNodes.put(node.getName(), node);  
+                        visitedNodes.put(node.getName(), node);
                         if(node.predictedCost <=costLimit)
                             node.expand(fringe,true);
                         else{ 
@@ -362,7 +363,7 @@ public class Project {
                         heuristic=node.originVertex.heuristic;
        
                     node.predictedCost = this.predictedCost + edge.getPredictedCost()+heuristic;
-                    node.realCost= this.realCost +  edge.getRealCost();
+                    node.realCost= this.realCost +  edge.getRealCost() + heuristic;
                     node.parentNode=this;
                     fringe.add(node);
                 }
