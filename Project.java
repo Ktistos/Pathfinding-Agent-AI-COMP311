@@ -53,7 +53,8 @@ public class Project {
         Vertex destination;
         static HashMap<String,Edge> roads = new HashMap<>();
         static Probabilities probs=new Probabilities();
-        static int day=0;
+        ArrayList<Vertex> listOfVertices= new ArrayList<>();
+        static int day=-1;
 
         Experiment(BufferedReader in , Output out){
             this.in=in;
@@ -68,23 +69,28 @@ public class Project {
             //initialization of predictions and actual outcomes of road traffic status
             initializeTraffic(false);
             initializeTraffic(true);
-
-            int numOfCorrectPredictions=0;
+            initializeVertexHeuristics();
+            day++;
+            out.println("=================================================");
             for (int i = 0; i < 80; i++) {
                 out.println("Day "+(i+1));
-                printPathInfo(UCS(source,destination.name));
-                int pred= findNumOfCorrectPredictionsPerDay();
-                numOfCorrectPredictions+=pred;
-                out.println(pred);
+                out.print("<Uninformed Search Algorithm>:");
+                SearchNode goal= UCS(source, destination.name);
+                out.println("Visited Nodes number: "+ goal.numOfExpandedNodes);
+                printPathInfo(goal);
+                out.println("IDA*:");
+                goal= IDA(source, destination.name);
+                out.println("Visited Nodes number: "+ goal.numOfExpandedNodes);
+                printPathInfo(goal);
+              
                 if(i<79){
                     day++;
                     probs.computeDailyProbabilities();
                 }
-
                 out.println("");
+
             }
-            out.println(numOfCorrectPredictions);
-            out.println(((float)numOfCorrectPredictions/(float) 80*roads.size()) + " /" + 80*roads.size() );
+            
 
 
 
@@ -92,14 +98,12 @@ public class Project {
 
         }
 
-
-        int findNumOfCorrectPredictionsPerDay(){
-            int numOfCorrectPredictions=0;
-            for(Edge edge : roads.values()){
-                if(edge.decision==edge.historyOfActualOutcomes.get(day))
-                    numOfCorrectPredictions++;
+        
+        void initializeVertexHeuristics(){
+            for(int i=0; i<listOfVertices.size();i++){
+                Vertex start=listOfVertices.get(i);
+                listOfVertices.get(i).heuristic=UCS(start, destination.name).predictedCost;
             }
-            return numOfCorrectPredictions;
         }
 
 
@@ -111,12 +115,13 @@ public class Project {
                 node=node.parentNode;
             }
 
-
-
-            out.print("Predicted Cost:" + nodeList.getLast().predictedCost+" ");
-            out.println("Actual Cost:"+ nodeList.getLast().realCost);
-
-
+            for(int i=0;i<nodeList.size()-1;i++){
+                float roadCost=nodeList.get(i).originVertex.findEdgeOfNeighbour(nodeList.get(i+1).originVertex).getPredictedCost();
+                 out.print(nodeList.get(i).getName()+ "(" +roadCost+" ) " + "-> ");
+            }
+            out.println(nodeList.get(nodeList.size()-1).getName());
+            out.println("Predicted Cost: "+goal.predictedCost);
+            out.println("Real Cost:" + goal.realCost);
 
         }
 
@@ -167,6 +172,9 @@ public class Project {
             destinationName= destinationName.substring(13,destinationName.length()-14);
             destination = new Vertex(destinationName);
 
+            listOfVertices.add(source);
+            listOfVertices.add(destination);
+
             HashMap<String,Vertex> vertexMap = new HashMap<>();
             vertexMap.put(sourceName, source);
             vertexMap.put(destinationName, destination);
@@ -197,6 +205,7 @@ public class Project {
                     startingVertex=vertexMap.get(startVertexName);
                 else{
                     startingVertex = new Vertex(startVertexName);
+                    listOfVertices.add(startingVertex);
                     vertexMap.put(startVertexName, startingVertex);
                 }
                 Vertex endVertex;
@@ -204,6 +213,7 @@ public class Project {
                     endVertex=vertexMap.get(endVertexName);
                 else{
                     endVertex = new Vertex(endVertexName);
+                    listOfVertices.add(endVertex);
                     vertexMap.put(endVertexName, endVertex);
                 }
                 Edge road = new Edge(roadName,startingVertex,endVertex,normalWeight);
@@ -222,13 +232,15 @@ public class Project {
             while(!fringe.isEmpty()){
                 SearchNode node = fringe.poll();
 
-                if(node.getName().equals(destination))
+                if(node.getName().equals(destination)){
+                    node.numOfExpandedNodes=visitedNodes.size();
                     return node;
+                }
 
                 if(!visitedNodes.containsKey(node.getName())){
 
                     visitedNodes.put(node.getName(), node);  
-                    node.expand(fringe);
+                    node.expand(fringe,true);
                 }
 
             }
@@ -249,14 +261,17 @@ public class Project {
                 while(!fringe.isEmpty()){
                     SearchNode node = fringe.poll();
     
-                    if(node.getName().equals(destination))
+                    if(node.getName().equals(destination)){
+                        node.numOfExpandedNodes=visitedNodes.size();
                         return node;
+                    }
+                        
     
                     if(!visitedNodes.containsKey(node.getName())){
     
                         visitedNodes.put(node.getName(), node);  
                         if(node.predictedCost <=costLimit)
-                            node.expand(fringe);
+                            node.expand(fringe,true);
                         else{ 
                             costLimit=node.predictedCost;
                             break;
@@ -276,10 +291,12 @@ public class Project {
     static class Vertex{
         String name;
         List<Edge> edges;
+        float heuristic;
         
         Vertex(String name){
             this.name=name;
             edges= new LinkedList<>();
+            heuristic=0;
         }
 
         void addEdge(Edge edge){
@@ -290,6 +307,16 @@ public class Project {
             return new SearchNode(name,this);
         }
 
+
+        Edge findEdgeOfNeighbour(Vertex neighbour){
+            for(Edge edge : edges){
+                if(edge.getNeighbourVertex(this).name.equals(neighbour.name))
+                    return edge;
+            }
+            return null;
+        }
+
+
     }
 
 
@@ -299,6 +326,7 @@ public class Project {
         float predictedCost;
         float realCost;
         Vertex originVertex;
+        int numOfExpandedNodes;
 
 
         SearchNode(String name,Vertex originVertex) {
@@ -306,6 +334,7 @@ public class Project {
             realCost=0;
             parentNode=null;
             this.originVertex=originVertex;
+            numOfExpandedNodes=0;
         }
 
         @Override
@@ -323,12 +352,16 @@ public class Project {
             return originVertex.name;
         }
 
-        void expand(PriorityQueue<SearchNode> fringe){
+        void expand(PriorityQueue<SearchNode> fringe,boolean includeHeuristic){
             for(Edge edge : originVertex.edges){
 
                 SearchNode node = edge.getNeighbourVertex(this.originVertex).createSearchNode();
                 if(!(this.parentNode!=null && this.parentNode.getName().equals(node.getName()))){
-                    node.predictedCost = this.predictedCost + edge.getPredictedCost();
+                    float heuristic=0;
+                    if(includeHeuristic)
+                        heuristic=node.originVertex.heuristic;
+       
+                    node.predictedCost = this.predictedCost + edge.getPredictedCost()+heuristic;
                     node.realCost= this.realCost +  edge.getRealCost();
                     node.parentNode=this;
                     fringe.add(node);
@@ -545,6 +578,8 @@ public class Project {
 
             if(Experiment.day>0)
                 decision=Experiment.probs.MAP(historyOfPredictions.get(Experiment.day));
+            else if(Experiment.day==-1)
+                return normalWeight*((float)0.9);
             else {
                 Random rand = new Random();
                 decision= rand.nextInt(3);
@@ -555,7 +590,9 @@ public class Project {
 
 
         float getRealCost(){
-            return normalWeight*weightMap.get(historyOfActualOutcomes.get(Experiment.day));
+            if(Experiment.day>=0)
+                return normalWeight*weightMap.get(historyOfActualOutcomes.get(Experiment.day));
+            return 0 ;
         }
     }
 

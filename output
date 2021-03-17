@@ -1,322 +1,881 @@
+=================================================
 Day 1
-Predicted Cost:113.25 Actual Cost:119.3
-60
+<Uninformed Search Algorithm>:Visited Nodes number: 16
+10Node3e(73.75 ) -> 9Node6e(32.5 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 288.75
+Real Cost:119.6
+IDA*:
+Visited Nodes number: 19
+10Node3e(53.1 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 301.0
+Real Cost:119.6
 
 Day 2
-Predicted Cost:103.75 Actual Cost:106.35
-107
+<Uninformed Search Algorithm>:Visited Nodes number: 17
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 286.45
+Real Cost:113.549995
+IDA*:
+Visited Nodes number: 17
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 286.45
+Real Cost:113.549995
 
 Day 3
-Predicted Cost:108.4 Actual Cost:104.6
-105
+<Uninformed Search Algorithm>:Visited Nodes number: 21
+10Node3e(73.75 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 306.65
+Real Cost:131.15
+IDA*:
+Visited Nodes number: 21
+10Node3e(73.75 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 306.65
+Real Cost:131.15
 
 Day 4
-Predicted Cost:129.65 Actual Cost:152.75
-106
+<Uninformed Search Algorithm>:Visited Nodes number: 24
+10Node3e(73.75 ) -> 9Node6e(32.5 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 324.25
+Real Cost:148.75
+IDA*:
+Visited Nodes number: 24
+10Node3e(73.75 ) -> 9Node6e(32.5 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 324.25
+Real Cost:148.75
 
 Day 5
-Predicted Cost:113.75 Actual Cost:124.25
-101
+<Uninformed Search Algorithm>:Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 294.65
+Real Cost:121.75
+IDA*:
+Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 294.65
+Real Cost:121.75
 
 Day 6
-Predicted Cost:116.4 Actual Cost:119.0
-102
+<Uninformed Search Algorithm>:Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 291.9
+Real Cost:119.0
+IDA*:
+Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 291.9
+Real Cost:119.0
 
 Day 7
-Predicted Cost:105.9 Actual Cost:103.6
-110
+<Uninformed Search Algorithm>:Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:116.7
+IDA*:
+Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:116.7
 
 Day 8
-Predicted Cost:110.2 Actual Cost:120.7
-113
+<Uninformed Search Algorithm>:Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:133.75
+IDA*:
+Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:133.75
 
 Day 9
-Predicted Cost:122.15 Actual Cost:122.15
-107
+<Uninformed Search Algorithm>:Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 297.65
+Real Cost:122.15
+IDA*:
+Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 297.65
+Real Cost:122.15
 
 Day 10
-Predicted Cost:117.1 Actual Cost:126.4
-101
+<Uninformed Search Algorithm>:Visited Nodes number: 20
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 300.25
+Real Cost:124.75
+IDA*:
+Visited Nodes number: 20
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 300.25
+Real Cost:124.75
 
 Day 11
-Predicted Cost:109.85 Actual Cost:109.85
-100
+<Uninformed Search Algorithm>:Visited Nodes number: 22
+10Node3e(73.75 ) -> 9Node6e(23.4 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 309.4
+Real Cost:133.9
+IDA*:
+Visited Nodes number: 22
+10Node3e(73.75 ) -> 9Node6e(23.4 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 309.4
+Real Cost:133.9
 
 Day 12
-Predicted Cost:119.15 Actual Cost:119.15
-110
+<Uninformed Search Algorithm>:Visited Nodes number: 16
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 294.65
+Real Cost:119.15
+IDA*:
+Visited Nodes number: 16
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 294.65
+Real Cost:119.15
 
 Day 13
-Predicted Cost:107.35 Actual Cost:120.25
-106
+<Uninformed Search Algorithm>:Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 294.65
+Real Cost:128.25
+IDA*:
+Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 294.65
+Real Cost:128.25
 
 Day 14
-Predicted Cost:103.6 Actual Cost:111.65
-104
+<Uninformed Search Algorithm>:Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 292.2
+Real Cost:118.85
+IDA*:
+Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 292.2
+Real Cost:118.85
 
 Day 15
-Predicted Cost:103.3 Actual Cost:116.6
-108
+<Uninformed Search Algorithm>:Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 291.9
+Real Cost:110.5
+IDA*:
+Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 291.9
+Real Cost:110.5
 
 Day 16
-Predicted Cost:109.7 Actual Cost:125.7
-101
+<Uninformed Search Algorithm>:Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:125.5
+IDA*:
+Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:125.5
 
 Day 17
-Predicted Cost:109.8 Actual Cost:116.75
-106
+<Uninformed Search Algorithm>:Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:124.75
+IDA*:
+Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:124.75
 
 Day 18
-Predicted Cost:109.8 Actual Cost:122.3
-110
+<Uninformed Search Algorithm>:Visited Nodes number: 16
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:116.4
+IDA*:
+Visited Nodes number: 16
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:116.4
 
 Day 19
-Predicted Cost:115.45 Actual Cost:126.9
-100
+<Uninformed Search Algorithm>:Visited Nodes number: 17
+10Node3e(53.1 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 294.35
+Real Cost:116.25
+IDA*:
+Visited Nodes number: 17
+10Node3e(53.1 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 294.35
+Real Cost:116.25
 
 Day 20
-Predicted Cost:102.2 Actual Cost:124.6
-102
+<Uninformed Search Algorithm>:Visited Nodes number: 17
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 284.9
+Real Cost:118.5
+IDA*:
+Visited Nodes number: 17
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 284.9
+Real Cost:118.5
 
 Day 21
-Predicted Cost:119.0 Actual Cost:116.4
-107
+<Uninformed Search Algorithm>:Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:116.4
+IDA*:
+Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:116.4
 
 Day 22
-Predicted Cost:107.85 Actual Cost:123.9
-92
+<Uninformed Search Algorithm>:Visited Nodes number: 21
+10Node3e(73.75 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 306.65
+Real Cost:133.9
+IDA*:
+Visited Nodes number: 21
+10Node3e(73.75 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 306.65
+Real Cost:133.9
 
 Day 23
-Predicted Cost:110.5 Actual Cost:110.5
-110
+<Uninformed Search Algorithm>:Visited Nodes number: 14
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 286.0
+Real Cost:110.5
+IDA*:
+Visited Nodes number: 14
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 286.0
+Real Cost:110.5
 
 Day 24
-Predicted Cost:105.9 Actual Cost:115.5
-102
+<Uninformed Search Algorithm>:Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(26.0 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 288.6
+Real Cost:109.4
+IDA*:
+Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(26.0 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 288.6
+Real Cost:109.4
 
 Day 25
-Predicted Cost:107.2 Actual Cost:121.5
-102
+<Uninformed Search Algorithm>:Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:119.0
+IDA*:
+Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:119.0
 
 Day 26
-Predicted Cost:104.6 Actual Cost:111.399994
-104
+<Uninformed Search Algorithm>:Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 291.9
+Real Cost:123.2
+IDA*:
+Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 291.9
+Real Cost:123.2
 
 Day 27
-Predicted Cost:115.3 Actual Cost:119.15
-104
+<Uninformed Search Algorithm>:Visited Nodes number: 15
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 290.8
+Real Cost:119.15
+IDA*:
+Visited Nodes number: 15
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 290.8
+Real Cost:119.15
 
 Day 28
-Predicted Cost:107.1 Actual Cost:107.1
-103
+<Uninformed Search Algorithm>:Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 286.0
+Real Cost:110.5
+IDA*:
+Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 286.0
+Real Cost:110.5
 
 Day 29
-Predicted Cost:110.2 Actual Cost:116.5
-113
+<Uninformed Search Algorithm>:Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:116.4
+IDA*:
+Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:116.4
 
 Day 30
-Predicted Cost:107.1 Actual Cost:116.2
-108
+<Uninformed Search Algorithm>:Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 291.9
+Real Cost:125.5
+IDA*:
+Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 291.9
+Real Cost:125.5
 
 Day 31
-Predicted Cost:111.0 Actual Cost:108.4
-105
+<Uninformed Search Algorithm>:Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:116.4
+IDA*:
+Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:116.4
 
 Day 32
-Predicted Cost:119.75 Actual Cost:119.2
-108
+<Uninformed Search Algorithm>:Visited Nodes number: 21
+10Node3e(59.0 ) -> 9Node6e(32.5 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 306.75
+Real Cost:114.1
+IDA*:
+Visited Nodes number: 21
+10Node3e(59.0 ) -> 9Node6e(32.5 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 306.75
+Real Cost:114.1
 
 Day 33
-Predicted Cost:119.0 Actual Cost:119.0
-111
+<Uninformed Search Algorithm>:Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:119.0
+IDA*:
+Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:119.0
 
 Day 34
-Predicted Cost:110.5 Actual Cost:110.5
-104
+<Uninformed Search Algorithm>:Visited Nodes number: 17
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 286.0
+Real Cost:110.5
+IDA*:
+Visited Nodes number: 17
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 286.0
+Real Cost:110.5
 
 Day 35
-Predicted Cost:111.0 Actual Cost:117.7
-100
+<Uninformed Search Algorithm>:Visited Nodes number: 16
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:125.5
+IDA*:
+Visited Nodes number: 16
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:125.5
 
 Day 36
-Predicted Cost:116.4 Actual Cost:119.0
-99
+<Uninformed Search Algorithm>:Visited Nodes number: 16
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 291.9
+Real Cost:119.0
+IDA*:
+Visited Nodes number: 16
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 291.9
+Real Cost:119.0
 
 Day 37
-Predicted Cost:110.2 Actual Cost:115.399994
-106
+<Uninformed Search Algorithm>:Visited Nodes number: 22
+10Node3e(73.75 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 309.25
+Real Cost:137.95
+IDA*:
+Visited Nodes number: 22
+10Node3e(73.75 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 309.25
+Real Cost:137.95
 
 Day 38
-Predicted Cost:103.5 Actual Cost:103.5
-111
+<Uninformed Search Algorithm>:Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 284.9
+Real Cost:109.4
+IDA*:
+Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 284.9
+Real Cost:109.4
 
 Day 39
-Predicted Cost:109.7 Actual Cost:116.2
-101
+<Uninformed Search Algorithm>:Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:125.5
+IDA*:
+Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:125.5
 
 Day 40
-Predicted Cost:116.4 Actual Cost:119.0
-109
+<Uninformed Search Algorithm>:Visited Nodes number: 16
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 291.9
+Real Cost:119.0
+IDA*:
+Visited Nodes number: 16
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 291.9
+Real Cost:119.0
 
 Day 41
-Predicted Cost:109.35 Actual Cost:109.35
-109
+<Uninformed Search Algorithm>:Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 289.6
+Real Cost:128.85
+IDA*:
+Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 289.6
+Real Cost:128.85
 
 Day 42
-Predicted Cost:115.85 Actual Cost:122.35
-104
+<Uninformed Search Algorithm>:Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(26.0 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 291.35
+Real Cost:122.35
+IDA*:
+Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(26.0 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 291.35
+Real Cost:122.35
 
 Day 43
-Predicted Cost:114.25 Actual Cost:120.75
-106
+<Uninformed Search Algorithm>:Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:125.5
+IDA*:
+Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:125.5
 
 Day 44
-Predicted Cost:110.5 Actual Cost:108.2
-102
+<Uninformed Search Algorithm>:Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 286.0
+Real Cost:108.2
+IDA*:
+Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 286.0
+Real Cost:108.2
 
 Day 45
-Predicted Cost:108.4 Actual Cost:108.4
-106
+<Uninformed Search Algorithm>:Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 291.9
+Real Cost:116.4
+IDA*:
+Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 291.9
+Real Cost:116.4
 
 Day 46
-Predicted Cost:104.6 Actual Cost:108.4
-99
+<Uninformed Search Algorithm>:Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 291.9
+Real Cost:116.4
+IDA*:
+Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 291.9
+Real Cost:116.4
 
 Day 47
-Predicted Cost:111.0 Actual Cost:126.9
-107
+<Uninformed Search Algorithm>:Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:122.15
+IDA*:
+Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:122.15
 
 Day 48
-Predicted Cost:108.600006 Actual Cost:106.0
-106
+<Uninformed Search Algorithm>:Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(26.0 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 287.5
+Real Cost:109.4
+IDA*:
+Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(26.0 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 287.5
+Real Cost:109.4
 
 Day 49
-Predicted Cost:120.5 Actual Cost:107.2
-108
+<Uninformed Search Algorithm>:Visited Nodes number: 21
+10Node3e(73.75 ) -> 9Node6e(26.0 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 309.25
+Real Cost:133.75
+IDA*:
+Visited Nodes number: 21
+10Node3e(73.75 ) -> 9Node6e(26.0 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 309.25
+Real Cost:133.75
 
 Day 50
-Predicted Cost:107.1 Actual Cost:119.2
-100
+<Uninformed Search Algorithm>:Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 286.0
+Real Cost:113.1
+IDA*:
+Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 286.0
+Real Cost:113.1
 
 Day 51
-Predicted Cost:119.0 Actual Cost:116.4
-108
+<Uninformed Search Algorithm>:Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:116.4
+IDA*:
+Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:116.4
 
 Day 52
-Predicted Cost:107.1 Actual Cost:112.4
-100
+<Uninformed Search Algorithm>:Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 291.9
+Real Cost:125.5
+IDA*:
+Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 291.9
+Real Cost:125.5
 
 Day 53
-Predicted Cost:108.4 Actual Cost:104.6
-104
+<Uninformed Search Algorithm>:Visited Nodes number: 22
+10Node3e(73.75 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 306.65
+Real Cost:131.15
+IDA*:
+Visited Nodes number: 22
+10Node3e(73.75 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 306.65
+Real Cost:131.15
 
 Day 54
-Predicted Cost:104.8 Actual Cost:104.8
-107
+<Uninformed Search Algorithm>:Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 293.4
+Real Cost:117.9
+IDA*:
+Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 293.4
+Real Cost:117.9
 
 Day 55
-Predicted Cost:103.5 Actual Cost:106.75
-113
+<Uninformed Search Algorithm>:Visited Nodes number: 16
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 290.8
+Real Cost:115.3
+IDA*:
+Visited Nodes number: 16
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 290.8
+Real Cost:115.3
 
 Day 56
-Predicted Cost:104.6 Actual Cost:104.6
-108
+<Uninformed Search Algorithm>:Visited Nodes number: 17
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 286.0
+Real Cost:110.5
+IDA*:
+Visited Nodes number: 17
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 286.0
+Real Cost:110.5
 
 Day 57
-Predicted Cost:119.6 Actual Cost:115.799995
-104
+<Uninformed Search Algorithm>:Visited Nodes number: 21
+10Node3e(59.0 ) -> 9Node6e(32.5 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 301.0
+Real Cost:116.4
+IDA*:
+Visited Nodes number: 21
+10Node3e(59.0 ) -> 9Node6e(32.5 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 301.0
+Real Cost:116.4
 
 Day 58
-Predicted Cost:108.4 Actual Cost:106.1
-106
+<Uninformed Search Algorithm>:Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 291.9
+Real Cost:114.1
+IDA*:
+Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 291.9
+Real Cost:114.1
 
 Day 59
-Predicted Cost:111.65 Actual Cost:109.05
-104
+<Uninformed Search Algorithm>:Visited Nodes number: 19
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 300.25
+Real Cost:122.15
+IDA*:
+Visited Nodes number: 19
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 300.25
+Real Cost:122.15
 
 Day 60
-Predicted Cost:107.2 Actual Cost:117.5
-102
+<Uninformed Search Algorithm>:Visited Nodes number: 19
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:125.5
+IDA*:
+Visited Nodes number: 19
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:125.5
 
 Day 61
-Predicted Cost:111.75 Actual Cost:126.05
-102
+<Uninformed Search Algorithm>:Visited Nodes number: 18
+10Node3e(53.1 ) -> 9Node6e(26.0 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 294.35
+Real Cost:118.85
+IDA*:
+Visited Nodes number: 18
+10Node3e(53.1 ) -> 9Node6e(26.0 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 294.35
+Real Cost:118.85
 
 Day 62
-Predicted Cost:118.7 Actual Cost:119.35
-106
+<Uninformed Search Algorithm>:Visited Nodes number: 22
+10Node3e(73.75 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 312.4
+Real Cost:136.9
+IDA*:
+Visited Nodes number: 22
+10Node3e(73.75 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 312.4
+Real Cost:136.9
 
 Day 63
-Predicted Cost:112.45 Actual Cost:108.65
-99
+<Uninformed Search Algorithm>:Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 297.25
+Real Cost:121.75
+IDA*:
+Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 297.25
+Real Cost:121.75
 
 Day 64
-Predicted Cost:109.4 Actual Cost:112.0
-109
+<Uninformed Search Algorithm>:Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 284.9
+Real Cost:112.0
+IDA*:
+Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 284.9
+Real Cost:112.0
 
 Day 65
-Predicted Cost:110.5 Actual Cost:110.5
-102
+<Uninformed Search Algorithm>:Visited Nodes number: 15
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 286.0
+Real Cost:110.5
+IDA*:
+Visited Nodes number: 15
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 286.0
+Real Cost:110.5
 
 Day 66
-Predicted Cost:104.6 Actual Cost:107.2
-110
+<Uninformed Search Algorithm>:Visited Nodes number: 22
+10Node3e(73.75 ) -> 9Node6e(23.4 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 306.65
+Real Cost:133.75
+IDA*:
+Visited Nodes number: 22
+10Node3e(73.75 ) -> 9Node6e(23.4 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 306.65
+Real Cost:133.75
 
 Day 67
-Predicted Cost:104.8 Actual Cost:114.350006
-100
+<Uninformed Search Algorithm>:Visited Nodes number: 21
+10Node3e(73.75 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 308.15
+Real Cost:138.4
+IDA*:
+Visited Nodes number: 21
+10Node3e(73.75 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 308.15
+Real Cost:138.4
 
 Day 68
-Predicted Cost:119.6 Actual Cost:141.0
-116
+<Uninformed Search Algorithm>:Visited Nodes number: 19
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 297.25
+Real Cost:119.15
+IDA*:
+Visited Nodes number: 19
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 297.25
+Real Cost:119.15
 
 Day 69
-Predicted Cost:119.0 Actual Cost:119.0
-115
+<Uninformed Search Algorithm>:Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:119.0
+IDA*:
+Visited Nodes number: 17
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:119.0
 
 Day 70
-Predicted Cost:116.4 Actual Cost:116.4
-98
+<Uninformed Search Algorithm>:Visited Nodes number: 16
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 291.9
+Real Cost:116.4
+IDA*:
+Visited Nodes number: 16
+10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 291.9
+Real Cost:116.4
 
 Day 71
-Predicted Cost:125.05 Actual Cost:111.75
-109
+<Uninformed Search Algorithm>:Visited Nodes number: 20
+10Node3e(59.0 ) -> 9Node6e(32.5 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 303.75
+Real Cost:128.25
+IDA*:
+Visited Nodes number: 20
+10Node3e(59.0 ) -> 9Node6e(32.5 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 303.75
+Real Cost:128.25
 
 Day 72
-Predicted Cost:111.15 Actual Cost:126.4
-100
+<Uninformed Search Algorithm>:Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 288.75
+Real Cost:119.0
+IDA*:
+Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 288.75
+Real Cost:119.0
 
 Day 73
-Predicted Cost:108.7 Actual Cost:115.2
-99
+<Uninformed Search Algorithm>:Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(26.0 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 286.30002
+Real Cost:117.299995
+IDA*:
+Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(26.0 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 286.30002
+Real Cost:117.299995
 
 Day 74
-Predicted Cost:116.7 Actual Cost:123.2
-106
+<Uninformed Search Algorithm>:Visited Nodes number: 16
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 292.2
+Real Cost:123.2
+IDA*:
+Visited Nodes number: 16
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(41.25 ) -> 9Node0e
+Predicted Cost: 292.2
+Real Cost:123.2
 
 Day 75
-Predicted Cost:107.35 Actual Cost:113.1
-105
+<Uninformed Search Algorithm>:Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 288.75
+Real Cost:119.0
+IDA*:
+Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 288.75
+Real Cost:119.0
 
 Day 76
-Predicted Cost:108.4 Actual Cost:108.4
-101
+<Uninformed Search Algorithm>:Visited Nodes number: 21
+10Node3e(73.75 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 306.65
+Real Cost:131.15
+IDA*:
+Visited Nodes number: 21
+10Node3e(73.75 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 306.65
+Real Cost:131.15
 
 Day 77
-Predicted Cost:114.15 Actual Cost:126.25
-114
+<Uninformed Search Algorithm>:Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 291.75
+Real Cost:118.85
+IDA*:
+Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 291.75
+Real Cost:118.85
 
 Day 78
-Predicted Cost:114.15 Actual Cost:116.75
-108
+<Uninformed Search Algorithm>:Visited Nodes number: 17
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 291.75
+Real Cost:118.85
+IDA*:
+Visited Nodes number: 17
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 291.75
+Real Cost:118.85
 
 Day 79
-Predicted Cost:119.0 Actual Cost:124.4
-100
+<Uninformed Search Algorithm>:Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:124.4
+IDA*:
+Visited Nodes number: 18
+10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(29.699999 ) -> 9Node0e
+Predicted Cost: 294.5
+Real Cost:124.4
 
 Day 80
-Predicted Cost:106.05 Actual Cost:106.05
-103
+<Uninformed Search Algorithm>:Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 288.75
+Real Cost:113.25
+IDA*:
+Visited Nodes number: 16
+10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(33.0 ) -> 9Node0e
+Predicted Cost: 288.75
+Real Cost:113.25
 
-8363
-17457.762 /13360
