@@ -46,26 +46,28 @@ public class Project {
         }
     
     
-    static class Experiment{
-        BufferedReader in ;
+    static class Experiment {
+        BufferedReader in;
         Output out;
         Vertex source;
         Vertex destination;
-        static HashMap<String,Edge> roads = new HashMap<>();
-        static Probabilities probs=new Probabilities();
-        ArrayList<Vertex> listOfVertices= new ArrayList<>();
-        static int day=-1;
+        static HashMap<String, Edge> roads = new HashMap<>();
+        static Probabilities probs = new Probabilities();
+        static int day = -1;
+        HashMap<String, Vertex> vertexMap ;
 
-        Experiment(BufferedReader in , Output out){
-            this.in=in;
-            this.out=out;
-            source=null;
-            destination= null ;
+        Experiment(BufferedReader in, Output out) {
+            this.in = in;
+            this.out = out;
+            source = null;
+            destination = null;
+            vertexMap = new HashMap<>();
         }
-        
-        public void experiment() throws IOException{
+
+        public void experiment() throws IOException {
 
             constructGraph();
+
             //initialization of predictions and actual outcomes of road traffic status
             initializeTraffic(false);
             initializeTraffic(true);
@@ -73,55 +75,52 @@ public class Project {
             day++;
             out.println("=================================================");
             for (int i = 0; i < 80; i++) {
-                out.println("Day "+(i+1));
+                out.println("Day " + (i + 1));
                 out.print("<Uninformed Search Algorithm>:");
-                SearchNode goal= UCS(source, destination.name);
-                out.println("Visited Nodes number: "+ goal.numOfExpandedNodes);
+                SearchNode goal = UCS(source, destination.name);
+                out.println("Visited Nodes number: " + goal.numOfExpandedNodes);
                 printPathInfo(goal);
                 out.println("IDA*:");
-                goal= IDA(source, destination.name);
-                out.println("Visited Nodes number: "+ goal.numOfExpandedNodes);
+                goal = IDA(source, destination.name);
+                out.println("Visited Nodes number: " + goal.numOfExpandedNodes);
                 printPathInfo(goal);
-              
-                if(i<79){
+
+                if (i < 79) {
                     day++;
                     probs.computeDailyProbabilities();
                 }
                 out.println("");
 
             }
-            
-
-
-
 
 
         }
 
-        
-        void initializeVertexHeuristics(){
-            for(int i=0; i<listOfVertices.size();i++){
-                Vertex start=listOfVertices.get(i);
-                listOfVertices.get(i).heuristic=UCS(start, destination.name).predictedCost;
-            }
+
+        void initializeVertexHeuristics() {
+            for (Vertex start : vertexMap.values())
+                start.heuristic = UCS(start, destination.name).predictedCost;
+
         }
 
 
-        void printPathInfo(SearchNode goal){
+        void printPathInfo(SearchNode goal) {
             LinkedList<SearchNode> nodeList = new LinkedList<>();
-            SearchNode node =  goal;
-            while(node.parentNode!=null){
+            SearchNode node = goal;
+            while (node.parentNode != null) {
                 nodeList.addFirst(node);
-                node=node.parentNode;
+                node = node.parentNode;
             }
             nodeList.addFirst(node);
 
-            for(int i=0;i<nodeList.size()-1;i++){
-                float roadCost=nodeList.get(i).originVertex.findEdgeOfNeighbour(nodeList.get(i+1).originVertex).getPredictedCost();
-                 out.print(nodeList.get(i).getName()+ "(" +roadCost+" ) " + "-> ");
+
+            for (int i = 0; i < nodeList.size() - 1; i++) {
+                float roadCost = nodeList.get(i).originVertex.findEdgeOfNeighbour(nodeList.get(i + 1).originVertex).getPredictedCost();
+
+                out.print(nodeList.get(i).getName() + "(" + nodeList.get(i).costToGetHere + " ) " + "-> ");
             }
-            out.println(nodeList.get(nodeList.size()-1).getName());
-            out.println("Predicted Cost: "+goal.predictedCost);
+            out.println(nodeList.get(nodeList.size() - 1).getName() + "(" + nodeList.get(nodeList.size() - 1).costToGetHere + " ) ");
+            out.println("Predicted Cost: " + nodeList.get(nodeList.size() - 1).predictedCost);
             out.println("Real Cost:" + goal.realCost);
 
         }
@@ -131,117 +130,111 @@ public class Project {
 
             //choosing whether to initialize predictions or actualTrafficPerDay
             String fileBound;
-            if(actualTraffic)
-                fileBound="</ActualTrafficPerDay>";
+            if (actualTraffic)
+                fileBound = "</ActualTrafficPerDay>";
             else
-                fileBound= "</Predictions>";
+                fileBound = "</Predictions>";
 
             //skip lines <Predictions> and <Day>
             in.readLine();
             in.readLine();
 
             String prediction = in.readLine();
-            while(!prediction.equals(fileBound)){
-                while(!prediction.equals("</Day>")){
+            while (!prediction.equals(fileBound)) {
+                while (!prediction.equals("</Day>")) {
                     //splitting string based on ';' character
-                    String[] lineTokens =  prediction.replaceAll(" ", "").split(";");
-                    if(lineTokens.length>1) {
+                    String[] lineTokens = prediction.replaceAll(" ", "").split(";");
+                    if (lineTokens.length > 1) {
                         String roadName = lineTokens[0];
                         String trafficState = lineTokens[1];
                         //adding predictions to the history of each road
                         roads.get(roadName).addToTrafficHistory(trafficState, actualTraffic);
                     }
                     //read next line
-                    prediction=in.readLine();
+                    prediction = in.readLine();
                 }
                 //skip <Day>
-                prediction=in.readLine();
+                prediction = in.readLine();
             }
         }
 
 
+        void constructGraph() throws IOException {
 
-        void constructGraph() throws IOException{
-            
             //aquiring and creating source vertex from file
             String sourceName = in.readLine();
-            sourceName =  sourceName.substring(8,sourceName.length()-9);
-            source= new Vertex(sourceName);
-            
+            sourceName = sourceName.substring(8, sourceName.length() - 9);
+            source = new Vertex(sourceName);
+
             //aquiring and creating destination vertex from file
             String destinationName = in.readLine();
-            destinationName= destinationName.substring(13,destinationName.length()-14);
+            destinationName = destinationName.substring(13, destinationName.length() - 14);
             destination = new Vertex(destinationName);
 
-            listOfVertices.add(source);
-            listOfVertices.add(destination);
 
-            HashMap<String,Vertex> vertexMap = new HashMap<>();
             vertexMap.put(sourceName, source);
             vertexMap.put(destinationName, destination);
 
             //bypassing the <Roads> string in the file
             in.readLine();
             //reading all lines until line == </Roads> to get the graph info
-            String fileLine=in.readLine().replaceAll(" ", "");
-            while(!fileLine.equals("</Roads>")){
-                String[] lineTokens =  fileLine.split(";");
-                
+            String fileLine = in.readLine().replaceAll(" ", "");
+            while (!fileLine.equals("</Roads>")) {
+                String[] lineTokens = fileLine.split(";");
+
                 addToGraph(lineTokens, vertexMap);
 
-                fileLine=in.readLine().replaceAll(" ", "");
+                fileLine = in.readLine().replaceAll(" ", "");
             }
 
         }
 
-        void addToGraph(String[] graphInfo,HashMap<String,Vertex> vertexMap){
+        void addToGraph(String[] graphInfo, HashMap<String, Vertex> vertexMap) {
 
-                String roadName = graphInfo[0];
-                String startVertexName  = graphInfo[1];
-                String endVertexName= graphInfo[2];
-                float normalWeight = Float.parseFloat(graphInfo[3]);
+            String roadName = graphInfo[0];
+            String startVertexName = graphInfo[1];
+            String endVertexName = graphInfo[2];
+            float normalWeight = Float.parseFloat(graphInfo[3]);
 
-                Vertex startingVertex;
-                if(vertexMap.containsKey(startVertexName))    
-                    startingVertex=vertexMap.get(startVertexName);
-                else{
-                    startingVertex = new Vertex(startVertexName);
-                    listOfVertices.add(startingVertex);
-                    vertexMap.put(startVertexName, startingVertex);
-                }
-                Vertex endVertex;
-                if(vertexMap.containsKey(endVertexName))
-                    endVertex=vertexMap.get(endVertexName);
-                else{
-                    endVertex = new Vertex(endVertexName);
-                    listOfVertices.add(endVertex);
-                    vertexMap.put(endVertexName, endVertex);
-                }
-                Edge road = new Edge(roadName,startingVertex,endVertex,normalWeight);
-                
-                roads.put(roadName,road);
+            Vertex startingVertex;
+            if (vertexMap.containsKey(startVertexName))
+                startingVertex = vertexMap.get(startVertexName);
+            else {
+                startingVertex = new Vertex(startVertexName);
+                vertexMap.put(startVertexName, startingVertex);
+            }
+            Vertex endVertex;
+            if (vertexMap.containsKey(endVertexName))
+                endVertex = vertexMap.get(endVertexName);
+            else {
+                endVertex = new Vertex(endVertexName);
+                vertexMap.put(endVertexName, endVertex);
+            }
+            Edge road = new Edge(roadName, startingVertex, endVertex, normalWeight);
 
-                startingVertex.addEdge(road);
-                endVertex.addEdge(road);
+            roads.put(roadName, road);
+
+            startingVertex.addEdge(road);
+            endVertex.addEdge(road);
         }
 
-        SearchNode UCS(Vertex source , String destination){
-            PriorityQueue<SearchNode> fringe =  new PriorityQueue<>();
+        SearchNode UCS(Vertex source, String destination) {
+            PriorityQueue<SearchNode> fringe = new PriorityQueue<>();
             fringe.add(source.createSearchNode());
-            HashMap<String,SearchNode> visitedNodes = new HashMap<>();
-            
-            while(!fringe.isEmpty()){
+            HashMap<String, SearchNode> visitedNodes = new HashMap<>();
+
+            while (!fringe.isEmpty()) {
                 SearchNode node = fringe.poll();
 
-                if(node.getName().equals(destination)){
-                    node.numOfExpandedNodes=visitedNodes.size();
+                if (node.getName().equals(destination)) {
+                    node.numOfExpandedNodes = visitedNodes.size();
                     return node;
                 }
 
-                if(!visitedNodes.containsKey(node.getName())){
+                if (!visitedNodes.containsKey(node.getName())) {
 
-                    visitedNodes.put(node.getName(), node);  
-                    node.expand(fringe,false);
+                    visitedNodes.put(node.getName(), node);
+                    node.expand(fringe, false);
                 }
 
             }
@@ -249,45 +242,40 @@ public class Project {
         }
 
 
-        SearchNode IDA(Vertex source , String destination){
-            
-            float costLimit=0;
+        SearchNode IDA(Vertex source, String destination) {
 
-            while(true){
+            float costLimit = 0;
+            int numOfExpandedNodes;
+            while (true) {
 
-                PriorityQueue<SearchNode> fringe =  new PriorityQueue<>();
+                PriorityQueue<SearchNode> fringe = new PriorityQueue<>();
                 fringe.add(source.createSearchNode());
-                HashMap<String,SearchNode> visitedNodes = new HashMap<>();
 
-                while(!fringe.isEmpty()){
+                numOfExpandedNodes = 0;
+                while (!fringe.isEmpty()) {
                     SearchNode node = fringe.poll();
-    
-                    if(node.getName().equals(destination)){
-                        node.numOfExpandedNodes=visitedNodes.size();
+
+                    if (node.getName().equals(destination)) {
+                        node.numOfExpandedNodes = numOfExpandedNodes;
                         return node;
                     }
-                        
-    
-                    if(!visitedNodes.containsKey(node.getName())){
-    
-                        visitedNodes.put(node.getName(), node);
-                        if(node.predictedCost <=costLimit)
-                            node.expand(fringe,true);
-                        else{ 
-                            costLimit=node.predictedCost;
-                            break;
-                        }
-    
+
+
+                    if (node.predictedCost <= costLimit) {
+                        node.expand(fringe, true);
+                        numOfExpandedNodes++;
+                    } else {
+                        costLimit = node.predictedCost;
+                        break;
                     }
-    
+
                 }
+
             }
-            
-            
-            //return null;
+
+
         }
     }
-    
 
     static class Vertex{
         String name;
@@ -328,6 +316,7 @@ public class Project {
         float realCost;
         Vertex originVertex;
         int numOfExpandedNodes;
+        float costToGetHere;
 
 
         SearchNode(String name,Vertex originVertex) {
@@ -336,6 +325,7 @@ public class Project {
             parentNode=null;
             this.originVertex=originVertex;
             numOfExpandedNodes=0;
+            costToGetHere=0;
         }
 
         @Override
@@ -359,10 +349,12 @@ public class Project {
                 SearchNode node = edge.getNeighbourVertex(this.originVertex).createSearchNode();
                 if(!(this.parentNode!=null && this.parentNode.getName().equals(node.getName()))){
                     float heuristic=0;
-                    if(includeHeuristic)
-                        heuristic=node.originVertex.heuristic;
-       
-                    node.predictedCost = this.predictedCost + edge.getPredictedCost()+heuristic;
+                    //if(includeHeuristic)
+                       // heuristic=node.originVertex.heuristic;
+
+                    node.costToGetHere=edge.getPredictedCost();
+                    node.predictedCost = this.predictedCost + node.costToGetHere+heuristic;
+
                     node.realCost= this.realCost +  edge.getRealCost() + heuristic;
                     node.parentNode=this;
                     fringe.add(node);
@@ -521,18 +513,13 @@ public class Project {
     }
 
 
-
-
-
-
-
     static class Edge{
         String name;
         float normalWeight;
         Vertex start,end;
         ArrayList<Integer> historyOfPredictions;
         ArrayList<Integer> historyOfActualOutcomes ;
-        HashMap<Integer,Float> weightMap ;
+        float[] weightMap ;
         int decision;
 
         Edge(String name,Vertex start,Vertex end,float normalWeight){
@@ -542,10 +529,10 @@ public class Project {
             this.normalWeight= normalWeight;
             this.historyOfPredictions = new ArrayList<>(80);
             this.historyOfActualOutcomes = new ArrayList<>(80);
-            weightMap = new HashMap<>();
-            weightMap.put(0,(float)0.9);
-            weightMap.put(1,(float)1.0);
-            weightMap.put(2,(float)1.25);
+            weightMap = new float[3];
+            weightMap[0]=(float)0.9;
+            weightMap[1]=(float)1.0;
+            weightMap[2]=(float)1.25;
             decision=0;
         }
 
@@ -582,17 +569,17 @@ public class Project {
             else if(Experiment.day==-1)
                 return normalWeight*((float)0.9);
             else {
-                Random rand = new Random();
-                decision= rand.nextInt(3);
+
+              //  decision= 1;
             }
-            return normalWeight*weightMap.get(decision);
+            return normalWeight*weightMap[decision];
         }
 
 
 
         float getRealCost(){
             if(Experiment.day>=0)
-                return normalWeight*weightMap.get(historyOfActualOutcomes.get(Experiment.day));
+                return normalWeight*weightMap[historyOfActualOutcomes.get(Experiment.day)];
             return 0 ;
         }
     }
