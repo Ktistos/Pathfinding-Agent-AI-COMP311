@@ -117,9 +117,9 @@ public class Project {
             for (int i = 0; i < nodeList.size() - 1; i++) {
                 float roadCost = nodeList.get(i).originVertex.findEdgeOfNeighbour(nodeList.get(i + 1).originVertex).getPredictedCost();
 
-                out.print(nodeList.get(i).getName() + "(" + nodeList.get(i).costToGetHere + " ) " + "-> ");
+                out.print(nodeList.get(i).getName() + "(" + nodeList.get(i+1).roadCostToHere+ " ) " + "-> ");
             }
-            out.println(nodeList.get(nodeList.size() - 1).getName() + "(" + nodeList.get(nodeList.size() - 1).costToGetHere + " ) ");
+            out.println(nodeList.get(nodeList.size() - 1).getName()  );
             out.println("Predicted Cost: " + nodeList.get(nodeList.size() - 1).predictedCost);
             out.println("Real Cost:" + goal.realCost);
 
@@ -317,6 +317,7 @@ public class Project {
         Vertex originVertex;
         int numOfExpandedNodes;
         float costToGetHere;
+        float roadCostToHere;
 
 
         SearchNode(String name,Vertex originVertex) {
@@ -326,6 +327,7 @@ public class Project {
             this.originVertex=originVertex;
             numOfExpandedNodes=0;
             costToGetHere=0;
+            roadCostToHere=0;
         }
 
         @Override
@@ -349,13 +351,14 @@ public class Project {
                 SearchNode node = edge.getNeighbourVertex(this.originVertex).createSearchNode();
                 if(!(this.parentNode!=null && this.parentNode.getName().equals(node.getName()))){
                     float heuristic=0;
-                    //if(includeHeuristic)
-                       // heuristic=node.originVertex.heuristic;
+                    if(includeHeuristic)
+                       heuristic=node.originVertex.heuristic;
 
-                    node.costToGetHere=edge.getPredictedCost();
-                    node.predictedCost = this.predictedCost + node.costToGetHere+heuristic;
+                    node.roadCostToHere=edge.getPredictedCost();
+                    node.costToGetHere= this.costToGetHere+node.roadCostToHere;
+                    node.predictedCost =  node.costToGetHere+heuristic;
 
-                    node.realCost= this.realCost +  edge.getRealCost() + heuristic;
+                    node.realCost= this.realCost +  edge.getRealCost();
                     node.parentNode=this;
                     fringe.add(node);
                 }
@@ -569,8 +572,8 @@ public class Project {
             else if(Experiment.day==-1)
                 return normalWeight*((float)0.9);
             else {
-
-              //  decision= 1;
+                Random rand = new Random();
+                decision= rand.nextInt(3);
             }
             return normalWeight*weightMap[decision];
         }
