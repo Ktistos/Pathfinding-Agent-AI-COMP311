@@ -1,13 +1,13 @@
 =================================================
 Day 1
 <Uninformed Search Algorithm>:Visited Nodes number: 31
-10Node4e(29.699999 ) -> 10Node5e(44.1 ) -> 11Node8e(19.0 ) -> 11Node10e
-Predicted Cost: 92.799995
-Real Cost:97.549995
+10Node4e(15.299999 ) -> 10Node1e(15.0 ) -> 10Node6e(27.0 ) -> 11Node5e(9.9 ) -> 11Node3e(28.0 ) -> 11Node10e
+Predicted Cost: 95.2
+Real Cost:100.85
 IDA*:
 Visited Nodes number: 5
-10Node4e(15.299999 ) -> 10Node1e(15.0 ) -> 10Node6e(24.3 ) -> 11Node5e(9.9 ) -> 11Node3e(25.199999 ) -> 11Node10e
-Predicted Cost: 89.7
+10Node4e(17.0 ) -> 10Node1e(13.5 ) -> 10Node6e(24.3 ) -> 11Node5e(11.0 ) -> 11Node3e(25.199999 ) -> 11Node10e
+Predicted Cost: 91.0
 Real Cost:100.85
 
 Day 2
