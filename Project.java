@@ -6,6 +6,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.time.Duration;
+import java.time.Instant;
 import java.util.*;
 
 
@@ -73,25 +75,64 @@ public class Project {
             initializeTraffic(true);
             initializeVertexHeuristics();
             day++;
+
+            float sumOfAllRealCosts=0;
+            float[] monthlySumOfRealCosts=new float[4];
+            int count=0;
             out.println("=================================================");
             for (int i = 0; i < 80; i++) {
                 out.println("Day " + (i + 1));
                 out.print("<Uninformed Search Algorithm>:");
+                Instant start = Instant.now();
                 SearchNode goal = UCS(source, destination.name);
-                out.println("Visited Nodes number: " + goal.numOfExpandedNodes);
-                printPathInfo(goal);
+                Instant end = Instant.now();
+                Duration duration= Duration.between(start,end);
+                out.println("\t" +"Excecution time(μs): "+(double)(duration.toNanos()/1000));
+                out.println("\t" +"Visited Nodes number: " + goal.numOfExpandedNodes);
+                out.println("\t" + getPathInfo(goal));
+                out.println("\t" +"Predicted Cost: " + goal.predictedCost);
+                out.println("\t" +"Real Cost:" + goal.realCost);
+
+
                 out.println("IDA*:");
+                start=Instant.now();
                 goal = IDA(source, destination.name);
-                out.println("Visited Nodes number: " + goal.numOfExpandedNodes);
-                printPathInfo(goal);
+                end = Instant.now();
+                duration= Duration.between(start,end);
+                out.println("\t" + "Excecution time(μs): "+(double)(duration.toNanos()/1000));
+                out.println("\t" +"Visited Nodes number: " + goal.numOfExpandedNodes);
+                out.println("\t" + getPathInfo(goal));
+                out.println("\t" +"Predicted Cost: " + goal.predictedCost);
+                out.println("\t" +"Real Cost:" + goal.realCost);
+
+                sumOfAllRealCosts+=goal.realCost;
+                monthlySumOfRealCosts[count]+= goal.realCost;
 
                 if (i < 79) {
                     day++;
                     probs.computeDailyProbabilities();
                 }
+
                 out.println("");
 
+                if(i==19 || i==39 || i==59 || i==79 )
+                    count++;
+
             }
+            out.println("=================================================");
+
+            out.println("");
+            out.println("**************************************************");
+            out.println("Average real path cost for days 1-20 :" + (monthlySumOfRealCosts[0]/20));
+            out.println("**************************************************");
+            out.println("Average real path cost for days 21-40 :" + (monthlySumOfRealCosts[1]/20));
+            out.println("**************************************************");
+            out.println("Average real path cost for days 41-60 :" + (monthlySumOfRealCosts[2]/20));
+            out.println("**************************************************");
+            out.println("Average real path cost for days 61-80 :" + (monthlySumOfRealCosts[3]/20));
+            out.println("**************************************************");
+            out.println("Average real path cost for the 3 months:" + (sumOfAllRealCosts/80));
+            out.println("**************************************************");
 
 
         }
@@ -104,7 +145,7 @@ public class Project {
         }
 
 
-        void printPathInfo(SearchNode goal) {
+        String getPathInfo(SearchNode goal) {
             LinkedList<SearchNode> nodeList = new LinkedList<>();
             SearchNode node = goal;
             while (node.parentNode != null) {
@@ -113,16 +154,18 @@ public class Project {
             }
             nodeList.addFirst(node);
 
+            StringBuilder pathInfo= new StringBuilder();
+
 
             for (int i = 0; i < nodeList.size() - 1; i++) {
-                float roadCost = nodeList.get(i).originVertex.findEdgeOfNeighbour(nodeList.get(i + 1).originVertex).getPredictedCost();
-
-                out.print(nodeList.get(i).getName() + "(" + nodeList.get(i+1).roadCostToHere+ " ) " + "-> ");
+                pathInfo.append(nodeList.get(i).getName());
+                pathInfo.append("(");
+                pathInfo.append(nodeList.get(i+1).roadCostToHere);
+                pathInfo.append( " ) -> ");
             }
-            out.println(nodeList.get(nodeList.size() - 1).getName()  );
-            out.println("Predicted Cost: " + nodeList.get(nodeList.size() - 1).predictedCost);
-            out.println("Real Cost:" + goal.realCost);
+            pathInfo.append(nodeList.get(nodeList.size() - 1).getName()  );
 
+            return pathInfo.toString();
         }
 
 
