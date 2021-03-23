@@ -57,7 +57,6 @@ public class Project {
         static Probabilities probs = new Probabilities();
         static int day = -1;
         HashMap<String, Vertex> vertexMap ;
-        int numOfCorrectPredictions;
 
         Experiment(BufferedReader in, Output out) {
             this.in = in;
@@ -65,7 +64,6 @@ public class Project {
             source = null;
             destination = null;
             vertexMap = new HashMap<>();
-            numOfCorrectPredictions=0;
         }
 
         public void experiment() throws IOException {
@@ -112,7 +110,7 @@ public class Project {
 
                 if (i < 79) {
                     day++;
-                    probs.computeDailyProbabilities(roads,day);
+                    probs.computeDailyProbabilities();
                 }
 
                 out.println("");
@@ -124,7 +122,6 @@ public class Project {
             out.println("=================================================");
 
             out.println("");
-            out.println("Frequency of correct predictions: " + (float)numOfCorrectPredictions/((float) 80* roads.size()));
             out.println("**************************************************");
             out.println("Average real path cost for days 1-20 :" + (monthlySumOfRealCosts[0]/20));
             out.println("**************************************************");
@@ -144,6 +141,7 @@ public class Project {
         void initializeVertexHeuristics() {
             for (Vertex start : vertexMap.values())
                 start.heuristic = UCS(start, destination.name).predictedCost;
+
         }
 
 
@@ -265,7 +263,7 @@ public class Project {
 
         SearchNode UCS(Vertex source, String destination) {
             PriorityQueue<SearchNode> fringe = new PriorityQueue<>();
-            fringe.add(source.createSearchNode(day));
+            fringe.add(source.createSearchNode());
             HashMap<String, SearchNode> visitedNodes = new HashMap<>();
 
             while (!fringe.isEmpty()) {
@@ -294,7 +292,7 @@ public class Project {
             while (true) {
 
                 PriorityQueue<SearchNode> fringe = new PriorityQueue<>();
-                fringe.add(source.createSearchNode(day));
+                fringe.add(source.createSearchNode());
 
                 numOfExpandedNodes = 0;
                 while (!fringe.isEmpty()) {
@@ -337,9 +335,19 @@ public class Project {
             edges.add(edge);
         }
 
-        SearchNode createSearchNode(int day){
-            return new SearchNode(name,this,day);
+         SearchNode createSearchNode(){
+            return new SearchNode(name,this);
         }
+
+
+        Edge findEdgeOfNeighbour(Vertex neighbour){
+            for(Edge edge : edges){
+                if(edge.getNeighbourVertex(this).name.equals(neighbour.name))
+                    return edge;
+            }
+            return null;
+        }
+
 
     }
 
@@ -353,10 +361,9 @@ public class Project {
         int numOfExpandedNodes;
         float costToGetHere;
         float roadCostToHere;
-        int day;
 
 
-        SearchNode(String name,Vertex originVertex,int day) {
+        SearchNode(String name,Vertex originVertex) {
             predictedCost =0;
             realCost=0;
             parentNode=null;
@@ -364,7 +371,6 @@ public class Project {
             numOfExpandedNodes=0;
             costToGetHere=0;
             roadCostToHere=0;
-            this.day=day;
         }
 
         @Override
@@ -385,17 +391,17 @@ public class Project {
         void expand(PriorityQueue<SearchNode> fringe,boolean includeHeuristic){
             for(Edge edge : originVertex.edges){
 
-                SearchNode node = edge.getNeighbourVertex(this.originVertex).createSearchNode(day);
+                SearchNode node = edge.getNeighbourVertex(this.originVertex).createSearchNode();
                 if(!(this.parentNode!=null && this.parentNode.getName().equals(node.getName()))){
                     float heuristic=0;
                     if(includeHeuristic)
                        heuristic=node.originVertex.heuristic;
 
-                    node.roadCostToHere=edge.getPredictedCost(day);
+                    node.roadCostToHere=edge.getPredictedCost();
                     node.costToGetHere= this.costToGetHere+node.roadCostToHere;
                     node.predictedCost =  node.costToGetHere+heuristic;
 
-                    node.realCost= this.realCost +  edge.getRealCost(day);
+                    node.realCost= this.realCost +  edge.getRealCost();
                     node.parentNode=this;
                     fringe.add(node);
                 }
@@ -407,37 +413,149 @@ public class Project {
 
     static class Probabilities{
 
-            int [][] statistics;
+            //a-priori statistics
+            int numOfActualHeavy;
+            int numOfActualNormal;
+            int numOfActualLow;
 
-            public Probabilities() {
+            //a-posteriori statistics
+            //Given Low
+            int lowGivenLow;
+            int normalGivenLow;
+            int heavyGivenLow;
+            //Given Normal
+            int lowGivenNormal;
+            int normalGivenNormal;
+            int heavyGivenNormal;
+            //Given Heavy
+            int lowGivenHeavy;
+            int normalGivenHeavy;
+            int heavyGivenHeavy;
 
-                statistics= new int[3][3];
+            int numOfActualStatus;
+
+
+        public Probabilities() {
+
+            numOfActualHeavy=0;
+            numOfActualNormal=0;
+            numOfActualLow=0;
+
+            lowGivenLow=0;
+            normalGivenLow=0;
+            heavyGivenLow=0;
+
+            lowGivenNormal=0;
+            normalGivenNormal=0;
+            heavyGivenNormal=0;
+
+            lowGivenHeavy=0;
+            normalGivenHeavy=0;
+            heavyGivenHeavy=0;
+
+            numOfActualStatus=0;
+        }
+
+        int MAP(int prediction){
+
+            Map<Float,Integer> probabilityHashmap = new HashMap<>();
+            float prod0=0;
+            float prod1=0;
+            float prod2=0;
+            float maxProd;
+
+
+            float p0 = ((float) numOfActualLow)/((float)numOfActualStatus);
+            float p1 = ((float) numOfActualNormal)/((float)numOfActualStatus);
+            float p2 = ((float) numOfActualHeavy)/((float)numOfActualStatus);
+
+
+
+            float enumerator0 = 0;
+            float enumerator1 = 0;
+            float enumerator2 = 0;
+
+            switch (prediction){
+                case 0:
+                    enumerator0 = lowGivenLow;
+                    enumerator1 = lowGivenNormal;
+                    enumerator2 = lowGivenHeavy;
+                    break;
+                case 1:
+                    enumerator0 = normalGivenLow;
+                    enumerator1 = normalGivenNormal;
+                    enumerator2 = normalGivenHeavy;
+                    break;
+                case 2:
+                    enumerator0 = heavyGivenLow;
+                    enumerator1 = heavyGivenNormal;
+                    enumerator2 = heavyGivenHeavy;
+                    break;
             }
 
-            double getAverageWeight(int prediction){
 
-                double p0=0;
-                double p1=0;
-                double p2=0;
+            prod0 = p0 *(((float)enumerator0)/((float) numOfActualLow));
+            prod1 = p1 *(((float)enumerator1)/((float) numOfActualNormal));
+            prod2 = p2 *(((float)enumerator2)/((float) numOfActualHeavy));
 
-                int numOfPredicted=statistics[2][prediction]+statistics[1][prediction]+statistics[0][prediction];
 
-                p0 =((double)statistics[0][prediction]/(double) numOfPredicted)*(0.9);
-                p1 = ((double) statistics[1][prediction]/(double) numOfPredicted);
-                p2 = ((double) statistics[2][prediction]/(double) numOfPredicted)*(1.25);
+            probabilityHashmap.put(prod0,0);
+            probabilityHashmap.put(prod1,1);
+            probabilityHashmap.put(prod2,2);
 
-                return (p0 + p1 + p2);
-            }
+            maxProd = Math.max(Math.max(prod0,prod1),prod2);
+            return probabilityHashmap.get(maxProd);
+        }
 
-            void computeDailyProbabilities(HashMap<String,Edge> roads , int day){
-
-                for(Edge edge : roads.values()){
-                    int prediction = edge.historyOfPredictions.get(day);
-                    int actualOutcome =  edge.historyOfActualOutcomes.get(day);
-                    statistics[actualOutcome][prediction] ++;
+        void computeDailyProbabilities(){
+            numOfActualStatus+=Experiment.roads.size();
+            for(Edge edge : Experiment.roads.values()){
+                switch (edge.historyOfActualOutcomes.get(Experiment.day)){
+                    case 0:
+                        switch (edge.historyOfPredictions.get(Experiment.day)){
+                            case 0:
+                                lowGivenLow++;
+                                break;
+                            case 1:
+                                normalGivenLow++;
+                                break;
+                            case 2:
+                                heavyGivenLow++;
+                                break;
+                        }
+                        numOfActualLow++;
+                        break;
+                    case 1:
+                        switch (edge.historyOfPredictions.get(Experiment.day)){
+                            case 0:
+                                lowGivenNormal++;
+                                break;
+                            case 1:
+                                normalGivenNormal++;
+                                break;
+                            case 2:
+                                heavyGivenNormal++;
+                                break;
+                        }
+                        numOfActualNormal++;
+                        break;
+                    case 2:
+                        switch (edge.historyOfPredictions.get(Experiment.day)){
+                            case 0:
+                                lowGivenHeavy++;
+                                break;
+                            case 1:
+                                normalGivenHeavy++;
+                                break;
+                            case 2:
+                                heavyGivenHeavy++;
+                                break;
+                        }
+                        numOfActualHeavy++;
+                        break;
                 }
             }
-
+        }
     }
 
 
@@ -490,25 +608,24 @@ public class Project {
             }
         }
 
-        float getPredictedCost(int day){
+        float getPredictedCost(){
 
-            if(day==-1)
+            if(Experiment.day>0)
+                decision=Experiment.probs.MAP(historyOfPredictions.get(Experiment.day));
+            else if(Experiment.day==-1)
                 return normalWeight*((float)0.9);
-            else if(day==0){
+            else {
                 Random rand = new Random();
                 decision= rand.nextInt(3);
-                return weightMap[decision]*normalWeight;
-
             }
-
-            return  normalWeight*(float)Experiment.probs.getAverageWeight(historyOfPredictions.get(day));
+            return normalWeight*weightMap[decision];
         }
 
 
 
-        float getRealCost(int day){
-            if(day>=0)
-                return normalWeight*weightMap[historyOfActualOutcomes.get(day)];
+        float getRealCost(){
+            if(Experiment.day>=0)
+                return normalWeight*weightMap[historyOfActualOutcomes.get(Experiment.day)];
             return 0 ;
         }
     }
@@ -534,5 +651,4 @@ public class Project {
         }
 
     }
-
 }
