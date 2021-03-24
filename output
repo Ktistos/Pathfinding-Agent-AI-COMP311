@@ -1,1054 +1,1055 @@
 =================================================
 Day 1
-<Uninformed Search Algorithm>:	Excecution time(μs): 1218.0
-	Visited Nodes number: 38
-	10Node9e(13.75 ) -> 10Node3e(34.2 ) -> 9Node4e(27.0 ) -> 9Node8e(10.799999 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 108.75
-	Real Cost:119.3
+<Uninformed Search Algorithm>:	Excecution time(μs): 1466.0
+	Visited Nodes number: 32
+	10Node4e(20.699999 ) -> 10Node9e(12.599999 ) -> 10Node6e(27.0 ) -> 11Node5e(13.75 ) -> 11Node3e(28.0 ) -> 11Node10e
+	Predicted Cost: 102.05
+	Real Cost:115.1
 IDA*:
-	Excecution time(μs): 293.0
-	Visited Nodes number: 5
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(11.7 ) -> 9Node6e(26.0 ) -> 9Node5e(20.699999 ) -> 9Node0e
-	Predicted Cost: 103.6
-	Real Cost:130.25
+	Excecution time(μs): 1130.0
+	Visited Nodes number: 14
+	10Node4e(15.299999 ) -> 10Node1e(13.5 ) -> 10Node6e(27.0 ) -> 11Node5e(13.75 ) -> 11Node3e(25.199999 ) -> 11Node10e
+	Predicted Cost: 94.75
+	Real Cost:100.85
 
 Day 2
-<Uninformed Search Algorithm>:	Excecution time(μs): 2041.0
-	Visited Nodes number: 38
-	10Node9e(13.75 ) -> 10Node3e(34.2 ) -> 9Node4e(11.7 ) -> 9Node6e(23.4 ) -> 9Node5e(20.699999 ) -> 9Node0e
-	Predicted Cost: 103.75
-	Real Cost:106.35
+<Uninformed Search Algorithm>:	Excecution time(μs): 454.0
+	Visited Nodes number: 32
+	10Node4e(17.491405 ) -> 10Node1e(17.32317 ) -> 10Node6e(31.181707 ) -> 11Node5e(21.60703 ) -> 11Node8e(19.54922 ) -> 11Node10e
+	Predicted Cost: 107.152534
+	Real Cost:102.75
 IDA*:
-	Excecution time(μs): 426.0
-	Visited Nodes number: 5
-	10Node9e(13.75 ) -> 10Node3e(34.2 ) -> 9Node4e(11.7 ) -> 9Node6e(23.4 ) -> 9Node5e(20.699999 ) -> 9Node0e
-	Predicted Cost: 103.75
-	Real Cost:106.35
+	Excecution time(μs): 3076.0
+	Visited Nodes number: 35
+	10Node4e(17.491405 ) -> 10Node1e(17.32317 ) -> 10Node6e(31.181707 ) -> 11Node5e(21.60703 ) -> 11Node8e(19.54922 ) -> 11Node10e
+	Predicted Cost: 107.152534
+	Real Cost:102.75
 
 Day 3
-<Uninformed Search Algorithm>:	Excecution time(μs): 2048.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 108.4
-	Real Cost:104.6
+<Uninformed Search Algorithm>:	Excecution time(μs): 188.0
+	Visited Nodes number: 31
+	10Node4e(17.361824 ) -> 10Node1e(15.319256 ) -> 10Node6e(27.574661 ) -> 11Node5e(11.234121 ) -> 11Node3e(28.595945 ) -> 11Node10e
+	Predicted Cost: 100.08581
+	Real Cost:95.3
 IDA*:
-	Excecution time(μs): 532.0
-	Visited Nodes number: 6
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 108.4
-	Real Cost:104.6
+	Excecution time(μs): 652.0
+	Visited Nodes number: 22
+	10Node4e(17.361824 ) -> 10Node1e(15.319256 ) -> 10Node6e(27.574661 ) -> 11Node5e(11.234121 ) -> 11Node3e(28.595945 ) -> 11Node10e
+	Predicted Cost: 100.08581
+	Real Cost:95.3
 
 Day 4
-<Uninformed Search Algorithm>:	Excecution time(μs): 4254.0
-	Visited Nodes number: 38
-	10Node9e(13.75 ) -> 10Node3e(47.5 ) -> 9Node4e(9.0 ) -> 9Node1e(59.399998 ) -> 9Node0e
-	Predicted Cost: 129.65
-	Real Cost:152.75
+<Uninformed Search Algorithm>:	Excecution time(μs): 202.0
+	Visited Nodes number: 32
+	10Node4e(17.2975 ) -> 10Node1e(17.201834 ) -> 10Node6e(30.963303 ) -> 11Node5e(11.1925 ) -> 11Node3e(27.217648 ) -> 11Node10e
+	Predicted Cost: 103.87279
+	Real Cost:97.25
 IDA*:
-	Excecution time(μs): 2467.0
-	Visited Nodes number: 31
-	10Node9e(13.75 ) -> 10Node3e(47.5 ) -> 9Node4e(9.0 ) -> 9Node1e(59.399998 ) -> 9Node0e
-	Predicted Cost: 129.65
-	Real Cost:152.75
+	Excecution time(μs): 2573.0
+	Visited Nodes number: 20
+	10Node4e(17.2975 ) -> 10Node1e(17.201834 ) -> 10Node6e(30.963303 ) -> 11Node5e(11.1925 ) -> 11Node3e(27.217648 ) -> 11Node10e
+	Predicted Cost: 103.87279
+	Real Cost:97.25
 
 Day 5
-<Uninformed Search Algorithm>:	Excecution time(μs): 384.0
-	Visited Nodes number: 38
-	10Node9e(13.75 ) -> 10Node3e(38.0 ) -> 9Node4e(27.0 ) -> 9Node8e(12.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 113.75
-	Real Cost:124.25
-IDA*:
-	Excecution time(μs): 426.0
-	Visited Nodes number: 13
-	10Node9e(13.75 ) -> 10Node3e(38.0 ) -> 9Node4e(27.0 ) -> 9Node8e(12.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 113.75
-	Real Cost:124.25
-
-Day 6
-<Uninformed Search Algorithm>:	Excecution time(μs): 337.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 116.4
-	Real Cost:119.0
+<Uninformed Search Algorithm>:	Excecution time(μs): 176.0
+	Visited Nodes number: 32
+	10Node4e(17.375252 ) -> 10Node1e(15.331104 ) -> 10Node6e(26.579508 ) -> 11Node5e(21.463547 ) -> 11Node8e(19.4194 ) -> 11Node10e
+	Predicted Cost: 100.16881
+	Real Cost:96.3
 IDA*:
 	Excecution time(μs): 634.0
+	Visited Nodes number: 19
+	10Node4e(17.375252 ) -> 10Node1e(15.331104 ) -> 10Node6e(26.579508 ) -> 11Node5e(21.463547 ) -> 11Node8e(19.4194 ) -> 11Node10e
+	Predicted Cost: 100.16881
+	Real Cost:96.3
+
+Day 6
+<Uninformed Search Algorithm>:	Excecution time(μs): 292.0
+	Visited Nodes number: 31
+	10Node4e(33.78342 ) -> 10Node5e(48.24193 ) -> 11Node8e(18.706053 ) -> 11Node10e
+	Predicted Cost: 100.7314
+	Real Cost:102.45
+IDA*:
+	Excecution time(μs): 452.0
 	Visited Nodes number: 17
-	10Node9e(11.0 ) -> 10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 116.4
-	Real Cost:119.0
+	10Node4e(33.78342 ) -> 10Node5e(48.24193 ) -> 11Node8e(18.706053 ) -> 11Node10e
+	Predicted Cost: 100.7314
+	Real Cost:102.45
 
 Day 7
-<Uninformed Search Algorithm>:	Excecution time(μs): 231.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(11.7 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 105.9
-	Real Cost:103.6
+<Uninformed Search Algorithm>:	Excecution time(μs): 248.0
+	Visited Nodes number: 32
+	10Node4e(32.368217 ) -> 10Node5e(50.1574 ) -> 11Node8e(18.636246 ) -> 11Node10e
+	Predicted Cost: 101.161865
+	Real Cost:107.35
 IDA*:
-	Excecution time(μs): 98.0
-	Visited Nodes number: 5
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(11.7 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 105.9
-	Real Cost:103.6
+	Excecution time(μs): 434.0
+	Visited Nodes number: 16
+	10Node4e(32.368217 ) -> 10Node5e(50.1574 ) -> 11Node8e(18.636246 ) -> 11Node10e
+	Predicted Cost: 101.161865
+	Real Cost:107.35
 
 Day 8
-<Uninformed Search Algorithm>:	Excecution time(μs): 367.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(30.0 ) -> 9Node8e(12.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 110.2
-	Real Cost:120.7
+<Uninformed Search Algorithm>:	Excecution time(μs): 217.0
+	Visited Nodes number: 32
+	10Node4e(17.479445 ) -> 10Node1e(14.792197 ) -> 10Node6e(31.343952 ) -> 11Node5e(24.37863 ) -> 11Node8e(19.53585 ) -> 11Node10e
+	Predicted Cost: 107.530075
+	Real Cost:123.75
 IDA*:
-	Excecution time(μs): 232.0
-	Visited Nodes number: 7
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(30.0 ) -> 9Node8e(12.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 110.2
-	Real Cost:120.7
+	Excecution time(μs): 2503.0
+	Visited Nodes number: 38
+	10Node4e(17.479445 ) -> 10Node1e(14.792197 ) -> 10Node6e(31.343952 ) -> 11Node5e(24.37863 ) -> 11Node8e(19.53585 ) -> 11Node10e
+	Predicted Cost: 107.530075
+	Real Cost:123.75
 
 Day 9
-<Uninformed Search Algorithm>:	Excecution time(μs): 352.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(28.75 ) -> 9Node0e
-	Predicted Cost: 122.15
-	Real Cost:122.15
+<Uninformed Search Algorithm>:	Excecution time(μs): 2917.0
+	Visited Nodes number: 31
+	10Node4e(9.865014 ) -> 5Node2e(7.2036786 ) -> 5Node0e(26.756521 ) -> 11Node2e(61.163086 ) -> 11Node10e
+	Predicted Cost: 104.9883
+	Real Cost:104.0
 IDA*:
-	Excecution time(μs): 1441.0
-	Visited Nodes number: 20
-	10Node9e(11.0 ) -> 10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(28.75 ) -> 9Node0e
-	Predicted Cost: 122.15
-	Real Cost:122.15
+	Excecution time(μs): 2170.0
+	Visited Nodes number: 24
+	10Node4e(9.865014 ) -> 5Node2e(7.2036786 ) -> 5Node0e(26.756521 ) -> 11Node2e(61.163086 ) -> 11Node10e
+	Predicted Cost: 104.9883
+	Real Cost:104.0
 
 Day 10
-<Uninformed Search Algorithm>:	Excecution time(μs): 492.0
-	Visited Nodes number: 38
-	10Node9e(15.0 ) -> 10Node0e(28.0 ) -> 5Node0e(7.5 ) -> 5Node4e(39.6 ) -> 5Node3e(27.0 ) -> 9Node0e
-	Predicted Cost: 117.1
-	Real Cost:126.4
+<Uninformed Search Algorithm>:	Excecution time(μs): 286.0
+	Visited Nodes number: 31
+	10Node4e(16.790579 ) -> 10Node1e(17.32767 ) -> 10Node6e(27.72924 ) -> 11Node5e(11.297098 ) -> 11Node3e(27.655071 ) -> 11Node10e
+	Predicted Cost: 100.79965
+	Real Cost:90.799995
 IDA*:
-	Excecution time(μs): 1156.0
-	Visited Nodes number: 19
-	10Node9e(15.0 ) -> 10Node0e(28.0 ) -> 5Node0e(7.5 ) -> 5Node4e(39.6 ) -> 5Node3e(27.0 ) -> 9Node0e
-	Predicted Cost: 117.1
-	Real Cost:126.4
+	Excecution time(μs): 994.0
+	Visited Nodes number: 22
+	10Node4e(16.790579 ) -> 10Node1e(17.32767 ) -> 10Node6e(27.72924 ) -> 11Node5e(11.297098 ) -> 11Node3e(27.655071 ) -> 11Node10e
+	Predicted Cost: 100.79965
+	Real Cost:90.799995
 
 Day 11
-<Uninformed Search Algorithm>:	Excecution time(μs): 343.0
-	Visited Nodes number: 38
-	10Node9e(13.75 ) -> 10Node3e(38.0 ) -> 9Node4e(11.7 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 109.85
-	Real Cost:109.85
+<Uninformed Search Algorithm>:	Excecution time(μs): 251.0
+	Visited Nodes number: 31
+	10Node4e(33.94474 ) -> 10Node5e(48.538948 ) -> 11Node8e(18.821226 ) -> 11Node10e
+	Predicted Cost: 101.30492
+	Real Cost:109.95
 IDA*:
-	Excecution time(μs): 186.0
-	Visited Nodes number: 6
-	10Node9e(13.75 ) -> 10Node3e(38.0 ) -> 9Node4e(11.7 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 109.85
-	Real Cost:109.85
+	Excecution time(μs): 514.0
+	Visited Nodes number: 17
+	10Node4e(33.94474 ) -> 10Node5e(48.538948 ) -> 11Node8e(18.821226 ) -> 11Node10e
+	Predicted Cost: 101.30492
+	Real Cost:109.95
 
 Day 12
-<Uninformed Search Algorithm>:	Excecution time(μs): 387.0
-	Visited Nodes number: 38
-	10Node9e(13.75 ) -> 10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 119.15
-	Real Cost:119.15
+<Uninformed Search Algorithm>:	Excecution time(μs): 201.0
+	Visited Nodes number: 31
+	10Node4e(17.472559 ) -> 10Node1e(15.416964 ) -> 10Node6e(27.750534 ) -> 11Node5e(11.305774 ) -> 11Node3e(28.778332 ) -> 11Node10e
+	Predicted Cost: 100.72417
+	Real Cost:95.3
 IDA*:
-	Excecution time(μs): 674.0
-	Visited Nodes number: 16
-	10Node9e(13.75 ) -> 10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 119.15
-	Real Cost:119.15
+	Excecution time(μs): 833.0
+	Visited Nodes number: 18
+	10Node4e(17.472559 ) -> 10Node1e(15.416964 ) -> 10Node6e(27.750534 ) -> 11Node5e(11.305774 ) -> 11Node3e(28.778332 ) -> 11Node10e
+	Predicted Cost: 100.72417
+	Real Cost:95.3
 
 Day 13
-<Uninformed Search Algorithm>:	Excecution time(μs): 341.0
-	Visited Nodes number: 38
-	10Node9e(13.75 ) -> 10Node3e(34.2 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 107.35
-	Real Cost:120.25
+<Uninformed Search Algorithm>:	Excecution time(μs): 7172.0
+	Visited Nodes number: 31
+	10Node4e(33.919464 ) -> 10Node5e(48.404545 ) -> 11Node8e(18.76911 ) -> 11Node10e
+	Predicted Cost: 101.09312
+	Real Cost:102.45
 IDA*:
-	Excecution time(μs): 100.0
-	Visited Nodes number: 5
-	10Node9e(13.75 ) -> 10Node3e(34.2 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 107.35
-	Real Cost:120.25
+	Excecution time(μs): 428.0
+	Visited Nodes number: 14
+	10Node4e(33.919464 ) -> 10Node5e(48.404545 ) -> 11Node8e(18.76911 ) -> 11Node10e
+	Predicted Cost: 101.09312
+	Real Cost:102.45
 
 Day 14
-<Uninformed Search Algorithm>:	Excecution time(μs): 340.0
-	Visited Nodes number: 37
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(11.7 ) -> 9Node6e(26.0 ) -> 9Node5e(20.699999 ) -> 9Node0e
-	Predicted Cost: 103.6
-	Real Cost:111.65
+<Uninformed Search Algorithm>:	Excecution time(μs): 171.0
+	Visited Nodes number: 31
+	10Node4e(16.817236 ) -> 10Node1e(17.328588 ) -> 10Node6e(26.709728 ) -> 11Node5e(11.299445 ) -> 11Node3e(27.698977 ) -> 11Node10e
+	Predicted Cost: 99.85397
+	Real Cost:97.25
 IDA*:
-	Excecution time(μs): 130.0
-	Visited Nodes number: 5
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(11.7 ) -> 9Node6e(26.0 ) -> 9Node5e(20.699999 ) -> 9Node0e
-	Predicted Cost: 103.6
-	Real Cost:111.65
+	Excecution time(μs): 561.0
+	Visited Nodes number: 20
+	10Node4e(16.817236 ) -> 10Node1e(17.328588 ) -> 10Node6e(26.709728 ) -> 11Node5e(11.299445 ) -> 11Node3e(27.698977 ) -> 11Node10e
+	Predicted Cost: 99.85397
+	Real Cost:97.25
 
 Day 15
-<Uninformed Search Algorithm>:	Excecution time(μs): 340.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(11.7 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 103.3
-	Real Cost:116.6
+<Uninformed Search Algorithm>:	Excecution time(μs): 186.0
+	Visited Nodes number: 32
+	10Node4e(33.930058 ) -> 10Node5e(48.50071 ) -> 11Node8e(19.535488 ) -> 11Node10e
+	Predicted Cost: 101.96626
+	Real Cost:104.35
 IDA*:
-	Excecution time(μs): 75.0
-	Visited Nodes number: 5
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(11.7 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 103.3
-	Real Cost:116.6
+	Excecution time(μs): 719.0
+	Visited Nodes number: 24
+	10Node4e(33.930058 ) -> 10Node5e(48.50071 ) -> 11Node8e(19.535488 ) -> 11Node10e
+	Predicted Cost: 101.96626
+	Real Cost:104.35
 
 Day 16
-<Uninformed Search Algorithm>:	Excecution time(μs): 350.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(11.7 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 109.7
-	Real Cost:125.7
+<Uninformed Search Algorithm>:	Excecution time(μs): 242.0
+	Visited Nodes number: 31
+	10Node4e(33.93936 ) -> 10Node5e(48.375706 ) -> 11Node8e(18.757927 ) -> 11Node10e
+	Predicted Cost: 101.07299
+	Real Cost:102.45
 IDA*:
-	Excecution time(μs): 247.0
-	Visited Nodes number: 7
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(11.7 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 109.7
-	Real Cost:125.7
+	Excecution time(μs): 452.0
+	Visited Nodes number: 19
+	10Node4e(33.93936 ) -> 10Node5e(48.375706 ) -> 11Node8e(18.757927 ) -> 11Node10e
+	Predicted Cost: 101.07299
+	Real Cost:102.45
 
 Day 17
-<Uninformed Search Algorithm>:	Excecution time(μs): 348.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(27.0 ) -> 9Node8e(10.799999 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 109.8
-	Real Cost:116.75
+<Uninformed Search Algorithm>:	Excecution time(μs): 153.0
+	Visited Nodes number: 31
+	10Node4e(19.569136 ) -> 10Node1e(14.810439 ) -> 10Node6e(26.65879 ) -> 11Node5e(11.310418 ) -> 11Node3e(27.646152 ) -> 11Node10e
+	Predicted Cost: 99.994934
+	Real Cost:100.45
 IDA*:
-	Excecution time(μs): 107.0
-	Visited Nodes number: 6
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(27.0 ) -> 9Node8e(10.799999 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 109.8
-	Real Cost:116.75
+	Excecution time(μs): 535.0
+	Visited Nodes number: 19
+	10Node4e(19.569136 ) -> 10Node1e(14.810439 ) -> 10Node6e(26.65879 ) -> 11Node5e(11.310418 ) -> 11Node3e(27.646152 ) -> 11Node10e
+	Predicted Cost: 99.994934
+	Real Cost:100.45
 
 Day 18
-<Uninformed Search Algorithm>:	Excecution time(μs): 358.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(27.0 ) -> 9Node8e(10.799999 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 109.8
-	Real Cost:122.3
+<Uninformed Search Algorithm>:	Excecution time(μs): 232.0
+	Visited Nodes number: 32
+	10Node4e(16.822685 ) -> 10Node1e(17.256638 ) -> 10Node6e(26.718382 ) -> 11Node5e(11.305181 ) -> 11Node3e(32.21239 ) -> 11Node10e
+	Predicted Cost: 104.31528
+	Real Cost:101.8
 IDA*:
-	Excecution time(μs): 360.0
-	Visited Nodes number: 9
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(27.0 ) -> 9Node8e(10.799999 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 109.8
-	Real Cost:122.3
+	Excecution time(μs): 1468.0
+	Visited Nodes number: 30
+	10Node4e(16.822685 ) -> 10Node1e(17.256638 ) -> 10Node6e(26.718382 ) -> 11Node5e(11.305181 ) -> 11Node3e(32.21239 ) -> 11Node10e
+	Predicted Cost: 104.31528
+	Real Cost:101.8
 
 Day 19
-<Uninformed Search Algorithm>:	Excecution time(μs): 358.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(11.7 ) -> 9Node6e(26.0 ) -> 9Node5e(28.75 ) -> 9Node0e
-	Predicted Cost: 115.45
-	Real Cost:126.9
+<Uninformed Search Algorithm>:	Excecution time(μs): 399.0
+	Visited Nodes number: 31
+	10Node4e(16.818007 ) -> 10Node1e(14.839418 ) -> 10Node6e(27.732828 ) -> 11Node5e(11.29856 ) -> 11Node3e(27.700247 ) -> 11Node10e
+	Predicted Cost: 98.38906
+	Real Cost:98.75
 IDA*:
-	Excecution time(μs): 1031.0
-	Visited Nodes number: 18
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(11.7 ) -> 9Node6e(26.0 ) -> 9Node5e(28.75 ) -> 9Node0e
-	Predicted Cost: 115.45
-	Real Cost:126.9
+	Excecution time(μs): 719.0
+	Visited Nodes number: 13
+	10Node4e(16.818007 ) -> 10Node1e(14.839418 ) -> 10Node6e(27.732828 ) -> 11Node5e(11.29856 ) -> 11Node3e(27.700247 ) -> 11Node10e
+	Predicted Cost: 98.38906
+	Real Cost:98.75
 
 Day 20
-<Uninformed Search Algorithm>:	Excecution time(μs): 374.0
-	Visited Nodes number: 38
-	10Node9e(9.9 ) -> 10Node3e(34.2 ) -> 9Node4e(11.7 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 102.2
-	Real Cost:124.6
+<Uninformed Search Algorithm>:	Excecution time(μs): 334.0
+	Visited Nodes number: 31
+	10Node4e(33.880596 ) -> 10Node5e(50.307552 ) -> 11Node8e(19.507011 ) -> 11Node10e
+	Predicted Cost: 103.69516
+	Real Cost:104.35
 IDA*:
-	Excecution time(μs): 71.0
-	Visited Nodes number: 5
-	10Node9e(9.9 ) -> 10Node3e(34.2 ) -> 9Node4e(11.7 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 102.2
-	Real Cost:124.6
+	Excecution time(μs): 886.0
+	Visited Nodes number: 20
+	10Node4e(33.880596 ) -> 10Node5e(50.307552 ) -> 11Node8e(19.507011 ) -> 11Node10e
+	Predicted Cost: 103.69516
+	Real Cost:104.35
 
 Day 21
-<Uninformed Search Algorithm>:	Excecution time(μs): 414.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 119.0
-	Real Cost:116.4
+<Uninformed Search Algorithm>:	Excecution time(μs): 305.0
+	Visited Nodes number: 31
+	10Node4e(17.45922 ) -> 10Node1e(14.850993 ) -> 10Node6e(31.054129 ) -> 11Node5e(20.791391 ) -> 11Node8e(18.811258 ) -> 11Node10e
+	Predicted Cost: 102.96699
+	Real Cost:93.5
 IDA*:
-	Excecution time(μs): 716.0
-	Visited Nodes number: 16
-	10Node9e(11.0 ) -> 10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 119.0
-	Real Cost:116.4
+	Excecution time(μs): 900.0
+	Visited Nodes number: 22
+	10Node4e(17.45922 ) -> 10Node1e(14.850993 ) -> 10Node6e(31.054129 ) -> 11Node5e(20.791391 ) -> 11Node8e(18.811258 ) -> 11Node10e
+	Predicted Cost: 102.96699
+	Real Cost:93.5
 
 Day 22
-<Uninformed Search Algorithm>:	Excecution time(μs): 365.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(16.25 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 107.85
-	Real Cost:123.9
+<Uninformed Search Algorithm>:	Excecution time(μs): 230.0
+	Visited Nodes number: 31
+	10Node4e(17.464254 ) -> 10Node1e(17.253304 ) -> 10Node6e(26.712948 ) -> 11Node5e(11.3004 ) -> 11Node3e(27.702316 ) -> 11Node10e
+	Predicted Cost: 100.43323
+	Real Cost:96.25
 IDA*:
-	Excecution time(μs): 235.0
-	Visited Nodes number: 9
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(16.25 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 107.85
-	Real Cost:123.9
+	Excecution time(μs): 880.0
+	Visited Nodes number: 21
+	10Node4e(17.464254 ) -> 10Node1e(17.253304 ) -> 10Node6e(26.712948 ) -> 11Node5e(11.3004 ) -> 11Node3e(27.702316 ) -> 11Node10e
+	Predicted Cost: 100.43323
+	Real Cost:96.25
 
 Day 23
-<Uninformed Search Algorithm>:	Excecution time(μs): 438.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 110.5
-	Real Cost:110.5
+<Uninformed Search Algorithm>:	Excecution time(μs): 269.0
+	Visited Nodes number: 31
+	10Node4e(16.825378 ) -> 10Node1e(14.8459215 ) -> 10Node6e(27.72478 ) -> 11Node5e(21.563717 ) -> 11Node8e(18.804834 ) -> 11Node10e
+	Predicted Cost: 99.764626
+	Real Cost:97.15
 IDA*:
-	Excecution time(μs): 141.0
-	Visited Nodes number: 6
-	10Node9e(11.0 ) -> 10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 110.5
-	Real Cost:110.5
+	Excecution time(μs): 670.0
+	Visited Nodes number: 18
+	10Node4e(16.825378 ) -> 10Node1e(14.8459215 ) -> 10Node6e(27.72478 ) -> 11Node5e(21.563717 ) -> 11Node8e(18.804834 ) -> 11Node10e
+	Predicted Cost: 99.764626
+	Real Cost:97.15
 
 Day 24
-<Uninformed Search Algorithm>:	Excecution time(μs): 351.0
-	Visited Nodes number: 37
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(11.7 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 105.9
-	Real Cost:115.5
+<Uninformed Search Algorithm>:	Excecution time(μs): 180.0
+	Visited Nodes number: 31
+	10Node4e(19.501461 ) -> 10Node1e(15.409245 ) -> 10Node6e(26.70737 ) -> 11Node5e(11.300113 ) -> 11Node3e(28.763924 ) -> 11Node10e
+	Predicted Cost: 101.68211
+	Real Cost:105.0
 IDA*:
-	Excecution time(μs): 77.0
-	Visited Nodes number: 5
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(11.7 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 105.9
-	Real Cost:115.5
+	Excecution time(μs): 832.0
+	Visited Nodes number: 21
+	10Node4e(19.501461 ) -> 10Node1e(15.409245 ) -> 10Node6e(26.70737 ) -> 11Node5e(11.300113 ) -> 11Node3e(28.763924 ) -> 11Node10e
+	Predicted Cost: 101.68211
+	Real Cost:105.0
 
 Day 25
-<Uninformed Search Algorithm>:	Excecution time(μs): 298.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(27.0 ) -> 9Node8e(12.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 107.2
-	Real Cost:121.5
+<Uninformed Search Algorithm>:	Excecution time(μs): 192.0
+	Visited Nodes number: 32
+	10Node4e(16.810505 ) -> 10Node1e(17.209667 ) -> 10Node6e(30.9774 ) -> 11Node5e(10.877385 ) -> 11Node3e(27.68789 ) -> 11Node10e
+	Predicted Cost: 103.56285
+	Real Cost:95.649994
 IDA*:
-	Excecution time(μs): 147.0
-	Visited Nodes number: 7
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(13.0 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 107.2
-	Real Cost:111.0
+	Excecution time(μs): 2317.0
+	Visited Nodes number: 24
+	10Node4e(16.810505 ) -> 10Node1e(17.209667 ) -> 10Node6e(30.9774 ) -> 11Node5e(10.877385 ) -> 11Node3e(27.68789 ) -> 11Node10e
+	Predicted Cost: 103.56285
+	Real Cost:95.649994
 
 Day 26
-<Uninformed Search Algorithm>:	Excecution time(μs): 341.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 104.6
-	Real Cost:111.399994
+<Uninformed Search Algorithm>:	Excecution time(μs): 229.0
+	Visited Nodes number: 32
+	10Node4e(33.933884 ) -> 10Node5e(48.498814 ) -> 11Node8e(19.53769 ) -> 11Node10e
+	Predicted Cost: 101.97038
+	Real Cost:104.35
 IDA*:
-	Excecution time(μs): 90.0
-	Visited Nodes number: 5
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 104.6
-	Real Cost:111.399994
+	Excecution time(μs): 770.0
+	Visited Nodes number: 24
+	10Node4e(33.933884 ) -> 10Node5e(48.498814 ) -> 11Node8e(19.53769 ) -> 11Node10e
+	Predicted Cost: 101.97038
+	Real Cost:104.35
 
 Day 27
-<Uninformed Search Algorithm>:	Excecution time(μs): 300.0
-	Visited Nodes number: 38
-	10Node9e(9.9 ) -> 10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 115.3
-	Real Cost:119.15
+<Uninformed Search Algorithm>:	Excecution time(μs): 161.0
+	Visited Nodes number: 31
+	10Node4e(17.468098 ) -> 10Node1e(14.859017 ) -> 10Node6e(27.74345 ) -> 11Node5e(21.57824 ) -> 11Node8e(19.523169 ) -> 11Node10e
+	Predicted Cost: 101.171974
+	Real Cost:94.8
 IDA*:
-	Excecution time(μs): 211.0
-	Visited Nodes number: 9
-	10Node9e(9.9 ) -> 10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 115.3
-	Real Cost:119.15
+	Excecution time(μs): 884.0
+	Visited Nodes number: 22
+	10Node4e(17.468098 ) -> 10Node1e(14.859017 ) -> 10Node6e(27.74345 ) -> 11Node5e(21.57824 ) -> 11Node8e(19.523169 ) -> 11Node10e
+	Predicted Cost: 101.171974
+	Real Cost:94.8
 
 Day 28
-<Uninformed Search Algorithm>:	Excecution time(μs): 310.0
-	Visited Nodes number: 37
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(11.7 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 107.1
-	Real Cost:107.1
+<Uninformed Search Algorithm>:	Excecution time(μs): 180.0
+	Visited Nodes number: 32
+	10Node4e(17.486591 ) -> 10Node1e(17.181356 ) -> 10Node6e(26.742804 ) -> 11Node5e(11.314853 ) -> 11Node3e(28.801443 ) -> 11Node10e
+	Predicted Cost: 101.52705
+	Real Cost:102.3
 IDA*:
-	Excecution time(μs): 98.0
-	Visited Nodes number: 5
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(11.7 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 107.1
-	Real Cost:107.1
+	Excecution time(μs): 712.0
+	Visited Nodes number: 23
+	10Node4e(17.486591 ) -> 10Node1e(17.181356 ) -> 10Node6e(26.742804 ) -> 11Node5e(11.314853 ) -> 11Node3e(28.801443 ) -> 11Node10e
+	Predicted Cost: 101.52705
+	Real Cost:102.3
 
 Day 29
-<Uninformed Search Algorithm>:	Excecution time(μs): 332.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(30.0 ) -> 9Node8e(12.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 110.2
-	Real Cost:116.5
+<Uninformed Search Algorithm>:	Excecution time(μs): 151.0
+	Visited Nodes number: 31
+	10Node4e(16.835075 ) -> 10Node1e(17.177393 ) -> 10Node6e(26.73806 ) -> 11Node5e(11.306603 ) -> 11Node3e(28.780445 ) -> 11Node10e
+	Predicted Cost: 100.83757
+	Real Cost:100.05
 IDA*:
-	Excecution time(μs): 310.0
-	Visited Nodes number: 10
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(30.0 ) -> 9Node8e(12.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 110.2
-	Real Cost:116.5
+	Excecution time(μs): 503.0
+	Visited Nodes number: 21
+	10Node4e(16.835075 ) -> 10Node1e(17.177393 ) -> 10Node6e(26.73806 ) -> 11Node5e(11.306603 ) -> 11Node3e(28.780445 ) -> 11Node10e
+	Predicted Cost: 100.83757
+	Real Cost:100.05
 
 Day 30
-<Uninformed Search Algorithm>:	Excecution time(μs): 301.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(11.7 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 107.1
-	Real Cost:116.2
+<Uninformed Search Algorithm>:	Excecution time(μs): 115.0
+	Visited Nodes number: 31
+	10Node4e(33.948547 ) -> 10Node5e(48.518883 ) -> 11Node8e(18.813444 ) -> 11Node10e
+	Predicted Cost: 101.280876
+	Real Cost:102.45
 IDA*:
-	Excecution time(μs): 92.0
-	Visited Nodes number: 5
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(11.7 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 107.1
-	Real Cost:116.2
+	Excecution time(μs): 943.0
+	Visited Nodes number: 23
+	10Node4e(33.948547 ) -> 10Node5e(48.518883 ) -> 11Node8e(18.813444 ) -> 11Node10e
+	Predicted Cost: 101.280876
+	Real Cost:102.45
 
 Day 31
-<Uninformed Search Algorithm>:	Excecution time(μs): 287.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(13.0 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 111.0
-	Real Cost:108.4
+<Uninformed Search Algorithm>:	Excecution time(μs): 232.0
+	Visited Nodes number: 32
+	10Node4e(16.828138 ) -> 10Node1e(17.147058 ) -> 10Node6e(30.864704 ) -> 11Node5e(21.594742 ) -> 11Node8e(19.5381 ) -> 11Node10e
+	Predicted Cost: 105.97275
+	Real Cost:98.35
 IDA*:
-	Excecution time(μs): 154.0
-	Visited Nodes number: 7
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(13.0 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 111.0
-	Real Cost:108.4
+	Excecution time(μs): 1741.0
+	Visited Nodes number: 34
+	10Node4e(16.828138 ) -> 10Node1e(17.147058 ) -> 10Node6e(30.864704 ) -> 11Node5e(21.594742 ) -> 11Node8e(19.5381 ) -> 11Node10e
+	Predicted Cost: 105.97275
+	Real Cost:98.35
 
 Day 32
-<Uninformed Search Algorithm>:	Excecution time(μs): 300.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(30.0 ) -> 9Node8e(12.0 ) -> 9Node5e(28.75 ) -> 9Node0e
-	Predicted Cost: 119.75
-	Real Cost:119.2
+<Uninformed Search Algorithm>:	Excecution time(μs): 182.0
+	Visited Nodes number: 32
+	10Node4e(19.406923 ) -> 10Node1e(15.416631 ) -> 10Node6e(30.82276 ) -> 11Node5e(11.30553 ) -> 11Node3e(27.722773 ) -> 11Node10e
+	Predicted Cost: 104.674614
+	Real Cost:96.75
 IDA*:
-	Excecution time(μs): 1961.0
-	Visited Nodes number: 27
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(30.0 ) -> 9Node8e(12.0 ) -> 9Node5e(28.75 ) -> 9Node0e
-	Predicted Cost: 119.75
-	Real Cost:119.2
+	Excecution time(μs): 1898.0
+	Visited Nodes number: 24
+	10Node4e(19.406923 ) -> 10Node1e(15.416631 ) -> 10Node6e(30.82276 ) -> 11Node5e(11.30553 ) -> 11Node3e(27.722773 ) -> 11Node10e
+	Predicted Cost: 104.674614
+	Real Cost:96.75
 
 Day 33
-<Uninformed Search Algorithm>:	Excecution time(μs): 329.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 119.0
-	Real Cost:119.0
+<Uninformed Search Algorithm>:	Excecution time(μs): 277.0
+	Visited Nodes number: 31
+	10Node4e(16.825819 ) -> 10Node1e(14.846312 ) -> 10Node6e(26.72336 ) -> 11Node5e(21.59113 ) -> 11Node8e(18.805328 ) -> 11Node10e
+	Predicted Cost: 98.79195
+	Real Cost:94.6
 IDA*:
-	Excecution time(μs): 1072.0
-	Visited Nodes number: 19
-	10Node9e(11.0 ) -> 10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 119.0
-	Real Cost:119.0
+	Excecution time(μs): 484.0
+	Visited Nodes number: 17
+	10Node4e(16.825819 ) -> 10Node1e(14.846312 ) -> 10Node6e(26.72336 ) -> 11Node5e(21.59113 ) -> 11Node8e(18.805328 ) -> 11Node10e
+	Predicted Cost: 98.79195
+	Real Cost:94.6
 
 Day 34
-<Uninformed Search Algorithm>:	Excecution time(μs): 312.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 110.5
-	Real Cost:110.5
+<Uninformed Search Algorithm>:	Excecution time(μs): 194.0
+	Visited Nodes number: 31
+	10Node4e(33.931286 ) -> 10Node5e(50.382816 ) -> 11Node8e(18.793589 ) -> 11Node10e
+	Predicted Cost: 103.10769
+	Real Cost:95.799995
 IDA*:
-	Excecution time(μs): 232.0
-	Visited Nodes number: 9
-	10Node9e(11.0 ) -> 10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 110.5
-	Real Cost:110.5
+	Excecution time(μs): 725.0
+	Visited Nodes number: 22
+	10Node4e(33.931286 ) -> 10Node5e(50.382816 ) -> 11Node8e(18.793589 ) -> 11Node10e
+	Predicted Cost: 103.10769
+	Real Cost:95.799995
 
 Day 35
-<Uninformed Search Algorithm>:	Excecution time(μs): 297.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(27.0 ) -> 9Node8e(12.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 111.0
-	Real Cost:117.7
+<Uninformed Search Algorithm>:	Excecution time(μs): 172.0
+	Visited Nodes number: 31
+	10Node4e(33.940613 ) -> 10Node5e(50.396667 ) -> 11Node8e(18.782612 ) -> 11Node10e
+	Predicted Cost: 103.11989
+	Real Cost:107.35
 IDA*:
-	Excecution time(μs): 307.0
-	Visited Nodes number: 10
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(27.0 ) -> 9Node8e(12.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 111.0
-	Real Cost:117.7
+	Excecution time(μs): 942.0
+	Visited Nodes number: 24
+	10Node4e(33.940613 ) -> 10Node5e(50.396667 ) -> 11Node8e(18.782612 ) -> 11Node10e
+	Predicted Cost: 103.11989
+	Real Cost:107.35
 
 Day 36
-<Uninformed Search Algorithm>:	Excecution time(μs): 312.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 116.4
-	Real Cost:119.0
+<Uninformed Search Algorithm>:	Excecution time(μs): 253.0
+	Visited Nodes number: 31
+	10Node4e(16.806673 ) -> 10Node1e(14.829417 ) -> 10Node6e(27.765383 ) -> 11Node5e(11.311823 ) -> 11Node3e(28.79373 ) -> 11Node10e
+	Predicted Cost: 99.50703
+	Real Cost:107.5
 IDA*:
-	Excecution time(μs): 556.0
-	Visited Nodes number: 16
-	10Node9e(11.0 ) -> 10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 116.4
-	Real Cost:119.0
+	Excecution time(μs): 474.0
+	Visited Nodes number: 17
+	10Node4e(16.806673 ) -> 10Node1e(14.829417 ) -> 10Node6e(27.765383 ) -> 11Node5e(11.311823 ) -> 11Node3e(28.79373 ) -> 11Node10e
+	Predicted Cost: 99.50703
+	Real Cost:107.5
 
 Day 37
-<Uninformed Search Algorithm>:	Excecution time(μs): 364.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(30.0 ) -> 9Node8e(12.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 110.2
-	Real Cost:115.399994
+<Uninformed Search Algorithm>:	Excecution time(μs): 304.0
+	Visited Nodes number: 31
+	10Node4e(16.8048 ) -> 10Node1e(15.425107 ) -> 10Node6e(26.689976 ) -> 11Node5e(11.311745 ) -> 11Node3e(27.678493 ) -> 11Node10e
+	Predicted Cost: 97.910126
+	Real Cost:96.149994
 IDA*:
-	Excecution time(μs): 181.0
-	Visited Nodes number: 7
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(30.0 ) -> 9Node8e(12.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 110.2
-	Real Cost:115.399994
+	Excecution time(μs): 453.0
+	Visited Nodes number: 15
+	10Node4e(16.8048 ) -> 10Node1e(15.425107 ) -> 10Node6e(26.689976 ) -> 11Node5e(11.311745 ) -> 11Node3e(27.678493 ) -> 11Node10e
+	Predicted Cost: 97.910126
+	Real Cost:96.149994
 
 Day 38
-<Uninformed Search Algorithm>:	Excecution time(μs): 282.0
-	Visited Nodes number: 38
-	10Node9e(9.9 ) -> 10Node3e(34.2 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 103.5
-	Real Cost:103.5
+<Uninformed Search Algorithm>:	Excecution time(μs): 172.0
+	Visited Nodes number: 31
+	10Node4e(19.406164 ) -> 10Node1e(14.810736 ) -> 10Node6e(26.659323 ) -> 11Node5e(11.314341 ) -> 11Node3e(28.800138 ) -> 11Node10e
+	Predicted Cost: 100.9907
+	Real Cost:100.75
 IDA*:
-	Excecution time(μs): 112.0
-	Visited Nodes number: 7
-	10Node9e(9.9 ) -> 10Node3e(34.2 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 103.5
-	Real Cost:103.5
+	Excecution time(μs): 649.0
+	Visited Nodes number: 22
+	10Node4e(19.406164 ) -> 10Node1e(14.810736 ) -> 10Node6e(26.659323 ) -> 11Node5e(11.314341 ) -> 11Node3e(28.800138 ) -> 11Node10e
+	Predicted Cost: 100.9907
+	Real Cost:100.75
 
 Day 39
-<Uninformed Search Algorithm>:	Excecution time(μs): 331.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(11.7 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 109.7
-	Real Cost:116.2
+<Uninformed Search Algorithm>:	Excecution time(μs): 170.0
+	Visited Nodes number: 31
+	10Node4e(16.781763 ) -> 10Node1e(15.440229 ) -> 10Node6e(26.653389 ) -> 11Node5e(20.730413 ) -> 11Node8e(19.557623 ) -> 11Node10e
+	Predicted Cost: 99.16342
+	Real Cost:93.7
 IDA*:
-	Excecution time(μs): 211.0
-	Visited Nodes number: 7
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(11.7 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 109.7
-	Real Cost:116.2
+	Excecution time(μs): 465.0
+	Visited Nodes number: 18
+	10Node4e(16.781763 ) -> 10Node1e(15.440229 ) -> 10Node6e(26.653389 ) -> 11Node5e(20.730413 ) -> 11Node8e(19.557623 ) -> 11Node10e
+	Predicted Cost: 99.16342
+	Real Cost:93.7
 
 Day 40
-<Uninformed Search Algorithm>:	Excecution time(μs): 300.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 116.4
-	Real Cost:119.0
+<Uninformed Search Algorithm>:	Excecution time(μs): 212.0
+	Visited Nodes number: 32
+	10Node4e(19.42115 ) -> 10Node1e(14.8120775 ) -> 10Node6e(30.845358 ) -> 11Node5e(11.32481 ) -> 11Node3e(27.649212 ) -> 11Node10e
+	Predicted Cost: 104.05261
+	Real Cost:107.75
 IDA*:
-	Excecution time(μs): 5899.0
-	Visited Nodes number: 14
-	10Node9e(11.0 ) -> 10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 116.4
-	Real Cost:119.0
+	Excecution time(μs): 730.0
+	Visited Nodes number: 19
+	10Node4e(19.42115 ) -> 10Node1e(14.8120775 ) -> 10Node6e(30.845358 ) -> 11Node5e(11.32481 ) -> 11Node3e(27.649212 ) -> 11Node10e
+	Predicted Cost: 104.05261
+	Real Cost:107.75
 
 Day 41
-<Uninformed Search Algorithm>:	Excecution time(μs): 223.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(16.25 ) -> 9Node6e(23.4 ) -> 9Node5e(20.699999 ) -> 9Node0e
-	Predicted Cost: 109.35
-	Real Cost:109.35
+<Uninformed Search Algorithm>:	Excecution time(μs): 150.0
+	Visited Nodes number: 31
+	10Node4e(16.78996 ) -> 10Node1e(17.125965 ) -> 10Node6e(26.666409 ) -> 11Node5e(11.330214 ) -> 11Node3e(27.654055 ) -> 11Node10e
+	Predicted Cost: 99.5666
+	Real Cost:97.25
 IDA*:
-	Excecution time(μs): 65.0
-	Visited Nodes number: 5
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(16.25 ) -> 9Node6e(23.4 ) -> 9Node5e(20.699999 ) -> 9Node0e
-	Predicted Cost: 109.35
-	Real Cost:109.35
+	Excecution time(μs): 368.0
+	Visited Nodes number: 16
+	10Node4e(16.78996 ) -> 10Node1e(17.125965 ) -> 10Node6e(26.666409 ) -> 11Node5e(11.330214 ) -> 11Node3e(27.654055 ) -> 11Node10e
+	Predicted Cost: 99.5666
+	Real Cost:97.25
 
 Day 42
-<Uninformed Search Algorithm>:	Excecution time(μs): 256.0
-	Visited Nodes number: 38
-	10Node9e(13.75 ) -> 10Node3e(53.1 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 115.85
-	Real Cost:122.35
+<Uninformed Search Algorithm>:	Excecution time(μs): 149.0
+	Visited Nodes number: 31
+	10Node4e(17.506247 ) -> 10Node1e(17.130566 ) -> 10Node6e(26.655968 ) -> 11Node5e(21.625362 ) -> 11Node8e(18.757904 ) -> 11Node10e
+	Predicted Cost: 101.67604
+	Real Cost:100.85
 IDA*:
-	Excecution time(μs): 297.0
-	Visited Nodes number: 11
-	10Node9e(13.75 ) -> 10Node3e(53.1 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 115.85
-	Real Cost:122.35
+	Excecution time(μs): 549.0
+	Visited Nodes number: 20
+	10Node4e(17.506247 ) -> 10Node1e(17.130566 ) -> 10Node6e(26.655968 ) -> 11Node5e(21.625362 ) -> 11Node8e(18.757904 ) -> 11Node10e
+	Predicted Cost: 101.67604
+	Real Cost:100.85
 
 Day 43
-<Uninformed Search Algorithm>:	Excecution time(μs): 219.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(16.25 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 114.25
-	Real Cost:120.75
+<Uninformed Search Algorithm>:	Excecution time(μs): 159.0
+	Visited Nodes number: 31
+	10Node4e(19.425259 ) -> 10Node1e(15.449722 ) -> 10Node6e(27.8095 ) -> 11Node5e(21.629612 ) -> 11Node8e(19.569649 ) -> 11Node10e
+	Predicted Cost: 103.883736
+	Real Cost:110.0
 IDA*:
-	Excecution time(μs): 1563.0
-	Visited Nodes number: 13
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(16.25 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 114.25
-	Real Cost:120.75
+	Excecution time(μs): 999.0
+	Visited Nodes number: 27
+	10Node4e(19.425259 ) -> 10Node1e(15.449722 ) -> 10Node6e(27.8095 ) -> 11Node5e(21.629612 ) -> 11Node8e(19.569649 ) -> 11Node10e
+	Predicted Cost: 103.883736
+	Real Cost:110.0
 
 Day 44
-<Uninformed Search Algorithm>:	Excecution time(μs): 295.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 110.5
-	Real Cost:108.2
+<Uninformed Search Algorithm>:	Excecution time(μs): 186.0
+	Visited Nodes number: 32
+	10Node4e(16.794031 ) -> 10Node1e(17.14309 ) -> 10Node6e(27.809837 ) -> 11Node5e(21.629875 ) -> 11Node8e(18.7698 ) -> 11Node10e
+	Predicted Cost: 102.14663
+	Real Cost:91.2
 IDA*:
-	Excecution time(μs): 157.0
-	Visited Nodes number: 6
-	10Node9e(11.0 ) -> 10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 110.5
-	Real Cost:108.2
+	Excecution time(μs): 941.0
+	Visited Nodes number: 24
+	10Node4e(16.794031 ) -> 10Node1e(17.14309 ) -> 10Node6e(27.809837 ) -> 11Node5e(21.629875 ) -> 11Node8e(18.7698 ) -> 11Node10e
+	Predicted Cost: 102.14663
+	Real Cost:91.2
 
 Day 45
-<Uninformed Search Algorithm>:	Excecution time(μs): 280.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 108.4
-	Real Cost:108.4
+<Uninformed Search Algorithm>:	Excecution time(μs): 203.0
+	Visited Nodes number: 32
+	10Node4e(17.509352 ) -> 10Node1e(15.449428 ) -> 10Node6e(30.867414 ) -> 11Node5e(21.629198 ) -> 11Node8e(19.569275 ) -> 11Node10e
+	Predicted Cost: 105.024666
+	Real Cost:97.5
 IDA*:
-	Excecution time(μs): 176.0
-	Visited Nodes number: 5
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 108.4
-	Real Cost:108.4
+	Excecution time(μs): 1047.0
+	Visited Nodes number: 27
+	10Node4e(17.509352 ) -> 10Node1e(15.449428 ) -> 10Node6e(30.867414 ) -> 11Node5e(21.629198 ) -> 11Node8e(19.569275 ) -> 11Node10e
+	Predicted Cost: 105.024666
+	Real Cost:97.5
 
 Day 46
-<Uninformed Search Algorithm>:	Excecution time(μs): 315.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 104.6
-	Real Cost:108.4
+<Uninformed Search Algorithm>:	Excecution time(μs): 156.0
+	Visited Nodes number: 32
+	10Node4e(19.43512 ) -> 10Node1e(15.451854 ) -> 10Node6e(27.813337 ) -> 11Node5e(21.632595 ) -> 11Node8e(19.572348 ) -> 11Node10e
+	Predicted Cost: 103.90525
+	Real Cost:99.05
 IDA*:
-	Excecution time(μs): 115.0
-	Visited Nodes number: 5
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 104.6
-	Real Cost:108.4
+	Excecution time(μs): 918.0
+	Visited Nodes number: 26
+	10Node4e(19.43512 ) -> 10Node1e(15.451854 ) -> 10Node6e(27.813337 ) -> 11Node5e(21.632595 ) -> 11Node8e(19.572348 ) -> 11Node10e
+	Predicted Cost: 103.90525
+	Real Cost:99.05
 
 Day 47
-<Uninformed Search Algorithm>:	Excecution time(μs): 340.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(13.0 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 111.0
-	Real Cost:126.9
+<Uninformed Search Algorithm>:	Excecution time(μs): 188.0
+	Visited Nodes number: 32
+	10Node4e(33.998646 ) -> 10Node5e(48.38985 ) -> 11Node8e(19.574978 ) -> 11Node10e
+	Predicted Cost: 101.96347
+	Real Cost:92.799995
 IDA*:
-	Excecution time(μs): 174.0
-	Visited Nodes number: 7
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(13.0 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 111.0
-	Real Cost:126.9
+	Excecution time(μs): 778.0
+	Visited Nodes number: 23
+	10Node4e(33.998646 ) -> 10Node5e(48.38985 ) -> 11Node8e(19.574978 ) -> 11Node10e
+	Predicted Cost: 101.96347
+	Real Cost:92.799995
 
 Day 48
-<Uninformed Search Algorithm>:	Excecution time(μs): 322.0
-	Visited Nodes number: 38
-	10Node9e(9.9 ) -> 10Node3e(38.0 ) -> 9Node4e(11.7 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 108.600006
-	Real Cost:106.0
+<Uninformed Search Algorithm>:	Excecution time(μs): 228.0
+	Visited Nodes number: 32
+	10Node4e(17.516232 ) -> 10Node1e(17.181147 ) -> 10Node6e(30.926065 ) -> 11Node5e(11.334032 ) -> 11Node3e(27.659033 ) -> 11Node10e
+	Predicted Cost: 104.61651
+	Real Cost:93.7
 IDA*:
-	Excecution time(μs): 178.0
-	Visited Nodes number: 7
-	10Node9e(9.9 ) -> 10Node3e(38.0 ) -> 9Node4e(11.7 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 108.600006
-	Real Cost:106.0
+	Excecution time(μs): 7512.0
+	Visited Nodes number: 25
+	10Node4e(17.516232 ) -> 10Node1e(17.181147 ) -> 10Node6e(30.926065 ) -> 11Node5e(11.334032 ) -> 11Node3e(27.659033 ) -> 11Node10e
+	Predicted Cost: 104.61651
+	Real Cost:93.7
 
 Day 49
-<Uninformed Search Algorithm>:	Excecution time(μs): 225.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(47.5 ) -> 9Node4e(13.0 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 120.5
-	Real Cost:107.2
+<Uninformed Search Algorithm>:	Excecution time(μs): 172.0
+	Visited Nodes number: 32
+	10Node4e(34.003807 ) -> 10Node5e(50.4905 ) -> 11Node8e(19.57795 ) -> 11Node10e
+	Predicted Cost: 104.07226
+	Real Cost:109.25
 IDA*:
-	Excecution time(μs): 586.0
-	Visited Nodes number: 14
-	10Node9e(11.0 ) -> 10Node3e(47.5 ) -> 9Node4e(13.0 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 120.5
-	Real Cost:107.2
+	Excecution time(μs): 961.0
+	Visited Nodes number: 24
+	10Node4e(34.003807 ) -> 10Node5e(50.4905 ) -> 11Node8e(19.57795 ) -> 11Node10e
+	Predicted Cost: 104.07226
+	Real Cost:109.25
 
 Day 50
-<Uninformed Search Algorithm>:	Excecution time(μs): 311.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(11.7 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 107.1
-	Real Cost:119.2
+<Uninformed Search Algorithm>:	Excecution time(μs): 193.0
+	Visited Nodes number: 32
+	10Node4e(16.78635 ) -> 10Node1e(17.187422 ) -> 10Node6e(27.813 ) -> 11Node5e(11.331222 ) -> 11Node3e(28.84311 ) -> 11Node10e
+	Predicted Cost: 101.9611
+	Real Cost:106.8
 IDA*:
-	Excecution time(μs): 95.0
-	Visited Nodes number: 6
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(11.7 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 107.1
-	Real Cost:119.2
+	Excecution time(μs): 797.0
+	Visited Nodes number: 24
+	10Node4e(16.78635 ) -> 10Node1e(17.187422 ) -> 10Node6e(27.813 ) -> 11Node5e(11.331222 ) -> 11Node3e(28.84311 ) -> 11Node10e
+	Predicted Cost: 101.9611
+	Real Cost:106.8
 
 Day 51
-<Uninformed Search Algorithm>:	Excecution time(μs): 216.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 119.0
-	Real Cost:116.4
+<Uninformed Search Algorithm>:	Excecution time(μs): 416.0
+	Visited Nodes number: 32
+	10Node4e(16.801653 ) -> 10Node1e(14.824988 ) -> 10Node6e(30.946346 ) -> 11Node5e(11.328608 ) -> 11Node3e(27.673311 ) -> 11Node10e
+	Predicted Cost: 101.574905
+	Real Cost:97.95
 IDA*:
-	Excecution time(μs): 657.0
-	Visited Nodes number: 17
-	10Node9e(11.0 ) -> 10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 119.0
-	Real Cost:116.4
+	Excecution time(μs): 668.0
+	Visited Nodes number: 19
+	10Node4e(16.801653 ) -> 10Node1e(14.824988 ) -> 10Node6e(30.946346 ) -> 11Node5e(11.328608 ) -> 11Node3e(27.673311 ) -> 11Node10e
+	Predicted Cost: 101.574905
+	Real Cost:97.95
 
 Day 52
-<Uninformed Search Algorithm>:	Excecution time(μs): 234.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(11.7 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 107.1
-	Real Cost:112.4
+<Uninformed Search Algorithm>:	Excecution time(μs): 4775.0
+	Visited Nodes number: 31
+	10Node4e(16.798985 ) -> 10Node1e(17.202127 ) -> 10Node6e(27.810617 ) -> 11Node5e(11.330252 ) -> 11Node3e(28.840641 ) -> 11Node10e
+	Predicted Cost: 101.98262
+	Real Cost:99.05
 IDA*:
-	Excecution time(μs): 89.0
-	Visited Nodes number: 6
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(11.7 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 107.1
-	Real Cost:112.4
+	Excecution time(μs): 1264.0
+	Visited Nodes number: 27
+	10Node4e(16.798985 ) -> 10Node1e(17.202127 ) -> 10Node6e(27.810617 ) -> 11Node5e(11.330252 ) -> 11Node3e(28.840641 ) -> 11Node10e
+	Predicted Cost: 101.98262
+	Real Cost:99.05
 
 Day 53
-<Uninformed Search Algorithm>:	Excecution time(μs): 265.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 108.4
-	Real Cost:104.6
+<Uninformed Search Algorithm>:	Excecution time(μs): 3928.0
+	Visited Nodes number: 32
+	10Node4e(33.98795 ) -> 10Node5e(48.389053 ) -> 11Node8e(21.788143 ) -> 11Node10e
+	Predicted Cost: 104.165146
+	Real Cost:97.549995
 IDA*:
-	Excecution time(μs): 277.0
-	Visited Nodes number: 6
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 108.4
-	Real Cost:104.6
+	Excecution time(μs): 1444.0
+	Visited Nodes number: 25
+	10Node4e(33.98795 ) -> 10Node5e(48.389053 ) -> 11Node8e(21.788143 ) -> 11Node10e
+	Predicted Cost: 104.165146
+	Real Cost:97.549995
 
 Day 54
-<Uninformed Search Algorithm>:	Excecution time(μs): 290.0
-	Visited Nodes number: 38
-	10Node9e(9.9 ) -> 10Node3e(34.2 ) -> 9Node4e(11.7 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 104.8
-	Real Cost:104.8
+<Uninformed Search Algorithm>:	Excecution time(μs): 184.0
+	Visited Nodes number: 31
+	10Node4e(17.512615 ) -> 10Node1e(15.452308 ) -> 10Node6e(27.814154 ) -> 11Node5e(11.331693 ) -> 11Node3e(27.640148 ) -> 11Node10e
+	Predicted Cost: 99.750916
+	Real Cost:100.45
 IDA*:
-	Excecution time(μs): 125.0
-	Visited Nodes number: 7
-	10Node9e(9.9 ) -> 10Node3e(34.2 ) -> 9Node4e(11.7 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 104.8
-	Real Cost:104.8
+	Excecution time(μs): 472.0
+	Visited Nodes number: 17
+	10Node4e(17.512615 ) -> 10Node1e(15.452308 ) -> 10Node6e(27.814154 ) -> 11Node5e(11.331693 ) -> 11Node3e(27.640148 ) -> 11Node10e
+	Predicted Cost: 99.750916
+	Real Cost:100.45
 
 Day 55
-<Uninformed Search Algorithm>:	Excecution time(μs): 238.0
-	Visited Nodes number: 38
-	10Node9e(9.9 ) -> 10Node3e(34.2 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 103.5
-	Real Cost:106.75
+<Uninformed Search Algorithm>:	Excecution time(μs): 167.0
+	Visited Nodes number: 31
+	10Node4e(17.512732 ) -> 10Node1e(14.805116 ) -> 10Node6e(27.814339 ) -> 11Node5e(21.633373 ) -> 11Node8e(18.753147 ) -> 11Node10e
+	Predicted Cost: 100.51871
+	Real Cost:104.5
 IDA*:
-	Excecution time(μs): 86.0
-	Visited Nodes number: 5
-	10Node9e(9.9 ) -> 10Node3e(34.2 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 103.5
-	Real Cost:106.75
+	Excecution time(μs): 697.0
+	Visited Nodes number: 22
+	10Node4e(17.512732 ) -> 10Node1e(14.805116 ) -> 10Node6e(27.814339 ) -> 11Node5e(21.633373 ) -> 11Node8e(18.753147 ) -> 11Node10e
+	Predicted Cost: 100.51871
+	Real Cost:104.5
 
 Day 56
-<Uninformed Search Algorithm>:	Excecution time(μs): 205.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 104.6
-	Real Cost:104.6
+<Uninformed Search Algorithm>:	Excecution time(μs): 152.0
+	Visited Nodes number: 31
+	10Node4e(17.516006 ) -> 10Node1e(14.803892 ) -> 10Node6e(27.81954 ) -> 11Node5e(21.637419 ) -> 11Node8e(21.780958 ) -> 11Node10e
+	Predicted Cost: 103.55782
+	Real Cost:112.55
 IDA*:
-	Excecution time(μs): 57.0
-	Visited Nodes number: 5
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 104.6
-	Real Cost:104.6
+	Excecution time(μs): 898.0
+	Visited Nodes number: 27
+	10Node4e(17.516006 ) -> 10Node1e(14.803892 ) -> 10Node6e(27.81954 ) -> 11Node5e(21.637419 ) -> 11Node8e(21.780958 ) -> 11Node10e
+	Predicted Cost: 103.55782
+	Real Cost:112.55
 
 Day 57
-<Uninformed Search Algorithm>:	Excecution time(μs): 221.0
-	Visited Nodes number: 38
-	10Node9e(15.0 ) -> 10Node0e(25.199999 ) -> 5Node0e(5.3999996 ) -> 5Node4e(44.0 ) -> 5Node3e(30.0 ) -> 9Node0e
-	Predicted Cost: 119.6
-	Real Cost:115.799995
+<Uninformed Search Algorithm>:	Excecution time(μs): 174.0
+	Visited Nodes number: 32
+	10Node4e(19.487143 ) -> 10Node1e(14.81162 ) -> 10Node6e(27.815258 ) -> 11Node5e(12.609327 ) -> 11Node3e(27.648357 ) -> 11Node10e
+	Predicted Cost: 102.371704
+	Real Cost:112.7
 IDA*:
-	Excecution time(μs): 532.0
-	Visited Nodes number: 16
-	10Node9e(15.0 ) -> 10Node0e(25.199999 ) -> 5Node0e(5.3999996 ) -> 5Node4e(44.0 ) -> 5Node3e(30.0 ) -> 9Node0e
-	Predicted Cost: 119.6
-	Real Cost:115.799995
+	Excecution time(μs): 422.0
+	Visited Nodes number: 18
+	10Node4e(19.487143 ) -> 10Node1e(14.81162 ) -> 10Node6e(27.815258 ) -> 11Node5e(12.609327 ) -> 11Node3e(27.648357 ) -> 11Node10e
+	Predicted Cost: 102.371704
+	Real Cost:112.7
 
 Day 58
-<Uninformed Search Algorithm>:	Excecution time(μs): 220.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 108.4
-	Real Cost:106.1
+<Uninformed Search Algorithm>:	Excecution time(μs): 153.0
+	Visited Nodes number: 32
+	10Node4e(16.780571 ) -> 10Node1e(17.199022 ) -> 10Node6e(27.813875 ) -> 11Node5e(12.612616 ) -> 11Node3e(27.638588 ) -> 11Node10e
+	Predicted Cost: 102.04467
+	Real Cost:94.75
 IDA*:
-	Excecution time(μs): 129.0
-	Visited Nodes number: 7
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 108.4
-	Real Cost:106.1
+	Excecution time(μs): 437.0
+	Visited Nodes number: 24
+	10Node4e(16.780571 ) -> 10Node1e(17.199022 ) -> 10Node6e(27.813875 ) -> 11Node5e(12.612616 ) -> 11Node3e(27.638588 ) -> 11Node10e
+	Predicted Cost: 102.04467
+	Real Cost:94.75
 
 Day 59
-<Uninformed Search Algorithm>:	Excecution time(μs): 206.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(11.7 ) -> 9Node6e(26.0 ) -> 9Node5e(28.75 ) -> 9Node0e
-	Predicted Cost: 111.65
-	Real Cost:109.05
+<Uninformed Search Algorithm>:	Excecution time(μs): 162.0
+	Visited Nodes number: 32
+	10Node4e(17.50749 ) -> 10Node1e(15.447786 ) -> 10Node6e(30.958792 ) -> 11Node5e(11.328377 ) -> 11Node3e(27.6343 ) -> 11Node10e
+	Predicted Cost: 102.87675
+	Real Cost:101.95
 IDA*:
-	Excecution time(μs): 155.0
-	Visited Nodes number: 10
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(11.7 ) -> 9Node6e(26.0 ) -> 9Node5e(28.75 ) -> 9Node0e
-	Predicted Cost: 111.65
-	Real Cost:109.05
+	Excecution time(μs): 435.0
+	Visited Nodes number: 22
+	10Node4e(17.50749 ) -> 10Node1e(15.447786 ) -> 10Node6e(30.958792 ) -> 11Node5e(11.328377 ) -> 11Node3e(27.6343 ) -> 11Node10e
+	Predicted Cost: 102.87675
+	Real Cost:101.95
 
 Day 60
-<Uninformed Search Algorithm>:	Excecution time(μs): 251.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(13.0 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 107.2
-	Real Cost:117.5
+<Uninformed Search Algorithm>:	Excecution time(μs): 269.0
+	Visited Nodes number: 32
+	10Node4e(37.83624 ) -> 10Node5e(48.345337 ) -> 11Node8e(19.57276 ) -> 11Node10e
+	Predicted Cost: 105.75434
+	Real Cost:96.1
 IDA*:
-	Excecution time(μs): 134.0
-	Visited Nodes number: 6
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(13.0 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 107.2
-	Real Cost:117.5
+	Excecution time(μs): 814.0
+	Visited Nodes number: 24
+	10Node4e(37.83624 ) -> 10Node5e(48.345337 ) -> 11Node8e(19.57276 ) -> 11Node10e
+	Predicted Cost: 105.75434
+	Real Cost:96.1
 
 Day 61
-<Uninformed Search Algorithm>:	Excecution time(μs): 297.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(27.0 ) -> 9Node8e(10.799999 ) -> 9Node5e(28.75 ) -> 9Node0e
-	Predicted Cost: 111.75
-	Real Cost:126.05
+<Uninformed Search Algorithm>:	Excecution time(μs): 288.0
+	Visited Nodes number: 32
+	10Node4e(19.491516 ) -> 10Node1e(15.452308 ) -> 10Node6e(27.814154 ) -> 11Node5e(21.633232 ) -> 11Node8e(18.74301 ) -> 11Node10e
+	Predicted Cost: 103.134224
+	Real Cost:105.3
 IDA*:
-	Excecution time(μs): 334.0
-	Visited Nodes number: 10
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(27.0 ) -> 9Node8e(10.799999 ) -> 9Node5e(28.75 ) -> 9Node0e
-	Predicted Cost: 111.75
-	Real Cost:126.05
+	Excecution time(μs): 419.0
+	Visited Nodes number: 21
+	10Node4e(19.491516 ) -> 10Node1e(15.452308 ) -> 10Node6e(27.814154 ) -> 11Node5e(21.633232 ) -> 11Node8e(18.74301 ) -> 11Node10e
+	Predicted Cost: 103.134224
+	Real Cost:105.3
 
 Day 62
-<Uninformed Search Algorithm>:	Excecution time(μs): 294.0
-	Visited Nodes number: 38
-	10Node9e(15.0 ) -> 10Node0e(25.199999 ) -> 5Node0e(7.5 ) -> 5Node4e(44.0 ) -> 5Node3e(27.0 ) -> 9Node0e
-	Predicted Cost: 118.7
-	Real Cost:119.35
+<Uninformed Search Algorithm>:	Excecution time(μs): 116.0
+	Visited Nodes number: 31
+	10Node4e(33.988316 ) -> 10Node5e(48.321053 ) -> 11Node8e(18.736734 ) -> 11Node10e
+	Predicted Cost: 101.046104
+	Real Cost:90.899994
 IDA*:
-	Excecution time(μs): 707.0
-	Visited Nodes number: 16
-	10Node9e(15.0 ) -> 10Node0e(25.199999 ) -> 5Node0e(7.5 ) -> 5Node4e(44.0 ) -> 5Node3e(27.0 ) -> 9Node0e
-	Predicted Cost: 118.7
-	Real Cost:119.35
+	Excecution time(μs): 473.0
+	Visited Nodes number: 26
+	10Node4e(33.988316 ) -> 10Node5e(48.321053 ) -> 11Node8e(18.736734 ) -> 11Node10e
+	Predicted Cost: 101.046104
+	Real Cost:90.899994
 
 Day 63
-<Uninformed Search Algorithm>:	Excecution time(μs): 285.0
-	Visited Nodes number: 38
-	10Node9e(13.75 ) -> 10Node3e(38.0 ) -> 9Node4e(11.7 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 112.45
-	Real Cost:108.65
+<Uninformed Search Algorithm>:	Excecution time(μs): 112.0
+	Visited Nodes number: 32
+	10Node4e(19.500977 ) -> 10Node1e(14.792502 ) -> 10Node6e(27.801517 ) -> 11Node5e(11.326545 ) -> 11Node3e(27.61267 ) -> 11Node10e
+	Predicted Cost: 101.03421
+	Real Cost:97.95
 IDA*:
-	Excecution time(μs): 397.0
-	Visited Nodes number: 11
-	10Node9e(13.75 ) -> 10Node3e(38.0 ) -> 9Node4e(11.7 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 112.45
-	Real Cost:108.65
+	Excecution time(μs): 215.0
+	Visited Nodes number: 17
+	10Node4e(19.500977 ) -> 10Node1e(14.792502 ) -> 10Node6e(27.801517 ) -> 11Node5e(11.326545 ) -> 11Node3e(27.61267 ) -> 11Node10e
+	Predicted Cost: 101.03421
+	Real Cost:97.95
 
 Day 64
-<Uninformed Search Algorithm>:	Excecution time(μs): 300.0
-	Visited Nodes number: 38
-	10Node9e(9.9 ) -> 10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 109.4
-	Real Cost:112.0
-IDA*:
-	Excecution time(μs): 322.0
-	Visited Nodes number: 11
-	10Node9e(9.9 ) -> 10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 109.4
-	Real Cost:112.0
-
-Day 65
-<Uninformed Search Algorithm>:	Excecution time(μs): 275.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 110.5
-	Real Cost:110.5
-IDA*:
-	Excecution time(μs): 246.0
-	Visited Nodes number: 11
-	10Node9e(11.0 ) -> 10Node3e(53.1 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 110.5
-	Real Cost:110.5
-
-Day 66
-<Uninformed Search Algorithm>:	Excecution time(μs): 259.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 104.6
-	Real Cost:107.2
-IDA*:
-	Excecution time(μs): 125.0
-	Visited Nodes number: 7
-	10Node9e(11.0 ) -> 10Node3e(34.2 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 104.6
-	Real Cost:107.2
-
-Day 67
-<Uninformed Search Algorithm>:	Excecution time(μs): 209.0
-	Visited Nodes number: 38
-	10Node9e(9.9 ) -> 10Node3e(34.2 ) -> 9Node4e(11.7 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 104.8
-	Real Cost:114.350006
-IDA*:
-	Excecution time(μs): 135.0
-	Visited Nodes number: 5
-	10Node9e(9.9 ) -> 10Node3e(34.2 ) -> 9Node4e(11.7 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 104.8
-	Real Cost:114.350006
-
-Day 68
-<Uninformed Search Algorithm>:	Excecution time(μs): 201.0
-	Visited Nodes number: 38
-	10Node9e(15.0 ) -> 10Node0e(25.199999 ) -> 5Node0e(5.3999996 ) -> 5Node4e(44.0 ) -> 5Node3e(30.0 ) -> 9Node0e
-	Predicted Cost: 119.6
-	Real Cost:141.0
-IDA*:
-	Excecution time(μs): 575.0
-	Visited Nodes number: 17
-	10Node9e(15.0 ) -> 10Node0e(25.199999 ) -> 5Node0e(5.3999996 ) -> 5Node4e(44.0 ) -> 5Node3e(30.0 ) -> 9Node0e
-	Predicted Cost: 119.6
-	Real Cost:141.0
-
-Day 69
-<Uninformed Search Algorithm>:	Excecution time(μs): 201.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 119.0
-	Real Cost:119.0
-IDA*:
-	Excecution time(μs): 529.0
-	Visited Nodes number: 15
-	10Node9e(11.0 ) -> 10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 119.0
-	Real Cost:119.0
-
-Day 70
-<Uninformed Search Algorithm>:	Excecution time(μs): 955.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 116.4
-	Real Cost:116.4
-IDA*:
-	Excecution time(μs): 661.0
-	Visited Nodes number: 16
-	10Node9e(11.0 ) -> 10Node3e(59.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 116.4
-	Real Cost:116.4
-
-Day 71
-<Uninformed Search Algorithm>:	Excecution time(μs): 341.0
-	Visited Nodes number: 38
-	10Node9e(13.75 ) -> 10Node3e(47.5 ) -> 9Node4e(30.0 ) -> 9Node8e(10.799999 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 125.05
-	Real Cost:111.75
-IDA*:
-	Excecution time(μs): 5200.0
-	Visited Nodes number: 18
-	10Node9e(13.75 ) -> 10Node3e(47.5 ) -> 9Node4e(30.0 ) -> 9Node8e(10.799999 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 125.05
-	Real Cost:111.75
-
-Day 72
-<Uninformed Search Algorithm>:	Excecution time(μs): 200.0
-	Visited Nodes number: 38
-	10Node9e(13.75 ) -> 10Node3e(38.0 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 111.15
-	Real Cost:126.4
-IDA*:
-	Excecution time(μs): 188.0
-	Visited Nodes number: 10
-	10Node9e(13.75 ) -> 10Node3e(38.0 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 111.15
-	Real Cost:126.4
-
-Day 73
-<Uninformed Search Algorithm>:	Excecution time(μs): 187.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(13.0 ) -> 9Node6e(26.0 ) -> 9Node5e(20.699999 ) -> 9Node0e
-	Predicted Cost: 108.7
-	Real Cost:115.2
-IDA*:
-	Excecution time(μs): 168.0
-	Visited Nodes number: 8
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(13.0 ) -> 9Node6e(26.0 ) -> 9Node5e(20.699999 ) -> 9Node0e
-	Predicted Cost: 108.7
-	Real Cost:115.2
-
-Day 74
-<Uninformed Search Algorithm>:	Excecution time(μs): 180.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(20.699999 ) -> 9Node0e
-	Predicted Cost: 116.7
-	Real Cost:123.2
-IDA*:
-	Excecution time(μs): 285.0
-	Visited Nodes number: 13
-	10Node9e(11.0 ) -> 10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(20.699999 ) -> 9Node0e
-	Predicted Cost: 116.7
-	Real Cost:123.2
-
-Day 75
-<Uninformed Search Algorithm>:	Excecution time(μs): 162.0
-	Visited Nodes number: 38
-	10Node9e(13.75 ) -> 10Node3e(34.2 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 107.35
-	Real Cost:113.1
-IDA*:
-	Excecution time(μs): 44.0
-	Visited Nodes number: 5
-	10Node9e(13.75 ) -> 10Node3e(34.2 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 107.35
-	Real Cost:113.1
-
-Day 76
-<Uninformed Search Algorithm>:	Excecution time(μs): 179.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 108.4
-	Real Cost:108.4
-IDA*:
-	Excecution time(μs): 65.0
-	Visited Nodes number: 5
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 108.4
-	Real Cost:108.4
-
-Day 77
-<Uninformed Search Algorithm>:	Excecution time(μs): 191.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(28.75 ) -> 9Node0e
-	Predicted Cost: 114.15
-	Real Cost:126.25
-IDA*:
-	Excecution time(μs): 405.0
-	Visited Nodes number: 15
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(28.75 ) -> 9Node0e
-	Predicted Cost: 114.15
-	Real Cost:126.25
-
-Day 78
-<Uninformed Search Algorithm>:	Excecution time(μs): 174.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(28.75 ) -> 9Node0e
-	Predicted Cost: 114.15
-	Real Cost:116.75
+<Uninformed Search Algorithm>:	Excecution time(μs): 123.0
+	Visited Nodes number: 31
+	10Node4e(33.981384 ) -> 10Node5e(48.318832 ) -> 11Node8e(19.565039 ) -> 11Node10e
+	Predicted Cost: 101.86526
+	Real Cost:92.799995
 IDA*:
 	Excecution time(μs): 388.0
+	Visited Nodes number: 21
+	10Node4e(33.981384 ) -> 10Node5e(48.318832 ) -> 11Node8e(19.565039 ) -> 11Node10e
+	Predicted Cost: 101.86526
+	Real Cost:92.799995
+
+Day 65
+<Uninformed Search Algorithm>:	Excecution time(μs): 113.0
+	Visited Nodes number: 31
+	10Node4e(17.500242 ) -> 10Node1e(15.44139 ) -> 10Node6e(26.627443 ) -> 11Node5e(20.710234 ) -> 11Node8e(18.73783 ) -> 11Node10e
+	Predicted Cost: 99.01714
+	Real Cost:90.799995
+IDA*:
+	Excecution time(μs): 216.0
+	Visited Nodes number: 17
+	10Node4e(17.500242 ) -> 10Node1e(15.44139 ) -> 10Node6e(26.627443 ) -> 11Node5e(20.710234 ) -> 11Node8e(18.73783 ) -> 11Node10e
+	Predicted Cost: 99.01714
+	Real Cost:90.799995
+
+Day 66
+<Uninformed Search Algorithm>:	Excecution time(μs): 111.0
+	Visited Nodes number: 31
+	10Node4e(16.756403 ) -> 10Node1e(15.4418335 ) -> 10Node6e(30.95763 ) -> 11Node5e(11.324011 ) -> 11Node3e(27.598782 ) -> 11Node10e
+	Predicted Cost: 102.07866
+	Real Cost:89.299995
+IDA*:
+	Excecution time(μs): 289.0
 	Visited Nodes number: 18
-	10Node9e(11.0 ) -> 10Node3e(38.0 ) -> 9Node4e(13.0 ) -> 9Node6e(23.4 ) -> 9Node5e(28.75 ) -> 9Node0e
-	Predicted Cost: 114.15
-	Real Cost:116.75
+	10Node4e(16.756403 ) -> 10Node1e(15.4418335 ) -> 10Node6e(30.95763 ) -> 11Node5e(11.324011 ) -> 11Node3e(27.598782 ) -> 11Node10e
+	Predicted Cost: 102.07866
+	Real Cost:89.299995
+
+Day 67
+<Uninformed Search Algorithm>:	Excecution time(μs): 125.0
+	Visited Nodes number: 31
+	10Node4e(35.48803 ) -> 10Node6e(26.616022 ) -> 11Node5e(11.3232 ) -> 11Node3e(27.601799 ) -> 11Node10e
+	Predicted Cost: 101.029045
+	Real Cost:95.59999
+IDA*:
+	Excecution time(μs): 321.0
+	Visited Nodes number: 21
+	10Node4e(35.48803 ) -> 10Node6e(26.616022 ) -> 11Node5e(11.3232 ) -> 11Node3e(27.601799 ) -> 11Node10e
+	Predicted Cost: 101.029045
+	Real Cost:95.59999
+
+Day 68
+<Uninformed Search Algorithm>:	Excecution time(μs): 125.0
+	Visited Nodes number: 31
+	10Node4e(16.75299 ) -> 10Node1e(14.782051 ) -> 10Node6e(26.60769 ) -> 11Node5e(10.840171 ) -> 11Node3e(28.820549 ) -> 11Node10e
+	Predicted Cost: 97.80345
+	Real Cost:93.7
+IDA*:
+	Excecution time(μs): 240.0
+	Visited Nodes number: 16
+	10Node4e(16.75299 ) -> 10Node1e(14.782051 ) -> 10Node6e(26.60769 ) -> 11Node5e(10.840171 ) -> 11Node3e(28.820549 ) -> 11Node10e
+	Predicted Cost: 97.80345
+	Real Cost:93.7
+
+Day 69
+<Uninformed Search Algorithm>:	Excecution time(μs): 132.0
+	Visited Nodes number: 32
+	10Node4e(32.509647 ) -> 10Node5e(50.448128 ) -> 11Node8e(18.717674 ) -> 11Node10e
+	Predicted Cost: 101.67545
+	Real Cost:99.1
+IDA*:
+	Excecution time(μs): 269.0
+	Visited Nodes number: 18
+	10Node4e(32.509647 ) -> 10Node5e(50.448128 ) -> 11Node8e(18.717674 ) -> 11Node10e
+	Predicted Cost: 101.67545
+	Real Cost:99.1
+
+Day 70
+<Uninformed Search Algorithm>:	Excecution time(μs): 195.0
+	Visited Nodes number: 31
+	10Node4e(19.506233 ) -> 10Node1e(14.77285 ) -> 10Node6e(27.799232 ) -> 11Node5e(11.325613 ) -> 11Node3e(28.828835 ) -> 11Node10e
+	Predicted Cost: 102.232765
+	Real Cost:98.05
+IDA*:
+	Excecution time(μs): 372.0
+	Visited Nodes number: 23
+	10Node4e(19.506233 ) -> 10Node1e(14.77285 ) -> 10Node6e(27.799232 ) -> 11Node5e(11.325613 ) -> 11Node3e(28.828835 ) -> 11Node10e
+	Predicted Cost: 102.232765
+	Real Cost:98.05
+
+Day 71
+<Uninformed Search Algorithm>:	Excecution time(μs): 159.0
+	Visited Nodes number: 31
+	10Node4e(17.507618 ) -> 10Node1e(15.447899 ) -> 10Node6e(27.806217 ) -> 11Node5e(11.328459 ) -> 11Node3e(27.576252 ) -> 11Node10e
+	Predicted Cost: 99.66644
+	Real Cost:115.5
+IDA*:
+	Excecution time(μs): 140.0
+	Visited Nodes number: 13
+	10Node4e(17.507618 ) -> 10Node1e(15.447899 ) -> 10Node6e(27.806217 ) -> 11Node5e(11.328459 ) -> 11Node3e(27.576252 ) -> 11Node10e
+	Predicted Cost: 99.66644
+	Real Cost:115.5
+
+Day 72
+<Uninformed Search Algorithm>:	Excecution time(μs): 133.0
+	Visited Nodes number: 31
+	10Node4e(16.739538 ) -> 10Node1e(14.770181 ) -> 10Node6e(30.983772 ) -> 11Node5e(12.623018 ) -> 11Node3e(27.571003 ) -> 11Node10e
+	Predicted Cost: 102.687515
+	Real Cost:97.25
+IDA*:
+	Excecution time(μs): 331.0
+	Visited Nodes number: 21
+	10Node4e(16.739538 ) -> 10Node1e(14.770181 ) -> 10Node6e(30.983772 ) -> 11Node5e(12.623018 ) -> 11Node3e(27.571003 ) -> 11Node10e
+	Predicted Cost: 102.687515
+	Real Cost:97.25
+
+Day 73
+<Uninformed Search Algorithm>:	Excecution time(μs): 124.0
+	Visited Nodes number: 32
+	10Node4e(16.73436 ) -> 10Node1e(15.451289 ) -> 10Node6e(27.81232 ) -> 11Node5e(21.631804 ) -> 11Node8e(18.703106 ) -> 11Node10e
+	Predicted Cost: 100.332886
+	Real Cost:96.45
+IDA*:
+	Excecution time(μs): 227.0
+	Visited Nodes number: 18
+	10Node4e(16.73436 ) -> 10Node1e(15.451289 ) -> 10Node6e(27.81232 ) -> 11Node5e(21.631804 ) -> 11Node8e(18.703106 ) -> 11Node10e
+	Predicted Cost: 100.332886
+	Real Cost:96.45
+
+Day 74
+<Uninformed Search Algorithm>:	Excecution time(μs): 114.0
+	Visited Nodes number: 32
+	10Node4e(19.49183 ) -> 10Node1e(15.450264 ) -> 10Node6e(30.957615 ) -> 11Node5e(21.63037 ) -> 11Node8e(18.712452 ) -> 11Node10e
+	Predicted Cost: 106.24252
+	Real Cost:97.15
+IDA*:
+	Excecution time(μs): 542.0
+	Visited Nodes number: 29
+	10Node4e(19.49183 ) -> 10Node1e(15.450264 ) -> 10Node6e(30.957615 ) -> 11Node5e(21.63037 ) -> 11Node8e(18.712452 ) -> 11Node10e
+	Predicted Cost: 106.24252
+	Real Cost:97.15
+
+Day 75
+<Uninformed Search Algorithm>:	Excecution time(μs): 8289.0
+	Visited Nodes number: 31
+	10Node4e(16.742447 ) -> 10Node1e(15.450785 ) -> 10Node6e(27.811413 ) -> 11Node5e(21.631098 ) -> 11Node8e(19.570993 ) -> 11Node10e
+	Predicted Cost: 101.20673
+	Real Cost:102.15
+IDA*:
+	Excecution time(μs): 248.0
+	Visited Nodes number: 20
+	10Node4e(16.742447 ) -> 10Node1e(15.450785 ) -> 10Node6e(27.811413 ) -> 11Node5e(21.631098 ) -> 11Node8e(19.570993 ) -> 11Node10e
+	Predicted Cost: 101.20673
+	Real Cost:102.15
+
+Day 76
+<Uninformed Search Algorithm>:	Excecution time(μs): 110.0
+	Visited Nodes number: 32
+	10Node4e(19.476841 ) -> 10Node1e(15.44719 ) -> 10Node6e(30.933805 ) -> 11Node5e(11.32794 ) -> 11Node3e(28.834755 ) -> 11Node10e
+	Predicted Cost: 106.02053
+	Real Cost:95.25
+IDA*:
+	Excecution time(μs): 536.0
+	Visited Nodes number: 29
+	10Node4e(19.476841 ) -> 10Node1e(15.44719 ) -> 10Node6e(30.933805 ) -> 11Node5e(11.32794 ) -> 11Node3e(28.834755 ) -> 11Node10e
+	Predicted Cost: 106.02053
+	Real Cost:95.25
+
+Day 77
+<Uninformed Search Algorithm>:	Excecution time(μs): 82.0
+	Visited Nodes number: 32
+	10Node4e(19.478642 ) -> 10Node1e(14.777487 ) -> 10Node6e(26.599476 ) -> 11Node5e(21.624104 ) -> 11Node8e(18.71815 ) -> 11Node10e
+	Predicted Cost: 101.19785
+	Real Cost:108.1
+IDA*:
+	Excecution time(μs): 297.0
+	Visited Nodes number: 20
+	10Node4e(19.478642 ) -> 10Node1e(14.777487 ) -> 10Node6e(26.599476 ) -> 11Node5e(21.624104 ) -> 11Node8e(18.71815 ) -> 11Node10e
+	Predicted Cost: 101.19785
+	Real Cost:108.1
+
+Day 78
+<Uninformed Search Algorithm>:	Excecution time(μs): 97.0
+	Visited Nodes number: 32
+	10Node4e(19.484827 ) -> 10Node1e(17.192495 ) -> 10Node6e(30.946491 ) -> 11Node5e(21.625195 ) -> 11Node8e(18.720268 ) -> 11Node10e
+	Predicted Cost: 107.96928
+	Real Cost:102.4
+IDA*:
+	Excecution time(μs): 1233.0
+	Visited Nodes number: 43
+	10Node4e(19.484827 ) -> 10Node1e(17.192495 ) -> 10Node6e(30.946491 ) -> 11Node5e(21.625195 ) -> 11Node8e(18.720268 ) -> 11Node10e
+	Predicted Cost: 107.96928
+	Real Cost:102.4
 
 Day 79
-<Uninformed Search Algorithm>:	Excecution time(μs): 129.0
-	Visited Nodes number: 38
-	10Node9e(11.0 ) -> 10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 119.0
-	Real Cost:124.4
+<Uninformed Search Algorithm>:	Excecution time(μs): 81.0
+	Visited Nodes number: 31
+	10Node4e(33.975704 ) -> 10Node5e(50.448772 ) -> 11Node8e(18.725723 ) -> 11Node10e
+	Predicted Cost: 103.1502
+	Real Cost:99.1
 IDA*:
-	Excecution time(μs): 553.0
-	Visited Nodes number: 16
-	10Node9e(11.0 ) -> 10Node3e(59.0 ) -> 9Node6e(26.0 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 119.0
-	Real Cost:124.4
+	Excecution time(μs): 769.0
+	Visited Nodes number: 22
+	10Node4e(33.975704 ) -> 10Node5e(50.448772 ) -> 11Node8e(18.725723 ) -> 11Node10e
+	Predicted Cost: 103.1502
+	Real Cost:99.1
 
 Day 80
-<Uninformed Search Algorithm>:	Excecution time(μs): 133.0
-	Visited Nodes number: 38
-	10Node9e(13.75 ) -> 10Node3e(34.2 ) -> 9Node4e(11.7 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 106.05
-	Real Cost:106.05
+<Uninformed Search Algorithm>:	Excecution time(μs): 73.0
+	Visited Nodes number: 31
+	10Node4e(16.756327 ) -> 10Node1e(17.192673 ) -> 10Node6e(26.61299 ) -> 11Node5e(11.325365 ) -> 11Node3e(27.598656 ) -> 11Node10e
+	Predicted Cost: 99.48601
+	Real Cost:97.25
 IDA*:
-	Excecution time(μs): 40.0
-	Visited Nodes number: 5
-	10Node9e(13.75 ) -> 10Node3e(34.2 ) -> 9Node4e(11.7 ) -> 9Node6e(23.4 ) -> 9Node5e(23.0 ) -> 9Node0e
-	Predicted Cost: 106.05
-	Real Cost:106.05
+	Excecution time(μs): 254.0
+	Visited Nodes number: 19
+	10Node4e(16.756327 ) -> 10Node1e(17.192673 ) -> 10Node6e(26.61299 ) -> 11Node5e(11.325365 ) -> 11Node3e(27.598656 ) -> 11Node10e
+	Predicted Cost: 99.48601
+	Real Cost:97.25
 
 =================================================
 
+Frequency of correct predictions: 0.0
 **************************************************
-Average real path cost for days 1-20 :120.19
+Average real path cost for days 1-20 :101.895
 **************************************************
-Average real path cost for days 21-40 :114.77749
+Average real path cost for days 21-40 :99.509995
 **************************************************
-Average real path cost for days 41-60 :111.73751
+Average real path cost for days 41-60 :100.7975
 **************************************************
-Average real path cost for days 61-80 :117.29999
+Average real path cost for days 61-80 :98.205
 **************************************************
-Average real path cost for the 3 months:116.00126
+Average real path cost for the 3 months:100.101875
 **************************************************
