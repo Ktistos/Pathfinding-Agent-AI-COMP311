@@ -16,10 +16,8 @@ public class Project {
 
 
     public static void main(String[] args) {
-    
-            /*
-            initializing the readers and writers of the files
-             */
+
+
         BufferedReader inputStream=null;
         try {
             inputStream = new BufferedReader(new FileReader(args[0]));
@@ -36,14 +34,11 @@ public class Project {
         }
 
 
+
         PrintWriter fileOut = new PrintWriter(outputStream);
-
-        /*Using the class output to print simultaneously to the the chosen output file and to the console*/
         Output out =  new Output(fileOut);
-
         Experiment exp = new Experiment(inputStream, out);
         try {
-            /* calling the experiment method to initiate the experiment */
             exp.experiment();
         } catch (IOException e) {
             // TODO Auto-generated catch block
@@ -53,16 +48,13 @@ public class Project {
     }
 
 
-    /**
-     * This class is used to conduct the measurements for the searching algorithms.
-     * It hosts the searching algorithms and the methods for
-     */
     static class Experiment {
         BufferedReader in;
         Output out;
         Vertex source;
         Vertex destination;
         static HashMap<String, Edge> roads = new HashMap<>();
+        static Probabilities probs = new Probabilities();
         static int day = -1;
         HashMap<String, Vertex> vertexMap ;
         int numOfCorrectPredictions;
@@ -120,7 +112,7 @@ public class Project {
 
                 if (i < 79) {
                     day++;
-                    Probabilities.probs.computeDailyProbabilities(roads,day);
+                    probs.computeDailyProbabilities(roads,day);
                 }
 
                 out.println("");
@@ -144,6 +136,7 @@ public class Project {
             out.println("**************************************************");
             out.println("Average real path cost for the 3 months:" + (sumOfAllRealCosts/80));
             out.println("**************************************************");
+
 
         }
 
@@ -270,30 +263,62 @@ public class Project {
             endVertex.addEdge(road);
         }
 
+        /*Uninformed Search Algorithm
+         * Uniform cost search
+         * Vertex source: the starting vertex
+         * String destination : the name of the destination vertex
+         *
+         */
         SearchNode UCS(Vertex source, String destination) {
+            /*Structure to store and sort the nodes to visit next, based on their predicted cost*/
             PriorityQueue<SearchNode> fringe = new PriorityQueue<>();
+
+            /*Adding the source node in the fringe*/
             fringe.add(source.createSearchNode(day));
+
+            /*HashMap to store visited nodes in order not to visit them again*/
             HashMap<String, SearchNode> visitedNodes = new HashMap<>();
 
+            /*Loops until a path is found
+             * Problem statement guaranties that a path exists
+             * if fringe is empty, it means we have nowhere else to go, and a path has not been found
+             * */
             while (!fringe.isEmpty()) {
+                /*Get node with the lowest predicted cost*/
                 SearchNode node = fringe.poll();
 
+                /*if the node's name is the name of the destination vertex, we have found a path
+                 * Update the numOfExpandedNodes variable in the destination node
+                 * return the destination node
+                 * */
                 if (node.getName().equals(destination)) {
                     node.numOfExpandedNodes = visitedNodes.size();
                     return node;
                 }
 
+                /*If the node doesn't exist in visited nodes, add it
+                 * then add neighbours of this node in the fringe using SearchNode.expand()*/
                 if (!visitedNodes.containsKey(node.getName())) {
-
+                    /*add node to visited nodes*/
                     visitedNodes.put(node.getName(), node);
+
+                    /*add neighbours to fringe
+                     * Expand method is called with includeHeuristic = false because UCS does not use a heuristic*/
                     node.expand(fringe, false);
                 }
 
+                /*if the node had been visited before, loop starts all over again, with next best node from the fringe*/
+
             }
+
+            /*return null if a path was not found*/
             return null;
         }
 
-
+        /*Informed search Algorithm
+         * Iterative deepening A*
+         * Implemented with multiple UCS Algorithms
+         * */
         SearchNode IDA(Vertex source, String destination) {
 
             float costLimit = 0;
@@ -325,43 +350,76 @@ public class Project {
 
             }
 
+
         }
     }
 
+    /*Vertex class, implements a vertex in the graph*/
     static class Vertex{
+        /*Name of the node*/
         String name;
+
+        /*A list of the roads that are connected to a vertex*/
         List<Edge> edges;
+
+        /*Heuristic of the vertex
+         * Cost of the best path to destination, given that all traffic is low*/
         float heuristic;
 
+        /*Class constructor*/
         Vertex(String name){
             this.name=name;
             edges= new LinkedList<>();
             heuristic=0;
         }
 
+        /*Method to add a road in the list of roads of a vertex*/
         void addEdge(Edge edge){
             edges.add(edge);
         }
 
+        /*Method to make a SearchNode node from a vertex
+         *Actual search is performed on search nodes */
         SearchNode createSearchNode(int day){
             return new SearchNode(name,this,day);
         }
 
     }
 
-
+    /*Class to implement a SearchNode
+     * SearchNodes are used in the actual searches
+     * SearchNodes are used to represent different states of a vertex
+     * Implements Comparable interface in order to be sorted in a Priority Queue */
     static class SearchNode implements Comparable<SearchNode>{
 
+        /*Parent of the SearchNode*/
         SearchNode parentNode;
+
+        /*Cost to get to a node + heuristic according to the decision of what is the
+         * real traffic given the prediction */
         float predictedCost;
+
+        /*Real cost to get to a node  */
         float realCost;
+
+        /*The vertex that this SearchNode was made from*/
         Vertex originVertex;
+
+        /*Variable used to store the number of expanded nodes
+         * Only used in the destination SearchNode */
         int numOfExpandedNodes;
+
+        /*Predicted cost of path to a certain node*/
         float costToGetHere;
+
+        /*Predicted cost of the road from a node to a neighbouring node*/
         float roadCostToHere;
+
+        /*Day of the experiment*/
         int day;
 
 
+        /*Class constructor, initializes member variables */
         SearchNode(String name,Vertex originVertex,int day) {
             predictedCost =0;
             realCost=0;
@@ -374,6 +432,8 @@ public class Project {
         }
 
         @Override
+        /*Overridden method of comparable interface
+         * Needed in order to sort SearchNodes,based on their predicted cost, using a PriorityQueue */
         public int compareTo(Project.SearchNode arg0) {
             if(this.predictedCost < arg0.predictedCost)
                 return -1;
@@ -383,26 +443,57 @@ public class Project {
         }
 
 
-
+        /*Method to return the name of the node*/
         String getName(){
             return originVertex.name;
         }
 
+        /*Method to add neighbouring nodes in the fringe and update the costs
+         *
+         * PriorityQueue<SearchNode> fringe: structure with all possible nodes to visit next,
+         * the one with the lowest predicted cost will be chosen.
+         *
+         * boolean includeHeuristic : boolean value in order to include the heuristic value or not
+         *
+         * UCS algorithm : includeHeuristic = false
+         * IDA* algorithm : includeHeuristic = true
+         * */
         void expand(PriorityQueue<SearchNode> fringe,boolean includeHeuristic){
+
+            /*looping through all roads that are connected with the vertex*/
             for(Edge edge : originVertex.edges){
 
+                /*For every road, find neighbour of current vertex*/
                 SearchNode node = edge.getNeighbourVertex(this.originVertex).createSearchNode(day);
+
+                /*If statement to prevent adding the node we came from, in the fringe
+                 * We are not allowed to do a step back
+                 * */
                 if(!(this.parentNode!=null && this.parentNode.getName().equals(node.getName()))){
+
+                    /*temp variable to store the heuristic if needed*/
                     float heuristic=0;
+
+                    /*If statement in order to check whether or not the heuristic should be included*/
                     if(includeHeuristic)
                         heuristic=node.originVertex.heuristic;
 
+                    /*Get predicted cost of the road to get to the neighbour node*/
                     node.roadCostToHere=edge.getPredictedCost(day);
+
+                    /*Update the total path cost from start to the next node we may visit*/
                     node.costToGetHere= this.costToGetHere+node.roadCostToHere;
+
+                    /*Update the total predicted cost from start to the next node we may visit*/
                     node.predictedCost =  node.costToGetHere+heuristic;
 
+                    /*Update the real cost from start to the next node we may visit*/
                     node.realCost= this.realCost +  edge.getRealCost(day);
+
+                    /*Set parent of the node we may visit as the node we currently are in*/
                     node.parentNode=this;
+
+                    /*At last, add neighbour (next node we may visit) in the fringe*/
                     fringe.add(node);
                 }
 
@@ -411,58 +502,30 @@ public class Project {
 
     }
 
-    /*
-     * This class uses the daily data acquired to compute daily statistics.
-     * These statistics are later used to compute a-posteriori probabilities which are used
-     * to calculate the cost of each road.
-     * The a-posteriori probabilities are based on the random variables X={0,1,2} and Y={0,1,2}
-     * where X is the actual outcome on a given day for a given road and Y is the prediction.
-     * (0=low traffic , 1= normal traffic , 2=heavy traffic)
-
-     */
     static class Probabilities{
 
-        /*
-        The matrix which holds the desired statistics.
-        Each value of the matrix is the number of occurrences of an event (X,Y),
-        statistics[X][Y] is the number of occurrences for the event (X,Y).
-        For example statistics[0][1] counts the number of times that a prediction for a road was normal
-        but the actual traffic outcome for that road was low.
-         */
         int [][] statistics;
-
-        /*The class is implemented as singleton so this is its instance.*/
-        static Probabilities probs = new Probabilities();
 
         public Probabilities() {
 
             statistics= new int[3][3];
         }
 
-        /*For a given prediction(Y=prediction) this method computes E[g(X)|Y=prediction]
-         * where g(X) is the weight to multiply to the normalCost of the road
-         * since g(X)={0.9 for X=0 ,1 for X=1,1.25 for X=2}.
-         * */
         double getAverageWeight(int prediction){
 
             double p0=0;
             double p1=0;
             double p2=0;
 
-            /*computing the number of a road was predicted Y=prediction*/
             int numOfPredicted=statistics[2][prediction]+statistics[1][prediction]+statistics[0][prediction];
 
-            /*to find the probability i.e P(X=1|Y=prediction) we divide the number of
-             *occurrences of the event(1,prediction)/ number of the occurrences of the particular prediction
-             */
-            p0 =((double)statistics[0][prediction]/(double) numOfPredicted);
+            p0 =((double)statistics[0][prediction]/(double) numOfPredicted)*(0.9);
             p1 = ((double) statistics[1][prediction]/(double) numOfPredicted);
-            p2 = ((double) statistics[2][prediction]/(double) numOfPredicted);
+            p2 = ((double) statistics[2][prediction]/(double) numOfPredicted)*(1.25);
 
-            return (p0*(0.9) + p1 + p2*(1.25));
+            return (p0 + p1 + p2);
         }
 
-        /*This method is used to calculate the needed statistics for all the roads on a particular day.*/
         void computeDailyProbabilities(HashMap<String,Edge> roads , int day){
 
             for(Edge edge : roads.values()){
@@ -471,14 +534,9 @@ public class Project {
                 statistics[actualOutcome][prediction] ++;
             }
         }
-
     }
 
-    /*
-     This class is used to represent the roads.It holds information about the name , the weight of the road,
-     which vertices are connected to the road, the prediction and actual outcomes for the traffic of the road
-     for every day of the experiment.
-     */
+
     static class Edge{
         String name;
         float normalWeight;
@@ -486,6 +544,7 @@ public class Project {
         ArrayList<Integer> historyOfPredictions;
         ArrayList<Integer> historyOfActualOutcomes ;
         float[] weightMap ;
+        int decision;
 
         Edge(String name,Vertex start,Vertex end,float normalWeight){
             this.name= name;
@@ -498,13 +557,14 @@ public class Project {
             weightMap[0]=(float)0.9;
             weightMap[1]=(float)1.0;
             weightMap[2]=(float)1.25;
+            decision=0;
         }
-        /*This method gets a vertex as an argument to return the opposing vertex of the road (its neighbor)*/
+
         Vertex getNeighbourVertex(Vertex vertex){
             if(start.name.equals(vertex.name)) return end;
             else return start;
         }
-        /*This method is used to initialize outcomes and predictions for the traffic of the road*/
+
         void addToTrafficHistory(String trafficState,boolean actualTraffic){
             List<Integer> history;
             if(actualTraffic)
@@ -526,29 +586,22 @@ public class Project {
             }
         }
 
-        /*This method is used to get the predicted cost for a particular day.
-         * It is used in the SearchNode expand method to compute the G(n) of a node for that given day.
-         */
         float getPredictedCost(int day){
-            /*Day -1 is used to initialize the heuristic of a vertex because the h(n) of a vertex
-             *is the cost to the goal if every road had low traffic
-             */
+
             if(day==-1)
                 return normalWeight*((float)0.9);
-                /*
-                 *for the first day the probabilities have not been yet computed so the cost for each road
-                 *will be its normal cost times the arithmetic mean weight(1.05)
-                 */
-            else if(day==0)
-                return (float) 1.05 *normalWeight;
+            else if(day==0){
+                Random rand = new Random();
+                decision= rand.nextInt(3);
+                return weightMap[decision]*normalWeight;
 
-            /*for all the other days the normalWeight is multiplied by the average weight for a given prediction*/
+            }
 
-            return  normalWeight*(float)Probabilities.probs.getAverageWeight(historyOfPredictions.get(day));
+            return  normalWeight*(float)Experiment.probs.getAverageWeight(historyOfPredictions.get(day));
         }
 
 
-        /*This method is used in expand to get the real cost of a road on a given day*/
+
         float getRealCost(int day){
             if(day>=0)
                 return normalWeight*weightMap[historyOfActualOutcomes.get(day)];
@@ -557,9 +610,7 @@ public class Project {
     }
 
 
-    /*
-     This class is used for convenience to output both to the specified file and the console
-     */
+
     static class Output{
         PrintWriter fileOut;
 
