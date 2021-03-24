@@ -1,0 +1,22 @@
+<Source>Arad</Source>
+<Destination>Buchurest</Destination>
+<Roads>
+a; Arad; Sibiu; 140
+b; Arad; Zerind; 75
+c; Zerind; Oradea; 71
+d; Arad; Timisoara; 118
+e; Timisoara; Lugoj; 111
+f; Lugoj; Mehadia; 70
+g; Mehadia; Drobeta; 75
+h; Drobeta; Craiova; 120
+i; Craiova; Rimiscu_Vileea; 146
+j; Craiova; Pitesti; 138
+k; Rimiscu_Vileea; Pitesti; 97
+l; Oradea; Sibiu; 151
+m; Sibiu; Rimiscu_Vileea; 80
+n; Pitesti; Buchurest; 101
+o; Sibiu; Fagaras; 99
+p; Fagaras; Buchurest; 211
+q; Buchurest; Glurgiu; 90
+r; Buchurest; Urzieeni; 85
+</Roads>
