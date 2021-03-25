@@ -159,7 +159,6 @@ public class Project {
             out.println("=================================================");
 
             out.println("");
-            out.println("Frequency of correct predictions: " + (float)numOfCorrectPredictions/((float) 80* roads.size()));
             out.println("**************************************************");
             out.println("Average real path cost for days 1-20 :" + (monthlySumOfRealCosts[0]/20));
             out.println("**************************************************");
@@ -643,7 +642,7 @@ public class Project {
         }
     }
 
-    }
+
 
     /*
      This class is used to represent the roads.It holds information about the name , the weight of the road,
