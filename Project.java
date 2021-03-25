@@ -58,26 +58,17 @@ public class Project {
      * It hosts the searching algorithms and the methods for the whole experiment.
      */
     static class Experiment {
-        /*Used to read input from the file.*/
         BufferedReader in;
-
         Output out;
-        /*Initial vertex of the searching path.*/
         Vertex source;
-        /*Goal vertex of the path.*/
         Vertex destination;
-        /*
-        *Hashmap which is contains the edges of the graph and allows easy access during the initializations for the
-        *predictions and the actual traffic outcomes of the edges.
-        */
         static HashMap<String, Edge> roads = new HashMap<>();
         /*the current day of the experiment.It is initialized at -1 because it is used in such way
         * during the initialization of the vertex heuristics
         */
         static int day = -1;
-        /*HashMap which contains all the vertices of the graph.*/
         HashMap<String, Vertex> vertexMap ;
-
+        int numOfCorrectPredictions;
 
         Experiment(BufferedReader in, Output out) {
             this.in = in;
@@ -85,39 +76,30 @@ public class Project {
             source = null;
             destination = null;
             vertexMap = new HashMap<>();
+            numOfCorrectPredictions=0;
         }
 
-        /*This is the main method of the program.It is responsible to
-        * output the results , the initiation of the searching algorithms and
-        * generally the orchestration of all the measurements*/
         public void experiment() throws IOException {
-            /*Reading from the file and initializing the graph.*/
+
             constructGraph();
 
-            /*initialization of predictions and actual outcomes of road traffic status.*/
+            //initialization of predictions and actual outcomes of road traffic status
             initializeTraffic(false);
             initializeTraffic(true);
-
             initializeVertexHeuristics();
             day++;
-            /*Starting from day 1(0)*/
-            /*variable to compute the mean real cost for the chosen path for 80 days.*/
+
             float sumOfAllRealCosts=0;
-            /*array to store the real cost accumulated for every 20 days for the experiment.It is then used to
-            *calculate the mean per 20 days.*/
             float[] monthlySumOfRealCosts=new float[4];
             int count=0;
             out.println("=================================================");
             for (int i = 0; i < 80; i++) {
                 out.println("Day " + (i + 1));
                 out.print("<Uninformed Search Algorithm>:");
-                /*starting to measure the duration of the UCS algorithm*/
                 Instant start = Instant.now();
                 SearchNode goal = UCS(source, destination.name);
                 Instant end = Instant.now();
-                /*ending of measurement*/
                 Duration duration= Duration.between(start,end);
-
                 out.println("\t" +"Excecution time(μs): "+(double)(duration.toNanos()/1000));
                 out.println("\t" +"Visited Nodes number: " + goal.numOfExpandedNodes);
                 out.println("\t" + getPathInfo(goal));
@@ -126,12 +108,10 @@ public class Project {
 
 
                 out.println("IDA*:");
-                /*starting to measure the duration of the IDA* algorithm*/
                 start=Instant.now();
                 goal = IDA(source, destination.name);
                 end = Instant.now();
                 duration= Duration.between(start,end);
-                /*ending of measurement*/
                 out.println("\t" + "Excecution time(μs): "+(double)(duration.toNanos()/1000));
                 out.println("\t" +"Visited Nodes number: " + goal.numOfExpandedNodes);
                 out.println("\t" + getPathInfo(goal));
@@ -150,8 +130,6 @@ public class Project {
 
                 out.println("");
 
-                /*condition to change the index of monthlySumOfRealCosts to compute the mean
-                *for the next 20 days of the experiment*/
                 if(i==19 || i==39 || i==59 || i==79 )
                     count++;
 
@@ -159,6 +137,7 @@ public class Project {
             out.println("=================================================");
 
             out.println("");
+            out.println("Frequency of correct predictions: " + (float)numOfCorrectPredictions/((float) 80* roads.size()));
             out.println("**************************************************");
             out.println("Average real path cost for days 1-20 :" + (monthlySumOfRealCosts[0]/20));
             out.println("**************************************************");
@@ -173,23 +152,15 @@ public class Project {
 
         }
 
-        /*This method runs UCS for every vertex of the graph to compute its heuristic.
-        * The heuristic of its vertex is its distance to the goal if all traffic on all roads was low.*/
+
         void initializeVertexHeuristics() {
             for (Vertex start : vertexMap.values())
                 start.heuristic = UCS(start, destination.name).predictedCost;
         }
 
-        /*
-        This method is used to get information about the path
-        each has chosen and turn it to a string in order to output it.
-         */
+
         String getPathInfo(SearchNode goal) {
             LinkedList<SearchNode> nodeList = new LinkedList<>();
-
-            /*Since the searching algorithms return the final node it needed to traverse the path until the
-            * source node is found in order to print information about it.
-            * Every node in the path is stored in the nodeList during this procedure.*/
             SearchNode node = goal;
             while (node.parentNode != null) {
                 nodeList.addFirst(node);
@@ -199,8 +170,6 @@ public class Project {
 
             StringBuilder pathInfo= new StringBuilder();
 
-            /*We later append information about every node of the path to a string builder in order
-            to then return it to a string form.*/
 
             for (int i = 0; i < nodeList.size() - 1; i++) {
                 pathInfo.append(nodeList.get(i).getName());
@@ -213,53 +182,48 @@ public class Project {
             return pathInfo.toString();
         }
 
-        /*This method is used to initialize the information about all the predictions and actual outcomes of traffic status for every day of the experiment,
-        * for every road of the experiment.*/
+
         void initializeTraffic(boolean actualTraffic) throws IOException {
 
-            /*choosing whether to initialize predictions or actualTrafficPerDay*/
+            //choosing whether to initialize predictions or actualTrafficPerDay
             String fileBound;
             if (actualTraffic)
                 fileBound = "</ActualTrafficPerDay>";
             else
                 fileBound = "</Predictions>";
 
-            /*skip lines <Predictions> and <Day> of the file*/
+            //skip lines <Predictions> and <Day>
             in.readLine();
             in.readLine();
 
-
-            String roadStatus = in.readLine();
-            while (!roadStatus.equals(fileBound)) {
-                while (!roadStatus.equals("</Day>")) {
-                    /*splitting string based on ';' character*/
-                    String[] lineTokens = roadStatus.replaceAll(" ", "").split(";");
+            String prediction = in.readLine();
+            while (!prediction.equals(fileBound)) {
+                while (!prediction.equals("</Day>")) {
+                    //splitting string based on ';' character
+                    String[] lineTokens = prediction.replaceAll(" ", "").split(";");
                     if (lineTokens.length > 1) {
                         String roadName = lineTokens[0];
                         String trafficState = lineTokens[1];
-                        /*adding the traffic status to the history (of predictions/actual outcomes) of the road*/
+                        //adding predictions to the history of each road
                         roads.get(roadName).addToTrafficHistory(trafficState, actualTraffic);
                     }
-                    /*read next line*/
-                    roadStatus = in.readLine();
+                    //read next line
+                    prediction = in.readLine();
                 }
-                /*skip <Day>*/
-                roadStatus = in.readLine();
+                //skip <Day>
+                prediction = in.readLine();
             }
         }
 
-        /*
-        This method is used to construct the graph of the experiment.
-        It uses the addToGraph method to add to the graph info from the file lines.
-         */
+
         void constructGraph() throws IOException {
 
-            /*aquiring and creating source vertex from file*/
+            //aquiring and creating source vertex from file
             String sourceName = in.readLine();
             sourceName = sourceName.substring(8, sourceName.length() - 9);
             source = new Vertex(sourceName);
 
-            /*aquiring and creating destination vertex from file*/
+            //aquiring and creating destination vertex from file
             String destinationName = in.readLine();
             destinationName = destinationName.substring(13, destinationName.length() - 14);
             destination = new Vertex(destinationName);
@@ -268,9 +232,9 @@ public class Project {
             vertexMap.put(sourceName, source);
             vertexMap.put(destinationName, destination);
 
-           /* bypassing the <Roads> string in the file*/
+            //bypassing the <Roads> string in the file
             in.readLine();
-            /*reading all lines until line == </Roads> to get the graph info*/
+            //reading all lines until line == </Roads> to get the graph info
             String fileLine = in.readLine().replaceAll(" ", "");
             while (!fileLine.equals("</Roads>")) {
                 String[] lineTokens = fileLine.split(";");
@@ -282,9 +246,6 @@ public class Project {
 
         }
 
-        /*This method adds to the graph the vertices of the start and the and of the road.
-        * It associates those vertices with the road that connects them and initializes
-        * some information about the graph roads.*/
         void addToGraph(String[] graphInfo, HashMap<String, Vertex> vertexMap) {
 
             String roadName = graphInfo[0];
