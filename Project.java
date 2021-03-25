@@ -118,7 +118,7 @@ public class Project {
                 /*ending of measurement*/
                 Duration duration= Duration.between(start,end);
 
-                out.println("\t" +"Excecution time(μs): "+(double)(duration.toNanos()/1000));
+                out.println("\t" +"Excecution time(ns): "+(double)(duration.toNanos()));
                 out.println("\t" +"Visited Nodes number: " + goal.numOfExpandedNodes);
                 out.println("\t" + getPathInfo(goal));
                 out.println("\t" +"Predicted Cost: " + goal.predictedCost);
@@ -132,7 +132,7 @@ public class Project {
                 end = Instant.now();
                 duration= Duration.between(start,end);
                 /*ending of measurement*/
-                out.println("\t" + "Excecution time(μs): "+(double)(duration.toNanos()/1000));
+                out.println("\t" + "Excecution time(ns): "+(double)(duration.toNanos()));
                 out.println("\t" +"Visited Nodes number: " + goal.numOfExpandedNodes);
                 out.println("\t" + getPathInfo(goal));
                 out.println("\t" +"Predicted Cost: " + goal.predictedCost);
