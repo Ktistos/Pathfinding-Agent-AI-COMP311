@@ -318,39 +318,65 @@ public class Project {
         /*Informed search Algorithm
          * Iterative deepening A*
          * Implemented with multiple UCS Algorithms
+         * Every time starting from the source node
+         * This algorithm does not have a visited node list
          * */
         SearchNode IDA(Vertex source, String destination) {
 
+            /*Cost limit is the max cost of the nodes the algorithm will explore
+            * Only algorithms with cost<=costLimit will be explored*/
             float costLimit = 0;
+
+            /*Number of expanded nodes, only used in destination vertex*/
             int numOfExpandedNodes;
+
+            /*Infinite loop to search for a path
+            * A path is guaranteed to exist*/
             while (true) {
 
+                /*Structure to store and sort the nodes to visit next, based on their predicted cost
+                * At every iteration of IDA* a new queue is made*/
                 PriorityQueue<SearchNode> fringe = new PriorityQueue<>();
+
+                /*Adding the source node in the fringe*/
                 fringe.add(source.createSearchNode(day));
 
+                /*Number of expanded nodes is set to 0, we have not made an expand yet*/
                 numOfExpandedNodes = 0;
+
+                /*basic while loop of a UCS algorithm */
                 while (!fringe.isEmpty()) {
+                    /*Get node with the lowest predicted cost*/
                     SearchNode node = fringe.poll();
 
+                    /*if the node's name is the name of the destination vertex, we have found a path
+                     * Update the numOfExpandedNodes variable in the destination node
+                     * return the destination node
+                     * */
                     if (node.getName().equals(destination)) {
                         node.numOfExpandedNodes = numOfExpandedNodes;
                         return node;
                     }
 
 
+                    /*if predictedCost of this node to the destination vertex is <= costLimit
+                    * we expand the current node*/
                     if (node.predictedCost <= costLimit) {
+                        /*add neighbours to fringe
+                         * Expand method is called with includeHeuristic = true because UCS uses a heuristic*/
                         node.expand(fringe, true);
                         numOfExpandedNodes++;
                     } else {
+                        /*if the node with the lowest predictedCost can't be expanded (fringe.poll())
+                        * update the costLimit as the predictedCost of the current node
+                        */
                         costLimit = node.predictedCost;
+
+                        /*Break the loop and start all over again, with new costLimit*/
                         break;
                     }
-
                 }
-
             }
-
-
         }
     }
 
